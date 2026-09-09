@@ -22,14 +22,6 @@ export default function MinisterialRoundtablePage() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
                 <path d="m9 18 6-6-6-6" />
               </svg>
-              <Link className="transition-colors hover:text-emerald-cta" to="/en/program">
-                Features
-              </Link>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
               <span aria-current="page" className="text-muted">
                 Ministerial Roundtable
               </span>
@@ -38,7 +30,7 @@ export default function MinisterialRoundtablePage() {
         </nav>
       </div>
       <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
-        Features
+        Ministerial Roundtable
       </span>
       <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.75rem]">
         The first
@@ -74,7 +66,7 @@ export default function MinisterialRoundtablePage() {
               Access
             </p>
             <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              By invitation
+              By invitation only
             </p>
           </div>
         </div>
@@ -94,10 +86,10 @@ export default function MinisterialRoundtablePage() {
           <div className="flex flex-col gap-8">
             <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
               <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-                June 6, 2027 · by invitation · Fairmont
+                June 6, 2027 · by invitation only · Fairmont
               </p>
               <p className="text-body text-muted">
-                Canada-Africa Ministerial Roundtable — a structured, closed-door, three-hour high-level political dialogue.
+                A structured, closed-door, three-hour high-level political dialogue.
               </p>
             </div>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
@@ -216,20 +208,26 @@ export default function MinisterialRoundtablePage() {
       </h2>
       <div className="mt-8">
         <div className="flex flex-col gap-6">
-          <p className="max-w-[760px] text-lead text-muted">
-            "A Partnership for Shared Prosperity and Security" — launched March 2025, A2M 2027 is its operational platform.
-          </p>
           <div className="flex flex-col gap-8">
-            <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
-              <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-                Official document
+            <div className="grid items-start gap-8 lg:grid-cols-[1fr_340px]">
+              <p className="max-w-[760px] text-lead text-muted lg:mt-4">
+                "A Partnership for Shared Prosperity and Security" — launched March 2025, A2M 2027 is its operational platform.
               </p>
-              <p className="text-body text-muted">
-                Read Canada's Africa Strategy (March 2025) — the policy framework A2M 2027 operationalizes.
-              </p>
-              <a href="https://international.canada.ca/international-canada/assets/pdfs/africa-strategy-strategie/africa-strategy-en.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4">
-                Read the Strategy (PDF)
-              </a>
+              <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
+                <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
+                  Official document
+                </p>
+                <p className="text-body text-muted">
+                  Read Canada's Africa Strategy (March 2025) — the policy framework A2M 2027 operationalizes.
+                </p>
+                <a href="https://international.canada.ca/international-canada/assets/pdfs/africa-strategy-strategie/africa-strategy-en.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4">
+                  Read the Strategy (PDF)
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
             </div>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
               Why It Matters for A2M 2027
@@ -278,7 +276,7 @@ export default function MinisterialRoundtablePage() {
                     Economic cooperation
                   </h3>
                   <p className="text-body text-muted">
-                    The axis most directly relevant to A2M 2027. It includes high-level trade missions, the creation of an Africa Trade Hub, robust support for the AfCFTA, accelerated negotiation of Foreign Investment Promotion and Protection Agreements (FIPAs), and expanded research partnerships.
+                    Organizing high-level trade missions, establishing an Africa Trade Hub, robustly supporting AfCFTA, accelerating Foreign Investment Promotion and Protection Agreements (FIPAs) negotiations, and expanding research partnerships.
                   </p>
                 </div>
               </div>
@@ -379,7 +377,12 @@ export default function MinisterialRoundtablePage() {
                       </svg>
                     </>
                   ),
-                  panel: null,
+                  panel: (
+                    <div className="flex flex-col gap-3 pb-5 text-body text-muted">
+                      <p>Direct access to the ministers and regulators who licence your African projects. The Roundtable is where fiscal terms, stability agreements and local-content expectations are discussed at the political level — before they become constraints on operations.</p>
+                      <p>Participating companies gain early visibility into government priorities across African mining jurisdictions, and a standing channel to raise regulatory obstacles directly with the decision-makers who can resolve them.</p>
+                    </div>
+                  ),
                 },
                 {
                   itemClassName: "border-hairline border-b",
@@ -392,7 +395,12 @@ export default function MinisterialRoundtablePage() {
                       </svg>
                     </>
                   ),
-                  panel: null,
+                  panel: (
+                    <div className="flex flex-col gap-3 pb-5 text-body text-muted">
+                      <p>A government-to-government anchor for country risk. The Roundtable aligns host-government priorities with the co-investment structures DFIs need — de-risking instruments, stability clauses and explicit policy commitments.</p>
+                      <p>Institutional investors leave with a consolidated read on where African governments stand on critical minerals, licensing and value addition — and on where Canadian policy is channelling support.</p>
+                    </div>
+                  ),
                 },
                 {
                   itemClassName: "border-hairline border-b",
@@ -405,7 +413,12 @@ export default function MinisterialRoundtablePage() {
                       </svg>
                     </>
                   ),
-                  panel: null,
+                  panel: (
+                    <div className="flex flex-col gap-3 pb-5 text-body text-muted">
+                      <p>Meet the Canadian institutions that shape mining finance — from Natural Resources Canada to the TSX-listed companies active on the continent — as negotiating partners rather than suitors.</p>
+                      <p>The Roundtable supports collective bargaining on value addition and local content under the AfCFTA, and positions your jurisdiction directly in front of the capital that funds African mining.</p>
+                    </div>
+                  ),
                 },
                 {
                   itemClassName: "border-hairline border-b",
@@ -418,7 +431,12 @@ export default function MinisterialRoundtablePage() {
                       </svg>
                     </>
                   ),
-                  panel: null,
+                  panel: (
+                    <div className="flex flex-col gap-3 pb-5 text-body text-muted">
+                      <p>The political outcomes of the Roundtable — infrastructure corridors, processing commitments, responsible-mining standards — define the contracts that follow.</p>
+                      <p>Providers in engineering, geoscience, equipment, power and digital mining get early sight of the project pipelines and partnership models emerging from the first Canada-Africa framework on critical minerals.</p>
+                    </div>
+                  ),
                 },
               ]}
             />
@@ -426,14 +444,14 @@ export default function MinisterialRoundtablePage() {
         </div>
       </div>
     </section>
-    <section id="honorary-patron" className="a2m-reveal scroll-mt-24 py-10 lg:py-12">
+    <section id="chairpersons" className="a2m-reveal scroll-mt-24 py-10 lg:py-12">
       <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
-        Honorary Patron
+        Chairpersons
       </h2>
       <div className="mt-8">
         <div className="flex flex-col gap-6">
           <p className="max-w-[760px] text-lead text-muted">
-            Each A2M edition honours a leading figure whose commitment embodies the conference's values.
+            The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
           </p>
           <div className="flex flex-col gap-8">
             <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
@@ -441,7 +459,7 @@ export default function MinisterialRoundtablePage() {
                 To be unveiled
               </p>
               <p className="text-body text-muted">
-                The Honorary Patron of A2M 2027 will be announced soon.
+                The chairpersons of the 2027 Ministerial Roundtable will be announced soon.
               </p>
             </div>
             <div className="grid gap-4 grid-cols-1">
@@ -456,7 +474,7 @@ export default function MinisterialRoundtablePage() {
                   4/5
                 </span>
                 <span className="max-w-[44ch] text-muted">
-                  Official portrait of the Honorary Patron (name + title)
+                  Official portraits of the Roundtable chairpersons (name + title)
                 </span>
               </div>
             </div>
@@ -468,8 +486,8 @@ export default function MinisterialRoundtablePage() {
   <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
     <div className="flex flex-wrap items-center justify-between gap-4">
       <div className="flex min-h-10 items-center" />
-      <Link className="font-semibold text-muted text-small underline-offset-4 transition-colors hover:text-emerald-cta hover:underline" to="/en/program">
-        Back to Features
+      <Link className="font-semibold text-muted text-small underline-offset-4 transition-colors hover:text-emerald-cta hover:underline" to="/en">
+        Back to Home
       </Link>
       <div className="flex min-h-10 items-center justify-end">
         <Link className="group inline-flex items-center gap-2 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" to="/en/program/honorary-country">
