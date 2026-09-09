@@ -132,7 +132,24 @@ const isMain = process.argv[1] && import.meta.url === (await import('node:url'))
 if (isMain) {
   const mode = process.argv[2] ?? 'snapshot'
   const outDir = '/tmp/a2m-rendered'
+  const snapDir = '/tmp/a2m-snapshots'
+  const legacyRepo = process.env.A2M_LEGACY_REPO ?? resolve('../kossoko-africa-mining-montreal-2026')
   mkdirSync(outDir, { recursive: true })
+
+  // `extract` — materialize the archived SSR snapshots from the legacy clone
+  // repo (src/snapshots/*.ts modules exporting JSON strings) into
+  // /tmp/a2m-snapshots/*.html, so the pipeline works on a fresh machine.
+  if (mode === 'extract') {
+    mkdirSync(snapDir, { recursive: true })
+    for (const route of ROUTES) {
+      const module = resolve(legacyRepo, 'src/snapshots', fileFor(route).replace(/\.html$/, '.ts'))
+      const src = readFileSync(module, 'utf8')
+      const match = src.match(/export default (".*")\n/s)
+      if (!match) throw new Error(`could not parse ${module}`)
+      writeFileSync(resolve(snapDir, fileFor(route)), JSON.parse(match[1]))
+    }
+    console.log(`extracted ${ROUTES.length} snapshots from ${legacyRepo} -> ${snapDir}`)
+  }
 
   if (mode === 'snapshot') {
     const canon = eval('(' + CANONICALIZER_SOURCE + ')')

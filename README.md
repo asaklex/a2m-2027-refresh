@@ -5,6 +5,10 @@ is gone; this project was migrated faithfully from the archived SSR snapshots
 kept in `../kossoko-africa-mining-montreal-2026` (the legacy snapshot clone),
 which remain the only surviving copy of the site's content.
 
+- **Working on this repo with an AI agent?** Start with `AGENTS.md`.
+- How the migration worked and how to verify changes:
+  `docs/migration-and-fidelity.md`.
+
 ## Quick start
 
 ```bash
@@ -62,9 +66,11 @@ The one-off migration pipeline, kept for provenance and future re-runs:
 
 ## Fidelity
 
-Verification: the canonical DOM diff (`tools/check-fidelity.mjs`) is
-**byte-identical on 10 of 13 pages**. The remaining differences are all
-intentional restorations, not losses:
+Verification: the canonical DOM diff (`tools/check-fidelity.mjs`) shows every
+page **byte-identical to its archived snapshot outside the site header**.
+Every page carries the same 48 header-only diff lines from the dropdown
+controller (below); three pages have additional intentional restorations —
+not losses:
 
 | Page | Difference | Why |
 | --- | --- | --- |
