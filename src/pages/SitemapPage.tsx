@@ -149,6 +149,11 @@ export default function SitemapPage() {
           </Link>
           <ul className="mt-4 flex flex-col gap-2 border-hairline border-l pl-4">
             <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/exhibit-sponsor#associate">
+                Associate Your Brand
+              </Link>
+            </li>
+            <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/exhibit-sponsor#why-exhibit">
                 Why Exhibit
               </Link>
@@ -178,16 +183,6 @@ export default function SitemapPage() {
             <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/exhibit-sponsor#sponsorship">
                 Sponsorship Opportunities
-              </Link>
-            </li>
-            <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/exhibit-sponsor#exhibitors-sponsors">
-                Exhibitors & Sponsors
-              </Link>
-            </li>
-            <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/exhibit-sponsor#associate">
-                Associate Your Brand
               </Link>
             </li>
           </ul>

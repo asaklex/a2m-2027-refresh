@@ -46,6 +46,7 @@ export const navSections: NavSection[] = [
     label: 'Exhibit or Sponsor',
     href: '/en/exhibit-sponsor',
     items: [
+      { label: 'Associate Your Brand', href: '/en/exhibit-sponsor#associate' },
       { label: 'Why Exhibit', href: '/en/exhibit-sponsor#why-exhibit' },
       {
         label: 'Exhibition opportunities',
@@ -57,8 +58,6 @@ export const navSections: NavSection[] = [
       },
       { label: 'Why Sponsor', href: '/en/exhibit-sponsor#why-sponsor' },
       { label: 'Sponsorship Opportunities', href: '/en/exhibit-sponsor#sponsorship' },
-      { label: 'Exhibitors & Sponsors', href: '/en/exhibit-sponsor#exhibitors-sponsors' },
-      { label: 'Associate Your Brand', href: '/en/exhibit-sponsor#associate' },
     ],
   },
   {
