@@ -14,7 +14,7 @@ import SitemapPage from './pages/SitemapPage'
 
 export const routes = [
   { path: '/en', title: 'A2M 2027 — Africa Mining in Montréal', component: HomePage },
-  { path: '/en/about', title: 'A2M Overview · A2M 2027', component: AboutPage },
+  { path: '/en/about', title: 'A2M 2027 · African Mining in Montreal', component: AboutPage },
   { path: '/en/program', title: 'Features · A2M 2027', component: ProgramPage },
   { path: '/en/program/ministerial-roundtable', title: 'Ministerial Roundtable · A2M 2027', component: MinisterialRoundtablePage },
   { path: '/en/program/honorary-country', title: 'Honorary Country · A2M 2027', component: HonoraryCountryPage },

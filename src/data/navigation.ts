@@ -7,10 +7,12 @@ export type NavSection = { label: string; href: string; items: NavFlyoutItem[] }
 
 export const navSections: NavSection[] = [
   {
-    label: 'A2M Overview',
+    label: 'A2M 2027',
     href: '/en/about',
     items: [
       { label: 'A2M 2027', href: '/en/about#conference' },
+      { label: 'Conference Themes', href: '/en/program#sessions' },
+      { label: 'Agenda', href: '/en/program#schedule' },
       { label: 'Why Participate?', href: '/en/about#why-participate' },
       { label: 'Institutional Endorsements', href: '/en/about#strategic-partners' },
       { label: 'Advisory Board', href: '/en/about#advisory-board' },
@@ -24,23 +26,20 @@ export const navSections: NavSection[] = [
     href: '/en/program',
     items: [
       { label: 'Highlights', href: '/en/program#highlights' },
-      { label: 'Program overview', href: '/en/program#sessions' },
-      { label: 'Speakers & Panellists', href: '/en/program#speakers' },
-      { label: 'Agenda', href: '/en/program#schedule' },
-      {
-        label: 'Ministerial Roundtable',
-        href: '/en/program/ministerial-roundtable',
-        children: [
-          { label: 'Overview', href: '/en/program/ministerial-roundtable#ministerial-round-table' },
-          { label: "Canada's Africa Strategy", href: '/en/program/ministerial-roundtable#canada-africa-strategy' },
-          { label: 'Honorary Patron', href: '/en/program/ministerial-roundtable#honorary-patron' },
-        ],
-      },
       { label: 'Honorary Country', href: '/en/program/honorary-country' },
       { label: 'Women in Mining Forum', href: '/en/program/women-in-mining' },
       { label: "Investors' Breakfast", href: '/en/program/investors-breakfast' },
       { label: 'Business Matchmaking', href: '/en/program#matchmaking' },
       { label: 'Networking & Social Events', href: '/en/program/networking' },
+    ],
+  },
+  {
+    label: 'Ministerial Roundtable',
+    href: '/en/program/ministerial-roundtable',
+    items: [
+      { label: 'Overview', href: '/en/program/ministerial-roundtable#ministerial-round-table' },
+      { label: 'Chairpersons', href: '/en/program/ministerial-roundtable#chairpersons' },
+      { label: "Canada's Africa Strategy", href: '/en/program/ministerial-roundtable#canada-africa-strategy' },
     ],
   },
   {

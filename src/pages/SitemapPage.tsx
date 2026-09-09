@@ -32,14 +32,24 @@ export default function SitemapPage() {
   <section className="a2m-reveal py-14 lg:py-16">
     <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <nav aria-label="A2M Overview">
+        <nav aria-label="A2M 2027">
           <Link className="font-display font-semibold text-h3 text-emerald-deep hover:text-emerald-cta" to="/en/about">
-            A2M Overview
+            A2M 2027
           </Link>
           <ul className="mt-4 flex flex-col gap-2 border-hairline border-l pl-4">
             <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/about#conference">
                 A2M 2027
+              </Link>
+            </li>
+            <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#sessions">
+                Conference Themes
+              </Link>
+            </li>
+            <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#schedule">
+                Agenda
               </Link>
             </li>
             <li>
@@ -85,43 +95,6 @@ export default function SitemapPage() {
               </Link>
             </li>
             <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#sessions">
-                Program overview
-              </Link>
-            </li>
-            <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#speakers">
-                Speakers & Panellists
-              </Link>
-            </li>
-            <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#schedule">
-                Agenda
-              </Link>
-            </li>
-            <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable">
-                Ministerial Roundtable
-              </Link>
-              <ul className="mt-2 flex flex-col gap-1.5 border-hairline border-l pl-4">
-                <li>
-                  <Link className="text-muted text-small transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#ministerial-round-table">
-                    Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-muted text-small transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#canada-africa-strategy">
-                    Canada's Africa Strategy
-                  </Link>
-                </li>
-                <li>
-                  <Link className="text-muted text-small transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#honorary-patron">
-                    Honorary Patron
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/honorary-country">
                 Honorary Country
               </Link>
@@ -144,6 +117,28 @@ export default function SitemapPage() {
             <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/networking">
                 Networking & Social Events
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <nav aria-label="Ministerial Roundtable">
+          <Link className="font-display font-semibold text-h3 text-emerald-deep hover:text-emerald-cta" to="/en/program/ministerial-roundtable">
+            Ministerial Roundtable
+          </Link>
+          <ul className="mt-4 flex flex-col gap-2 border-hairline border-l pl-4">
+            <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#ministerial-round-table">
+                Overview
+              </Link>
+            </li>
+            <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#chairpersons">
+                Chairpersons
+              </Link>
+            </li>
+            <li>
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/ministerial-roundtable#canada-africa-strategy">
+                Canada's Africa Strategy
               </Link>
             </li>
           </ul>

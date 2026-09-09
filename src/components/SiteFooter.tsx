@@ -62,8 +62,8 @@ export default function SiteFooter() {
           />
           <p className="mt-4 text-champagne/85 text-small">A2M is North America's premier platform for mining investment in Africa.</p>
         </div>
-        <nav aria-label="A2M Overview" className="flex flex-col gap-3">
-          <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">A2M Overview</h2>
+        <nav aria-label="A2M 2027" className="flex flex-col gap-3">
+          <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">A2M 2027</h2>
           <ul className="flex flex-col gap-2">
             {footerOverviewLinks.map((link) => (
               <li key={link.href}>

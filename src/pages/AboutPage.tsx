@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
               <span aria-current="page" className="text-muted">
-                A2M Overview
+                A2M 2027
               </span>
             </li>
           </ol>
