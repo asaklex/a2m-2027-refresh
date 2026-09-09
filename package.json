@@ -1,0 +1,29 @@
+{
+  "name": "a2m-2027",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A2M 2027 — Africa Mining in Montréal. Maintainable rebuild migrated from the archived snapshot clone.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "check:fidelity": "node tools/check-fidelity.mjs diff"
+  },
+  "dependencies": {
+    "lucide-react": "1.28.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "htmlparser2": "^10.0.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.2.0"
+  }
+}
