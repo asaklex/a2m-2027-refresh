@@ -40,40 +40,8 @@ export default function ProgramPage() {
         , dialogue and discovery
       </h1>
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-        Three days of keynotes, panels, B2B meetings and networking events (June 7–9, 2027).
+        Three days of keynotes, panels, B2B meetings and networking events.
       </p>
-      <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              Format
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              3 days
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              B2B meetings
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              3,000+
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              Ministerial Roundtable
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              June 6
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <div className="sticky top-20 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-[155px] lg:block">
@@ -88,10 +56,7 @@ export default function ProgramPage() {
             Highlights
           </a>
           <a href="#sessions" data-nav-id="sessions" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors text-muted hover:bg-anthracite/5 hover:text-anthracite">
-            Program overview
-          </a>
-          <a href="#speakers" data-nav-id="speakers" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors text-muted hover:bg-anthracite/5 hover:text-anthracite">
-            Speakers & Panellists
+            Conference Themes
           </a>
           <a href="#schedule" data-nav-id="schedule" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors text-muted hover:bg-anthracite/5 hover:text-anthracite">
             Agenda
@@ -320,14 +285,15 @@ export default function ProgramPage() {
               </div>
             </div>
             <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
-              <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-                Investment Showcase & Capital Markets Lounge
-              </p>
               <p className="text-body text-muted">
                 The Investment Showcase presents pre-screened African projects to investors; the Capital Markets Lounge offers private negotiation space. Both operate alongside the A2M business matchmaking.
               </p>
-              <Link className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4" to="/en/program#matchmaking">
-                Explore Business Matchmaking
+              <Link className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4" to="/en/plan-your-visit#register">
+                Register — Investment Showcase & Capital Lounge
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </div>
@@ -338,13 +304,10 @@ export default function ProgramPage() {
   <section id="sessions" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
     <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-        Program overview
+        Conference Themes
       </h2>
       <div className="mt-8">
         <div className="flex flex-col gap-6">
-          <p className="max-w-[760px] text-lead text-muted">
-            2027 theme — "The Alliance for the Minerals of Tomorrow: Investing, Transforming, and Sharing Value."
-          </p>
           <div className="flex flex-col gap-8">
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
               A Platform for Strategic Connections, Deal-Making, and Sustainable Growth
@@ -363,25 +326,6 @@ export default function ProgramPage() {
               </em>
               .
             </p>
-            <div className="a2m-motif relative overflow-hidden rounded-sm border-2 border-gold/60 bg-emerald-deep text-ivory shadow-card">
-              <div className="relative z-10 grid items-center gap-8 p-8 lg:grid-cols-[1fr_380px] lg:p-12">
-                <div className="flex flex-col items-start gap-4">
-                  <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em]">
-                    2027 Theme
-                  </span>
-                  <h3 className="font-bold text-[1.4rem] text-ivory leading-snug [font-family:var(--font-display)] sm:text-[1.7rem]">
-                    The Alliance for the
-                    <span className="text-gold">
-                      Minerals of Tomorrow
-                    </span>
-                    : Investing, Transforming, and Sharing Value
-                  </h3>
-                  <p className="max-w-[560px] text-champagne/85 text-body">
-                    This central theme underscores the need to build win-win partnerships for responsible and sustainable mining. How can stakeholders in the mining sector turn this vision of an alliance for the minerals of tomorrow into reality?
-                  </p>
-                </div>
-              </div>
-            </div>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
               Theme Breakdown
             </h3>
@@ -986,101 +930,6 @@ export default function ProgramPage() {
                 },
               ]}
             />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="speakers" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
-      <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-        Speakers & Panellists
-      </h2>
-      <div className="mt-8">
-        <div className="flex flex-col gap-6">
-          <p className="max-w-[760px] text-lead text-muted">
-            Leading executives and experts from Canada and Africa. The line-up will be unveiled soon.
-          </p>
-          <div className="flex flex-col gap-8">
-            <figure>
-              <div className="relative">
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-1.jpg 32w, /images/people/portrait-1.jpg 48w, /images/people/portrait-1.jpg 64w, /images/people/portrait-1.jpg 96w, /images/people/portrait-1.jpg 128w, /images/people/portrait-1.jpg 256w, /images/people/portrait-1.jpg 384w, /images/people/portrait-1.jpg 640w, /images/people/portrait-1.jpg 750w, /images/people/portrait-1.jpg 828w, /images/people/portrait-1.jpg 1080w, /images/people/portrait-1.jpg 1200w, /images/people/portrait-1.jpg 1920w, /images/people/portrait-1.jpg 2048w, /images/people/portrait-1.jpg 3840w" src="/images/people/portrait-1.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-2.jpg 32w, /images/people/portrait-2.jpg 48w, /images/people/portrait-2.jpg 64w, /images/people/portrait-2.jpg 96w, /images/people/portrait-2.jpg 128w, /images/people/portrait-2.jpg 256w, /images/people/portrait-2.jpg 384w, /images/people/portrait-2.jpg 640w, /images/people/portrait-2.jpg 750w, /images/people/portrait-2.jpg 828w, /images/people/portrait-2.jpg 1080w, /images/people/portrait-2.jpg 1200w, /images/people/portrait-2.jpg 1920w, /images/people/portrait-2.jpg 2048w, /images/people/portrait-2.jpg 3840w" src="/images/people/portrait-2.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-3.jpg 32w, /images/people/portrait-3.jpg 48w, /images/people/portrait-3.jpg 64w, /images/people/portrait-3.jpg 96w, /images/people/portrait-3.jpg 128w, /images/people/portrait-3.jpg 256w, /images/people/portrait-3.jpg 384w, /images/people/portrait-3.jpg 640w, /images/people/portrait-3.jpg 750w, /images/people/portrait-3.jpg 828w, /images/people/portrait-3.jpg 1080w, /images/people/portrait-3.jpg 1200w, /images/people/portrait-3.jpg 1920w, /images/people/portrait-3.jpg 2048w, /images/people/portrait-3.jpg 3840w" src="/images/people/portrait-3.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-4.jpg 32w, /images/people/portrait-4.jpg 48w, /images/people/portrait-4.jpg 64w, /images/people/portrait-4.jpg 96w, /images/people/portrait-4.jpg 128w, /images/people/portrait-4.jpg 256w, /images/people/portrait-4.jpg 384w, /images/people/portrait-4.jpg 640w, /images/people/portrait-4.jpg 750w, /images/people/portrait-4.jpg 828w, /images/people/portrait-4.jpg 1080w, /images/people/portrait-4.jpg 1200w, /images/people/portrait-4.jpg 1920w, /images/people/portrait-4.jpg 2048w, /images/people/portrait-4.jpg 3840w" src="/images/people/portrait-4.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-5.jpg 32w, /images/people/portrait-5.jpg 48w, /images/people/portrait-5.jpg 64w, /images/people/portrait-5.jpg 96w, /images/people/portrait-5.jpg 128w, /images/people/portrait-5.jpg 256w, /images/people/portrait-5.jpg 384w, /images/people/portrait-5.jpg 640w, /images/people/portrait-5.jpg 750w, /images/people/portrait-5.jpg 828w, /images/people/portrait-5.jpg 1080w, /images/people/portrait-5.jpg 1200w, /images/people/portrait-5.jpg 1920w, /images/people/portrait-5.jpg 2048w, /images/people/portrait-5.jpg 3840w" src="/images/people/portrait-5.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-6.jpg 32w, /images/people/portrait-6.jpg 48w, /images/people/portrait-6.jpg 64w, /images/people/portrait-6.jpg 96w, /images/people/portrait-6.jpg 128w, /images/people/portrait-6.jpg 256w, /images/people/portrait-6.jpg 384w, /images/people/portrait-6.jpg 640w, /images/people/portrait-6.jpg 750w, /images/people/portrait-6.jpg 828w, /images/people/portrait-6.jpg 1080w, /images/people/portrait-6.jpg 1200w, /images/people/portrait-6.jpg 1920w, /images/people/portrait-6.jpg 2048w, /images/people/portrait-6.jpg 3840w" src="/images/people/portrait-6.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-7.jpg 32w, /images/people/portrait-7.jpg 48w, /images/people/portrait-7.jpg 64w, /images/people/portrait-7.jpg 96w, /images/people/portrait-7.jpg 128w, /images/people/portrait-7.jpg 256w, /images/people/portrait-7.jpg 384w, /images/people/portrait-7.jpg 640w, /images/people/portrait-7.jpg 750w, /images/people/portrait-7.jpg 828w, /images/people/portrait-7.jpg 1080w, /images/people/portrait-7.jpg 1200w, /images/people/portrait-7.jpg 1920w, /images/people/portrait-7.jpg 2048w, /images/people/portrait-7.jpg 3840w" src="/images/people/portrait-7.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                  <div aria-hidden="true" className="flex flex-col items-center gap-3 rounded-sm border border-hairline bg-card p-5 text-center shadow-card">
-                    <span className="relative size-16 overflow-hidden rounded-full bg-mist">
-                      <img alt="" loading="lazy" decoding="async" data-nimg="fill" className="scale-110 object-cover blur-[6px]" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="64px" srcSet="/images/people/portrait-8.jpg 32w, /images/people/portrait-8.jpg 48w, /images/people/portrait-8.jpg 64w, /images/people/portrait-8.jpg 96w, /images/people/portrait-8.jpg 128w, /images/people/portrait-8.jpg 256w, /images/people/portrait-8.jpg 384w, /images/people/portrait-8.jpg 640w, /images/people/portrait-8.jpg 750w, /images/people/portrait-8.jpg 828w, /images/people/portrait-8.jpg 1080w, /images/people/portrait-8.jpg 1200w, /images/people/portrait-8.jpg 1920w, /images/people/portrait-8.jpg 2048w, /images/people/portrait-8.jpg 3840w" src="/images/people/portrait-8.jpg" />
-                    </span>
-                    <span className="h-2.5 w-20 rounded-full bg-hairline blur-[2px]" />
-                    <span className="h-2 w-14 rounded-full bg-hairline-soft blur-[2px]" />
-                  </div>
-                </div>
-                <span className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 whitespace-nowrap rounded-sm border border-gold/60 bg-ivory/90 px-4 py-2 font-semibold text-[11px] text-emerald-deep uppercase tracking-[0.14em] shadow-card backdrop-blur-sm">
-                  To be revealed soon
-                </span>
-              </div>
-              <figcaption className="mt-3 text-small text-subtle">
-                Speakers & panellists — profiles to be announced
-              </figcaption>
-            </figure>
-            <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
-              <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-                Become a speaker
-              </p>
-              <p className="text-body text-muted">
-                Would you like to speak? Submit your proposal to info@a2mevent.com.
-              </p>
-              <Link className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4" to="/en/about?interest=interestSpeaker#contact">
-                Propose a talk
-              </Link>
-            </div>
           </div>
         </div>
       </div>
@@ -1852,6 +1701,10 @@ export default function ProgramPage() {
                 <div className="mt-2 flex flex-wrap items-center gap-3">
                   <Link className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px]" to="/en/plan-your-visit#register">
                     Get your pass
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
               </div>
@@ -1961,8 +1814,26 @@ export default function ProgramPage() {
           </div>
           <div className="flex flex-col gap-6">
             <h3 className="font-display font-semibold text-h3 text-ink">
-              Demo
+              Demo — how the app works
             </h3>
+            <div style={{ aspectRatio: '16 / 9' }} className="relative max-w-[760px] overflow-hidden rounded-sm border border-hairline bg-emerald-deep">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
+                <span className="inline-flex size-16 items-center justify-center rounded-full border border-gold/50 bg-emerald-deep/60 text-gold">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-7">
+                    <g fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m10 8.5 5 3.5-5 3.5z" fill="currentColor" stroke="none" />
+                    </g>
+                  </svg>
+                </span>
+                <p className="font-display font-semibold text-[15px] text-ivory">
+                  Video walkthrough of the A2M matchmaking app
+                </p>
+                <p className="text-small text-champagne/80">
+                  Profile, match, meet — see the platform in action. Video coming soon.
+                </p>
+              </div>
+            </div>
             <div className="grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
               <div>
                 <div className="flex items-start gap-4">
