@@ -31,6 +31,15 @@ Deep dive on the migration and verification system: `docs/migration-and-fidelity
 the previous dev's clone, kept for its SSR snapshots; `perfect-copy` and
 `feature/reactable` are redundant older duplicates of that clone.
 
+**Branch workflow (since 2026-09-09).** Work on short-lived feature branches
+cut from `main` (`YYYYMMDD-slug`, matching the client-change convention) and
+merge to `main` only when the work is done. **Pushing to `main` auto-deploys
+to production** — Netlify serves `africa-mining-montreal.netlify.app` from
+this repo's `main` (SPA fallback via `public/_redirects`). Treat a merge to
+`main` as a release: run `npm run build` and browser-check the affected
+routes on the feature branch first. Keep the small, dated, revertible
+commits on the feature branch so a client flip-flop reverts cleanly.
+
 Consequences:
 
 - **Never try to fetch the reference origin** (`a2m-website-git...vercel.app`)
