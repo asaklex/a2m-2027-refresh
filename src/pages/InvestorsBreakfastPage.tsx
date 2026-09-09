@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useAccountDialog } from '../components/AccountDialogContext'
 
 export default function InvestorsBreakfastPage() {
+  const { openAccount } = useAccountDialog()
   return (
     <>
   <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
@@ -106,6 +108,13 @@ export default function InvestorsBreakfastPage() {
             <p className="text-body text-muted">
               Reserved for capital institutions (promoters and general audience excluded). Complimentary for qualified investors.
             </p>
+            <Link className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px] mt-4" to="/en/about?interest=interestInvestment#contact">
+              Register as Investor
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
           </div>
           <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
             Why this program exists
@@ -171,6 +180,67 @@ export default function InvestorsBreakfastPage() {
             <p className="text-body text-muted">
               Eligibility is assessed by the A2M program committee on application.
             </p>
+          </div>
+          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
+            Pre-screened projects
+          </h3>
+          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+            The sequence below previews the calibre of projects presented through the Investment Showcase. The full deal room — with detailed dossiers — opens with your investor login.
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+              <p className="font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
+                Gold
+              </p>
+              <p className="tnum mt-2 font-display font-bold text-data text-emerald-deep">
+                Feasibility
+              </p>
+              <p className="mt-1 text-small text-muted">
+                West Africa · pre-screened dossier
+              </p>
+            </div>
+            <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+              <p className="font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
+                Lithium
+              </p>
+              <p className="tnum mt-2 font-display font-bold text-data text-emerald-deep">
+                Construction
+              </p>
+              <p className="mt-1 text-small text-muted">
+                Hard-rock pegmatite · offtake pending
+              </p>
+            </div>
+            <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+              <p className="font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
+                Copper
+              </p>
+              <p className="tnum mt-2 font-display font-bold text-data text-emerald-deep">
+                Exploration
+              </p>
+              <p className="mt-1 text-small text-muted">
+                Central Africa · Tier-1 target
+              </p>
+            </div>
+            <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+              <p className="font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
+                Manganese
+              </p>
+              <p className="tnum mt-2 font-display font-bold text-data text-emerald-deep">
+                Production
+              </p>
+              <p className="mt-1 text-small text-muted">
+                Expansion capital · exporting
+              </p>
+            </div>
+          </div>
+          <div>
+            <button type="button" onClick={() => openAccount('login')} className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-7 text-[12px]">
+              View all projects
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
