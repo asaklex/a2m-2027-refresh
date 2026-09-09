@@ -8,12 +8,12 @@ export default function HomePage() {
     <>
   <HeroCarousel />
   <KpiBand
-    footnote="Estimated figures for the 2027 edition."
+    footnote="The Canada–Africa mining relationship at a glance."
     items={[
-      { value: "1 500+", label: "delegates · 35 countries" },
-      { value: "30+", label: "African Ministers" },
-      { value: "100+", label: "TSX, TSX-V and other major securities-listed mining companies" },
-      { value: "3 000+", label: "B2B Meetings Platform" },
+      { value: "30%", label: "of global mineral reserves" },
+      { value: "45B+", label: "Canadian investments" },
+      { value: "120+", label: "TSX-listed companies active" },
+      { value: "30+", label: "African mining countries" },
     ]}
   />
   <section className="a2m-reveal py-14 lg:py-16 bg-ivory">
@@ -21,8 +21,37 @@ export default function HomePage() {
       <div className="mx-auto max-w-[900px] text-center">
         <span className="mx-auto mb-6 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
         <h2 className="text-balance font-display font-bold text-h2 text-ink tracking-[-0.01em]">
-          North America's Premier African Mining Investment Platform
+          Unlocking Africa's Mining Potential in Montreal
         </h2>
+        <p className="mt-6 text-lead text-muted leading-[1.7]">
+          African Mining in Montreal (A2M) brings together the leading figures of the African mining industry in Montreal, Canada — government officials, industry visionaries, financiers, investors, and service providers — to explore Africa's vast mining potential and unlock transformative opportunities. This flagship event features keynote presentations from renowned industry thought leaders, interactive panel discussions, investment showcases and exclusive networking opportunities.
+        </p>
+      </div>
+      <div className="mx-auto mt-10 flex max-w-[760px] flex-wrap items-start justify-center gap-x-12 gap-y-5 border-t border-hairline pt-8">
+        <div className="text-center">
+          <p className="font-semibold text-[10px] text-muted uppercase tracking-[0.16em]">
+            Format
+          </p>
+          <p className="mt-1 font-display font-semibold text-[15px] text-emerald-deep">
+            3 days
+          </p>
+        </div>
+        <div className="text-center">
+          <p className="font-semibold text-[10px] text-muted uppercase tracking-[0.16em]">
+            B2B meetings
+          </p>
+          <p className="mt-1 font-display font-semibold text-[15px] text-emerald-deep">
+            3,000+
+          </p>
+        </div>
+        <div className="text-center">
+          <p className="font-semibold text-[10px] text-muted uppercase tracking-[0.16em]">
+            Ministerial Roundtable
+          </p>
+          <p className="mt-1 font-display font-semibold text-[15px] text-emerald-deep">
+            June 6
+          </p>
+        </div>
       </div>
     </div>
   </section>
