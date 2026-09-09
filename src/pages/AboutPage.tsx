@@ -57,20 +57,20 @@ export default function AboutPage() {
         <div className="flex items-center gap-2.5">
           <div>
             <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              Delegates
+              Venue
             </p>
             <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              1,500+
+              Centre Mont-Royal, Montréal
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2.5">
           <div>
             <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              African ministers
+              Honorary Country
             </p>
             <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              30+
+              Côte d'Ivoire
             </p>
           </div>
         </div>
@@ -102,10 +102,26 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
                 <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
-                  1 500+
+                  30%
                 </span>
                 <span className="mt-1 block text-small text-muted">
-                  delegates · 35 countries
+                  of global mineral reserves
+                </span>
+              </div>
+              <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+                <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
+                  45B+
+                </span>
+                <span className="mt-1 block text-small text-muted">
+                  Canadian investments
+                </span>
+              </div>
+              <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
+                <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
+                  120+
+                </span>
+                <span className="mt-1 block text-small text-muted">
+                  TSX-listed companies active
                 </span>
               </div>
               <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
@@ -113,36 +129,13 @@ export default function AboutPage() {
                   30+
                 </span>
                 <span className="mt-1 block text-small text-muted">
-                  African ministers
-                </span>
-              </div>
-              <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
-                <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
-                  100+
-                </span>
-                <span className="mt-1 block text-small text-muted">
-                  listed companies (TSX/TSX-V)
-                </span>
-              </div>
-              <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
-                <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
-                  3 000+
-                </span>
-                <span className="mt-1 block text-small text-muted">
-                  B2B meetings
+                  African mining countries
                 </span>
               </div>
             </div>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
               Who We Are
             </h3>
-            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-              A2M 2027 — African Mining in Montreal is the first North American platform dedicated exclusively to investment, deal-making, and high-level political dialogue between Canada and Africa in the mining and critical minerals sector.
-              <em className="font-medium [font-family:var(--font-display)] text-copper">
-                Three days. One city. One shared purpose
-              </em>
-              : to forge the strategic partnership that Canada and Africa have been building separately for years, a partnership neither can fully realize alone.
-            </p>
             <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
               <em className="font-medium [font-family:var(--font-display)] text-copper">
                 We are not another general mining conference.
@@ -212,7 +205,7 @@ export default function AboutPage() {
               <em className="font-medium [font-family:var(--font-display)] text-copper">
                 Montréal is the ideal host city.
               </em>
-              It is the global capital of junior mining finance, home to a vibrant bilingual business community that naturally bridges Canada and Africa, and North America's leading destination for international association congresses. Nowhere else offers the institutional depth, credibility, and convening power required for this event.
+              It is home to a vibrant bilingual business community that naturally bridges Canada and Africa, and North America's leading destination for international association congresses. Nowhere else offers the institutional depth, credibility, and convening power required for this event.
             </p>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
               Our Vision
@@ -1530,43 +1523,6 @@ export default function AboutPage() {
               <p className="text-body text-muted">
                 With each edition, A2M commits to allocating up to 10% of revenues collected into high-impact programs across Africa, with two core priorities: children's education and women's empowerment.
               </p>
-            </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <path fill="none" stroke="currentColor" strokeWidth="1.5" d="m12 9l4.5-4.5m-4.5 10L18.5 8M12 19.5l7.5-7.5M12 22c4.418 0 8-3.646 8-8.143c0-4.462-2.553-9.67-6.537-11.531A3.45 3.45 0 0 0 12 2m0 20c-4.418 0-8-3.646-8-8.143c0-4.462 2.553-9.67 6.537-11.531A3.45 3.45 0 0 1 12 2m0 20V2" />
-                    </svg>
-                  </span>
-                  <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                    Children's education
-                  </h3>
-                  <p className="text-body text-muted">
-                    Support for carefully selected local community organisations and technical and vocational training institutions, in line with the A2M Sustainability Program.
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <circle cx="9" cy="6" r="4" />
-                        <path strokeLinecap="round" d="M15 9a3 3 0 1 0 0-6" />
-                        <ellipse cx="9" cy="17" rx="7" ry="4" />
-                        <path strokeLinecap="round" d="M18 14c1.754.385 3 1.359 3 2.5c0 1.03-1.014 1.923-2.5 2.37" />
-                      </g>
-                    </svg>
-                  </span>
-                  <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                    Women's empowerment
-                  </h3>
-                  <p className="text-body text-muted">
-                    Mining skills development programs, selected for their grassroots presence and the measurability of their results.
-                  </p>
-                </div>
-              </div>
             </div>
             <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
               These funds will be directed to carefully selected local community organisations, technical and vocational training institutions, and mining skills development programs, selected for their grassroots presence and the measurability of their results.

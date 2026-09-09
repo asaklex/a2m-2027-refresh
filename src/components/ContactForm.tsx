@@ -5,18 +5,14 @@ import { useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 
 const interests: { id: string; label: string }[] = [
-  { id: 'interestDelegate', label: 'Attend as a Delegate' },
   { id: 'interestInvestment', label: 'Investment Opportunities' },
   { id: 'interestExhibit', label: 'Exhibit at A2M' },
   { id: 'interestSponsorship', label: 'Sponsorship' },
   { id: 'interestGovernment', label: 'Government / Ministerial Participation' },
   { id: 'interestMedia', label: 'Media Partnership' },
   { id: 'interestSpeaker', label: 'Speaker / Panellist Inquiry' },
-  { id: 'interestWomen', label: 'Women in Mining Forum' },
-  { id: 'interestMatchmaking', label: 'Business Matchmaking' },
   { id: 'interestPartnership', label: 'Partnership with A2M' },
   { id: 'interestGeneral', label: 'General Inquiry' },
-  { id: 'interestOther', label: 'Other (please specify)' },
 ]
 
 const fields: { id: string; label: string; type?: string; autoComplete?: string; required?: boolean; half?: boolean }[] = [
