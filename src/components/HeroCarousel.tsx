@@ -43,7 +43,7 @@ const slides: Slide[] = [
   },
   {
     image: '/images/hero/slide-2.jpg',
-    eyebrow: '1,500+ delegates · 35 countries',
+    eyebrow: '30+ African mining countries',
     heading: { before: 'Build the partnerships that will power the', gold: 'clean energy transition' },
     paragraph: "Ministers, mining executives, institutional investors and suppliers gather to build tomorrow's partnerships.",
   },

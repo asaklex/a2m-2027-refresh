@@ -161,3 +161,46 @@ node tools/snapshot-to-jsx.mjs /tmp/a2m-snapshots src/pages
 re-applied. As of the initial migration no page carries hand edits beyond
 what the tool emits, so regeneration is currently lossless; re-run the
 fidelity harness afterwards to confirm.
+
+## Client changes (2026-09-08) — branch `20260908-client-changes`
+
+The client's change requests (`docs/New-Changes-Sept-8-2026/Website_comments.docx`,
+~27 MB of docx + screenshots, deliberately uncommitted) **supersede the
+snapshot fidelity contract** for everything they cover. The branch applies
+them in nine dated commits (`512081c` → `2567b8e`), one logical batch each:
+
+| Commit | Scope |
+| --- | --- |
+| `512081c` | About: hero badges → Venue / Honorary Country; KPI cards → industry numbers (30% reserves, 45B+, 120+ TSX, 30+ countries); Who-We-Are lead deleted; "junior mining finance" clause deleted; sustainability boxes deleted; contact form interests trimmed |
+| `66011e6` | Home: KpiBand → industry numbers; "Unlocking Africa's Mining Potential in Montreal" intro; Format/B2B/Roundtable highlight stats added |
+| `d0234e1` | Program: "(June 7–9, 2027)" deleted; hero stat badges moved to home; "Program overview" → "Conference Themes"; 2027 Theme banner deleted; Showcase callout → registration button; Speakers section removed; Demo block → video placeholder; CTA icons |
+| `faa0075` | Nav: first section renamed "A2M 2027" and gains Conference Themes + Agenda; Ministerial Roundtable promoted to top level; "Honorary Patron" → "Chairpersons"; sitemap/footer synced |
+| `ab68b13` | Roundtable: "By invitation only"; dialogue-line prefix dropped; axis 02 rewritten; strategy PDF callout moved right; "What This Means for You" accordion panels authored; Chairpersons section renamed |
+| `5e869aa` | WIM/Breakfast/Networking: quote marks removed from three taglines; WIM workforce badge deleted; Gala → June 8, Networking Evening badge deleted; networking hero photo → Black-professionals reception; evenings-before-Gala ordering |
+| `7b23749` | Honorary Country: Selection badge and Call-for-Applications deleted; Côte d'Ivoire content authored (Why CI, flagship minerals, what CI brings); `N° 1` → `#1` |
+| `e39f80f` | Investors' Breakfast: "Register as Investor" CTA; pre-screened project teaser cards; "View all projects" → account dialog (login) |
+| `2567b8e` | Exhibit/Sponsor: badges swapped/deleted; Reserve-your-stand deleted; Why-Sponsor duplicate lead removed; tier boxes → text summary; Exhibitors & Sponsors section deleted; Associate Your Brand moved first |
+
+Plus `src/components/HeroCarousel.tsx`: slide-2 eyebrow
+"1,500+ delegates · 35 countries" → "30+ African mining countries" (the
+struck string in the docx).
+
+Interpretation calls worth knowing (docx was ambiguous):
+
+- **Speakers**: the docx both moves "Speakers & panellists" to the A2M 2027
+  section and marks it `[Remove]`. Resolution: removed from the Program page
+  and nav entirely; the home teaser links to `/en/about#advisory-board`
+  (profiles will live there). `PartnerPage`'s "Become a speaker" section was
+  not mentioned and stays.
+- **Networking lead sentence**: struck in the docx *and* "remove quotes" —
+  resolved as: hero tagline kept unquoted, duplicate body lead deleted.
+- **Gala date**: docx shows June 8 while the site said June 7 — applied
+  June 8 (networking evenings now explicitly precede the Gala).
+- **Networking photo**: swapped to `/images/program/networking-evening.jpg`
+  (copy of the in-library `home/unlocking.jpg` — a reception centred on
+  Black professionals; reusing an already-licensed asset instead of sourcing
+  an unlicensed web image).
+
+The fidelity harness is unchanged and still runs; on this branch large
+diffs are expected on About, Home, Program, Roundtable, WIM, Networking,
+Honorary Country, Investors' Breakfast and Exhibit/Sponsor.

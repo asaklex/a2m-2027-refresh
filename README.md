@@ -66,7 +66,13 @@ The one-off migration pipeline, kept for provenance and future re-runs:
 
 ## Fidelity
 
-Verification: the canonical DOM diff (`tools/check-fidelity.mjs`) shows every
+> **Branch `20260908-client-changes`:** the client's change requests of
+> 2026-09-08 (`docs/New-Changes-Sept-8-2026/`) supersede snapshot fidelity.
+> Everything below describes the frozen migration as it lives on `master`;
+> the client-driven divergences are catalogued in
+> `docs/migration-and-fidelity.md` → *Client changes (2026-09-08)*.
+
+On `master`, the canonical DOM diff (`tools/check-fidelity.mjs`) shows every
 page **byte-identical to its archived snapshot outside the site header**.
 Every page carries the same 48 header-only diff lines from the dropdown
 controller (below); three pages have additional intentional restorations —
@@ -77,7 +83,7 @@ not losses:
 | All (header) | Dropdowns are state-driven (hover intent, one panel at a time, close on navigation/Escape/outside click) instead of pure CSS `group-hover` | The archived snapshots only captured the CSS states, not the original React controller; pure CSS hover let panels cross-fade on top of each other and stay open after navigating. `SiteHeader`'s `useDropdownController` restores the intended behaviour |
 | Home | The five non-active persona tab panels have content | The snapshot only server-rendered the active panel; the other five were captured from the client-rendered site by the legacy clone and are restored here |
 | About | The contact form exists | It was client-rendered (Next bailout marker) and never appears in the snapshot; its markup was captured by the legacy clone |
-| Ministerial Roundtable | Accordion triggers carry `aria-controls` | Accessibility improvement; the panels themselves are empty because their content was client-rendered and was never captured |
+| Ministerial Roundtable | Accordion triggers carry `aria-controls` | Accessibility improvement; the panels themselves are empty because their content was client-rendered and was never captured *(on the client-changes branch the panels are authored)* |
 
 Known dead ends inherited from the archived site (unchanged on purpose):
 
