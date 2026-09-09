@@ -68,6 +68,7 @@ intentional restorations, not losses:
 
 | Page | Difference | Why |
 | --- | --- | --- |
+| All (header) | Dropdowns are state-driven (hover intent, one panel at a time, close on navigation/Escape/outside click) instead of pure CSS `group-hover` | The archived snapshots only captured the CSS states, not the original React controller; pure CSS hover let panels cross-fade on top of each other and stay open after navigating. `SiteHeader`'s `useDropdownController` restores the intended behaviour |
 | Home | The five non-active persona tab panels have content | The snapshot only server-rendered the active panel; the other five were captured from the client-rendered site by the legacy clone and are restored here |
 | About | The contact form exists | It was client-rendered (Next bailout marker) and never appears in the snapshot; its markup was captured by the legacy clone |
 | Ministerial Roundtable | Accordion triggers carry `aria-controls` | Accessibility improvement; the panels themselves are empty because their content was client-rendered and was never captured |

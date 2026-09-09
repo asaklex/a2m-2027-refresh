@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ALargeSmall, ChevronDown, ChevronRight, Menu } from 'lucide-react'
 import { navSections, legacyFrenchOrigin } from '../data/navigation'
@@ -14,16 +15,100 @@ const navLinkClass = (active: boolean) =>
 
 const dropLinkClass = 'block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep'
 
+const subLinkClass =
+  'flex items-center justify-between gap-2 px-4 py-2 font-semibold text-body text-ink transition-colors hover:bg-mist hover:text-emerald-deep'
+
 function goFrench() {
   window.location.assign(`${legacyFrenchOrigin}/fr${window.location.pathname.replace(/^\/en/, '')}`)
+}
+
+// Hover-intent timing: menus open quickly, but stay open briefly after the
+// pointer leaves so diagonal moves towards them don't snap them shut.
+const OPEN_DELAY_MS = 60
+const CLOSE_DELAY_MS = 260
+
+/** State-driven dropdown behaviour for one nav section and its optional
+ *  nested flyout: only one panel open at a time, closes on navigation,
+ *  Escape, outside pointer-down, and on pointer leave with a grace
+ *  delay. Keyboard users get the same menu via focus. */
+function useDropdownController() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [flyoutOpen, setFlyoutOpen] = useState(false)
+  const openTimer = useRef<number>(0)
+  const closeTimer = useRef<number>(0)
+  const rootRef = useRef<HTMLElement>(null)
+
+  const clearTimers = () => {
+    window.clearTimeout(openTimer.current)
+    window.clearTimeout(closeTimer.current)
+  }
+
+  const openMenu = (index: number) => {
+    clearTimers()
+    if (openIndex === index) return
+    // Opening from closed: brief intent delay. Switching menus: swap at once
+    // so two panels never fade over each other.
+    if (openIndex === null) openTimer.current = window.setTimeout(() => setOpenIndex(index), OPEN_DELAY_MS)
+    else setOpenIndex(index)
+  }
+
+  const scheduleClose = () => {
+    clearTimers()
+    closeTimer.current = window.setTimeout(() => {
+      setOpenIndex(null)
+      setFlyoutOpen(false)
+    }, CLOSE_DELAY_MS)
+  }
+
+  // Close when the route changes (clicking a menu item navigates).
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    clearTimers()
+    setOpenIndex(null)
+    setFlyoutOpen(false)
+  }, [pathname, hash])
+
+  // Escape closes and re-focuses the section link; outside pointer-down closes.
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape' || openIndex === null) return
+      event.stopPropagation()
+      const link = rootRef.current?.querySelectorAll<HTMLAnchorElement>('nav > ul > li > a')[openIndex]
+      setOpenIndex(null)
+      setFlyoutOpen(false)
+      link?.focus()
+    }
+    const onPointerDown = (event: PointerEvent) => {
+      if (openIndex === null) return
+      if (rootRef.current && !rootRef.current.contains(event.target as Node)) {
+        clearTimers()
+        setOpenIndex(null)
+        setFlyoutOpen(false)
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    document.addEventListener('pointerdown', onPointerDown)
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.removeEventListener('pointerdown', onPointerDown)
+      clearTimers()
+    }
+  }, [openIndex])
+
+  return { rootRef, openIndex, flyoutOpen, openMenu, scheduleClose, cancelClose: clearTimers, setFlyoutOpen }
 }
 
 export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobileMenu }: Props) {
   const { pathname } = useLocation()
   const activeSection = navSections.find((s) => pathname === s.href || pathname.startsWith(s.href + '/'))
+  const { rootRef, openIndex, flyoutOpen, openMenu, scheduleClose, cancelClose, setFlyoutOpen } = useDropdownController()
+
+  const panelVisibility = (open: boolean) =>
+    'transition-opacity duration-200 ease-discret ' +
+    (open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none')
 
   return (
-    <header className="sticky top-0 z-40 border-hairline border-b transition-colors duration-300 bg-ivory">
+    <header ref={rootRef} className="sticky top-0 z-40 border-hairline border-b transition-colors duration-300 bg-ivory">
       {/* Utility bar */}
       <div className="hidden border-hairline border-b md:block">
         <div className="flex items-center justify-end gap-2.5 px-4 py-1 sm:px-6">
@@ -105,57 +190,94 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
 
             <nav aria-label="Navigation principale" className="hidden lg:block">
               <ul className="flex items-center gap-1">
-                {navSections.map((section) => (
-                  <li className="group relative" key={section.href}>
-                    <Link className={navLinkClass(section === activeSection)} to={section.href}>
-                      {section.label}
-                      <ChevronDown className="size-3.5 text-taupe transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true" />
-                    </Link>
-                    <div
-                      data-dropdown="true"
-                      className="pointer-events-none absolute top-full right-0 z-50 min-w-[260px] pt-2 opacity-0 transition-opacity duration-200 ease-discret group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100"
+                {navSections.map((section, index) => {
+                  const isOpen = openIndex === index
+                  return (
+                    <li
+                      className="group relative"
+                      key={section.href}
+                      onMouseEnter={() => openMenu(index)}
+                      onMouseLeave={scheduleClose}
+                      onFocusCapture={() => {
+                        cancelClose()
+                        openMenu(index)
+                      }}
+                      onBlurCapture={(event) => {
+                        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) scheduleClose()
+                      }}
                     >
-                      <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
-                        {section.items.map((item) =>
-                          item.children ? (
-                            <li className="group/sub relative" data-side="left" key={item.href}>
-                              <Link
-                                className="flex items-center justify-between gap-2 px-4 py-2 font-semibold text-body text-ink transition-colors hover:bg-mist hover:text-emerald-deep"
-                                to={item.href}
+                      <Link
+                        className={navLinkClass(section === activeSection)}
+                        to={section.href}
+                        aria-expanded={isOpen}
+                        aria-haspopup="true"
+                      >
+                        {section.label}
+                        <ChevronDown
+                          className={'size-3.5 text-taupe transition-transform duration-200' + (isOpen ? ' rotate-180' : '')}
+                          aria-hidden="true"
+                        />
+                      </Link>
+                      <div
+                        data-dropdown="true"
+                        onMouseEnter={() => cancelClose()}
+                        onMouseLeave={scheduleClose}
+                        className={'absolute top-full right-0 z-50 min-w-[260px] pt-2 ' + panelVisibility(isOpen)}
+                      >
+                        <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
+                          {section.items.map((item) =>
+                            item.children ? (
+                              <li
+                                className="relative"
+                                data-side="left"
+                                key={item.href}
+                                onMouseEnter={() => {
+                                  cancelClose()
+                                  setFlyoutOpen(true)
+                                }}
+                                onMouseLeave={() => setFlyoutOpen(false)}
                               >
-                                <span>{item.label}</span>
-                                <ChevronRight
-                                  className="size-3.5 shrink-0 text-taupe transition-transform duration-200 group-data-[side=left]/sub:rotate-180"
-                                  aria-hidden="true"
-                                />
-                              </Link>
-                              <div
-                                data-flyout="true"
-                                className="pointer-events-none invisible absolute top-0 z-50 min-w-[240px] opacity-0 transition-opacity duration-200 ease-discret group-data-[side=left]/sub:right-full group-data-[side=left]/sub:pr-1 group-data-[side=right]/sub:left-full group-data-[side=right]/sub:pl-1 group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100"
-                              >
-                                <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
-                                  {item.children.map((child) => (
-                                    <li key={child.href}>
-                                      <Link className={dropLinkClass} to={child.href}>
-                                        {child.label}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </li>
-                          ) : (
-                            <li key={item.href}>
-                              <Link className={dropLinkClass} to={item.href}>
-                                {item.label}
-                              </Link>
-                            </li>
-                          ),
-                        )}
-                      </ul>
-                    </div>
-                  </li>
-                ))}
+                                <Link className={subLinkClass} to={item.href}>
+                                  <span>{item.label}</span>
+                                  <ChevronRight
+                                    className={'size-3.5 shrink-0 text-taupe transition-transform duration-200' + (flyoutOpen ? ' rotate-180' : '')}
+                                    aria-hidden="true"
+                                  />
+                                </Link>
+                                <div
+                                  data-flyout="true"
+                                  onMouseEnter={() => cancelClose()}
+                                  className={
+                                    'absolute top-0 right-full z-50 min-w-[240px] pr-1 transition-opacity duration-200 ease-discret ' +
+                                    (flyoutOpen && isOpen
+                                      ? 'visible opacity-100 pointer-events-auto'
+                                      : 'invisible opacity-0 pointer-events-none')
+                                  }
+                                >
+                                  <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
+                                    {item.children.map((child) => (
+                                      <li key={child.href}>
+                                        <Link className={dropLinkClass} to={child.href}>
+                                          {child.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </li>
+                            ) : (
+                              <li key={item.href}>
+                                <Link className={dropLinkClass} to={item.href}>
+                                  {item.label}
+                                </Link>
+                              </li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
           </div>
