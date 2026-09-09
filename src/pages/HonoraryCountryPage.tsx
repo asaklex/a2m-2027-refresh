@@ -60,16 +60,6 @@ export default function HonoraryCountryPage() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              Selection
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              35 criteria
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -91,7 +81,7 @@ export default function HonoraryCountryPage() {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div className="rounded-sm border border-hairline bg-card p-5 shadow-card">
               <span className="tnum block font-display font-bold text-data-xl text-emerald-deep">
-                N° 1
+                #1
               </span>
               <span className="mt-1 block text-small text-muted">
                 gold exploration destination in West Africa
@@ -136,18 +126,69 @@ export default function HonoraryCountryPage() {
             </figure>
           </div>
           <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
-            Call for Applications — Honorary Country
+            Why Côte d'Ivoire
           </h3>
           <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-            Each edition of A2M designates one African country as its Guest Honorary Country. Applications are evaluated by A2M's selection committee against a rigorous framework of 35 quantifiable criteria, organized into seven weighted categories:
+            Côte d'Ivoire is the largest economy in the West African Economic and Monetary Union (WAEMU) and one of the continent's fastest-growing mining jurisdictions. Building on two decades of political and economic stabilization, the country has turned its mining sector into a pillar of its National Development Plan, with a modern mining code, streamlined permitting and an explicit target of multiplying gold production by 2030.
           </p>
+          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+            Canadian-listed operators are central to that story. Barrick, Endeavour Mining, Allied Gold, Fortuna and Montage all run mines or advanced projects in the country, making Côte d'Ivoire one of the clearest illustrations of the Canada-Africa mining relationship that A2M exists to accelerate.
+          </p>
+          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
+            Flagship minerals
+          </h3>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="h-full">
+              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
+                  Gold
+                </h3>
+                <p className="text-body text-muted">
+                  A producing cluster of world-class mines — Tongon, Ity, Yaouré, Sissingué, Agbaou, Bonikro and Séguéla — with one of West Africa's most active exploration pipelines.
+                </p>
+              </div>
+            </div>
+            <div className="h-full">
+              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
+                  Manganese
+                </h3>
+                <p className="text-body text-muted">
+                  Fast-growing exports from the south-west deposits, positioning the country among Africa's emerging suppliers to global steel and battery chains.
+                </p>
+              </div>
+            </div>
+            <div className="h-full">
+              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
+                  Nickel & cobalt
+                </h3>
+                <p className="text-body text-muted">
+                  The Biankouma-Sipilou lateritic deposits hold battery-grade nickel and cobalt — directly relevant to critical-minerals supply chains.
+                </p>
+              </div>
+            </div>
+            <div className="h-full">
+              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
+                  Bauxite & iron ore
+                </h3>
+                <p className="text-body text-muted">
+                  Large reserved deposits in the west opening a second mining cycle, with infrastructure corridors shared with Guinea and Liberia under study.
+                </p>
+              </div>
+            </div>
+          </div>
+          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
+            What Côte d'Ivoire brings to A2M 2027
+          </h3>
           <ul className="flex max-w-[760px] flex-col gap-3">
             <li className="flex items-start gap-3 text-body text-muted">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mt-1 size-4 shrink-0 text-emerald-cta" aria-hidden="true">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
               <span>
-                Mining sector potential and investment attractiveness
+                A ministerial-level delegation led by the ministry in charge of mines
               </span>
             </li>
             <li className="flex items-start gap-3 text-body text-muted">
@@ -155,7 +196,7 @@ export default function HonoraryCountryPage() {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
               <span>
-                Political stability and governance
+                A national pavilion and presentation of flagship projects to Canadian investors and operators
               </span>
             </li>
             <li className="flex items-start gap-3 text-body text-muted">
@@ -163,7 +204,7 @@ export default function HonoraryCountryPage() {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
               <span>
-                Bilateral relations with Canada
+                Participation in the Ministerial Roundtable on June 6 and a featured role across the three-day program
               </span>
             </li>
             <li className="flex items-start gap-3 text-body text-muted">
@@ -171,70 +212,16 @@ export default function HonoraryCountryPage() {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
               <span>
-                Economic and commercial potential
-              </span>
-            </li>
-            <li className="flex items-start gap-3 text-body text-muted">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mt-1 size-4 shrink-0 text-emerald-cta" aria-hidden="true">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <span>
-                Capacity to field a high-level delegation
-              </span>
-            </li>
-            <li className="flex items-start gap-3 text-body text-muted">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mt-1 size-4 shrink-0 text-emerald-cta" aria-hidden="true">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <span>
-                Alignment with A2M's thematic program
-              </span>
-            </li>
-            <li className="flex items-start gap-3 text-body text-muted">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check mt-1 size-4 shrink-0 text-emerald-cta" aria-hidden="true">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <span>
-                Continental diplomatic reach
+                A cultural and economic showcase of Ivorian industry, entrepreneurship and investment readiness
               </span>
             </li>
           </ul>
           <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
             <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-              Application requirements
+              The Honorary Country program
             </p>
             <p className="text-body text-muted">
-              Applications must include: an executive summary of the country's mining investment framework · a list of flagship projects available for investor presentation · confirmation of ministerial participation.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="h-full">
-              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Who Should Apply?
-                </h3>
-                <p className="text-body text-muted">
-                  The program is designed for African governments with an active mining sector, a demonstrated commitment to responsible and sustainable practices, and a strategic interest in deepening economic partnerships with Canada. Countries with existing Canadian listed company presence on their territory are particularly encouraged to apply.
-                </p>
-              </div>
-            </div>
-            <div className="h-full">
-              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Customised Support Throughout
-                </h3>
-                <p className="text-body text-muted">
-                  The selected country receives dedicated preparation support from A2M Events Inc. before, during, and after the event: program co-design, stand production, delegation logistics, media coordination, and a certified post-event report on partnerships expressed and contacts qualified.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
-            <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-              Submit a candidacy
-            </p>
-            <p className="text-body text-muted">
-              To learn more or to submit a candidacy, contact our team: info@a2mevent.com.
+              The Honorary Country receives dedicated support from A2M Events Inc. before, during, and after the event: program co-design, stand production, delegation logistics, media coordination, and a certified post-event report on partnerships expressed and contacts qualified.
             </p>
           </div>
         </div>
