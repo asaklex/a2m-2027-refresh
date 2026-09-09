@@ -4,7 +4,7 @@ export default function NetworkingPage() {
   return (
     <>
   <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
-    <img alt="" aria-hidden="true" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="100vw" srcSet="/images/program/networking-band.jpg 640w, /images/program/networking-band.jpg 750w, /images/program/networking-band.jpg 828w, /images/program/networking-band.jpg 1080w, /images/program/networking-band.jpg 1200w, /images/program/networking-band.jpg 1920w, /images/program/networking-band.jpg 2048w, /images/program/networking-band.jpg 3840w" src="/images/program/networking-band.jpg" />
+    <img alt="" aria-hidden="true" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="100vw" srcSet="/images/program/networking-evening.jpg 640w, /images/program/networking-evening.jpg 750w, /images/program/networking-evening.jpg 828w, /images/program/networking-evening.jpg 1080w, /images/program/networking-evening.jpg 1200w, /images/program/networking-evening.jpg 1920w, /images/program/networking-evening.jpg 2048w, /images/program/networking-evening.jpg 3840w" src="/images/program/networking-evening.jpg" />
     <div aria-hidden="true" className="absolute inset-0 backdrop-blur-[6px]" style={{ maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 36%, rgba(0,0,0,0) 72%)', WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 36%, rgba(0,0,0,0) 72%)' }} />
     <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-emerald-deep/95 via-emerald-deep/70 to-emerald-deep/25" />
     <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-emerald-deep/90 to-transparent" />
@@ -47,7 +47,7 @@ export default function NetworkingPage() {
         happen
       </h1>
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-        "Where the real conversations happen" — a social program designed to accelerate trusted relationships.
+        Where the real conversations happen — a social program designed to accelerate trusted relationships.
       </p>
       <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
         <div className="flex items-center gap-2.5">
@@ -63,20 +63,10 @@ export default function NetworkingPage() {
         <div className="flex items-center gap-2.5">
           <div>
             <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              June 7
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              Gala Dinner
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
               June 8
             </p>
             <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              Networking Evening
+              Gala Dinner
             </p>
           </div>
         </div>
@@ -86,9 +76,6 @@ export default function NetworkingPage() {
   <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
     <div className="py-14 lg:py-16">
       <div className="flex flex-col gap-6">
-        <p className="max-w-[760px] text-lead text-muted">
-          "Where the real conversations happen" — a social program designed to accelerate trusted relationships.
-        </p>
         <div className="flex flex-col gap-8">
           <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
             Across All Three Days — The Marketplace as a Networking Hub
@@ -125,20 +112,20 @@ export default function NetworkingPage() {
             <div className="h-full">
               <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
                 <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Gala Dinner
+                  Networking evenings
                 </h3>
                 <p className="text-body text-muted">
-                  An evening of fine dining and high-value networking. Mixed Canada/Africa seating arrangements, curated for maximum business affinity.
+                  Every evening before the Gala Dinner, informal gatherings provide the space to deepen conversations started earlier in the day. Music, atmosphere, no agenda — just deals continuing.
                 </p>
               </div>
             </div>
             <div className="h-full">
               <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
                 <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Networking Evening
+                  Gala Dinner
                 </h3>
                 <p className="text-body text-muted">
-                  This informal gathering provides the space to deepen conversations started earlier in the day. Music, atmosphere, no agenda — just deals continuing.
+                  An evening of fine dining and high-value networking. Mixed Canada/Africa seating arrangements, curated for maximum business affinity.
                 </p>
               </div>
             </div>

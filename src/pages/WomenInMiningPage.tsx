@@ -46,7 +46,7 @@ export default function WomenInMiningPage() {
         </span>
       </h1>
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-        "Empowering Women, Reshaping the Industry" — a high-impact forum included with registration.
+        Empowering Women, Reshaping the Industry — a high-impact forum included with registration.
       </p>
       <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
         <div className="flex items-center gap-2.5">
@@ -59,16 +59,6 @@ export default function WomenInMiningPage() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2.5">
-          <div>
-            <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-              of the mining workforce is women
-            </p>
-            <p className="font-display font-semibold text-[14px] text-ivory leading-tight">
-              &lt; 15%
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -76,7 +66,7 @@ export default function WomenInMiningPage() {
     <div className="py-14 lg:py-16">
       <div className="flex flex-col gap-6">
         <p className="max-w-[760px] text-lead text-muted">
-          "Empowering Women, Reshaping the Industry" — a high-impact forum included with registration.
+          Empowering Women, Reshaping the Industry — a high-impact forum included with registration.
         </p>
         <div className="flex flex-col gap-8">
           <p className="max-w-[760px] text-lead text-muted leading-[1.7]">

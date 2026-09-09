@@ -47,7 +47,7 @@ export default function InvestorsBreakfastPage() {
         of your investment year
       </h1>
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-        "The most important 90 minutes of your Africa mining investment year."
+        The most important 90 minutes of your Africa mining investment year.
       </p>
       <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
         <div className="flex items-center gap-2.5">
@@ -87,7 +87,7 @@ export default function InvestorsBreakfastPage() {
     <div className="py-14 lg:py-16">
       <div className="flex flex-col gap-6">
         <p className="max-w-[760px] text-lead text-muted">
-          "The most important 90 minutes of your Africa mining investment year."
+          The most important 90 minutes of your Africa mining investment year.
         </p>
         <div className="flex flex-col gap-8">
           <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
