@@ -8,18 +8,28 @@ Deep dive on the migration and verification system: `docs/migration-and-fidelity
 
 **Two eras, two sources of truth.**
 
-1. **Migration era (branch `master`).** The original Next.js site is gone;
-   its content survives only as **SSR HTML snapshots** in the sibling repo
-   `../kossoko-africa-mining-montreal-2026` (the "legacy clone"). This
-   project rebuilt those snapshots verbatim as React components — that
-   work is complete and frozen on `master`.
-2. **Client-changes era (branch `20260908-client-changes`).** The client's
+1. **Migration era (local `master`; remote `fidelity-baseline-2026-09`).**
+   The original Next.js site is gone; its content survives only as **SSR
+   HTML snapshots** in the sibling repo
+   `../kossoko-africa-mining-montreal-2026` (the "legacy clone"). That repo
+   is archived on its `legacy-clone-2026` branch — keep it checked out
+   there so `tools/check-fidelity.mjs` can keep reading `src/snapshots/`.
+   This project rebuilt those snapshots verbatim as React components —
+   that work is complete and frozen.
+2. **Client-changes era (branch `main`, promoted 2026-09-09).** The client's
    change requests of **2026-09-08** (`docs/New-Changes-Sept-8-2026/` —
    `Website_comments.docx` + LAYOUT screenshots, not committed: ~27 MB)
    **supersede snapshot fidelity**. Roughly 50 changes were applied in
    nine dated commits (512081c…2567b8e). The docx is the design authority
    for everything it covers; the snapshots remain the authority for
    everything it doesn't.
+
+**Repository layout (since 2026-09-09).** The canonical remote is
+`github.com/asaklex/kossoko-africa-mining-montreal-2026` (this repo's
+`origin`). Branches there: `main` = the living client era; `fidelity-baseline-2026-09`
+= the frozen migration; `legacy-clone-2026` (+ tag `legacy-2026-final`) =
+the previous dev's clone, kept for its SSR snapshots; `perfect-copy` and
+`feature/reactable` are redundant older duplicates of that clone.
 
 Consequences:
 
@@ -78,9 +88,9 @@ node tools/check-fidelity.mjs diff      # compare *.actual.txt dumps against exp
 
 ### Fidelity baseline
 
-The table below describes **`master`** (the frozen migration). On
-`20260908-client-changes` every diff grows by the client-requested edits —
-that is expected, not a regression.
+The table below describes the frozen migration
+(`fidelity-baseline-2026-09`). On `main` every diff grows by the
+client-requested edits — that is expected, not a regression.
 
 | Route(s) | Diff lines on `master` | All accounted for by |
 | --- | --- | --- |

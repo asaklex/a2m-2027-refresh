@@ -66,13 +66,14 @@ The one-off migration pipeline, kept for provenance and future re-runs:
 
 ## Fidelity
 
-> **Branch `20260908-client-changes`:** the client's change requests of
-> 2026-09-08 (`docs/New-Changes-Sept-8-2026/`) supersede snapshot fidelity.
-> Everything below describes the frozen migration as it lives on `master`;
-> the client-driven divergences are catalogued in
-> `docs/migration-and-fidelity.md` → *Client changes (2026-09-08)*.
+> **Since 2026-09-09, `main` carries the client era.** The client's change
+> requests of 2026-09-08 (`docs/New-Changes-Sept-8-2026/`) supersede
+> snapshot fidelity. Everything below describes the frozen migration as it
+> lives on `fidelity-baseline-2026-09`; the client-driven divergences are
+> catalogued in `docs/migration-and-fidelity.md` → *Client changes
+> (2026-09-08)*.
 
-On `master`, the canonical DOM diff (`tools/check-fidelity.mjs`) shows every
+On the frozen baseline, the canonical DOM diff (`tools/check-fidelity.mjs`) shows every
 page **byte-identical to its archived snapshot outside the site header**.
 Every page carries the same 48 header-only diff lines from the dropdown
 controller (below); three pages have additional intentional restorations —

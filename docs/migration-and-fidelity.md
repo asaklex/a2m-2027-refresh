@@ -162,12 +162,13 @@ re-applied. As of the initial migration no page carries hand edits beyond
 what the tool emits, so regeneration is currently lossless; re-run the
 fidelity harness afterwards to confirm.
 
-## Client changes (2026-09-08) — branch `20260908-client-changes`
+## Client changes (2026-09-08) — now `main` (promoted 2026-09-09)
 
 The client's change requests (`docs/New-Changes-Sept-8-2026/Website_comments.docx`,
 ~27 MB of docx + screenshots, deliberately uncommitted) **supersede the
-snapshot fidelity contract** for everything they cover. The branch applies
-them in nine dated commits (`512081c` → `2567b8e`), one logical batch each:
+snapshot fidelity contract** for everything they cover. Originally the
+branch `20260908-client-changes`, they are applied in nine dated commits
+(`512081c` → `2567b8e`), one logical batch each:
 
 | Commit | Scope |
 | --- | --- |
