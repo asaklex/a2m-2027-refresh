@@ -2,9 +2,9 @@
 // (paused for prefers-reduced-motion), dot pagination and arrow controls —
 // behaviour ported from the legacy clone, markup faithful to the reference.
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Award, ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import { legacyFrenchOrigin } from '../data/navigation'
-import { useAccountDialog } from './AccountDialogContext'
 
 /** Calendar icon exactly as shipped by the reference build (its lucide
  *  version drew slightly different paths than the current release). */
@@ -32,6 +32,8 @@ type Slide = {
   eyebrow: string
   heading: { before: string; gold: string; after?: string }
   paragraph: string
+  /** Secondary CTA beside the waitlist button (target layout). */
+  secondary: { label: string; href: string }
 }
 
 const slides: Slide[] = [
@@ -40,18 +42,21 @@ const slides: Slide[] = [
     eyebrow: 'June 7–9, 2027 · Montréal',
     heading: { before: 'Where', gold: 'African mineral wealth', after: 'meets Canadian capital, expertise and know how' },
     paragraph: "North America's premier platform connecting African mining projects with Canadian investors, markets and expertise.",
+    secondary: { label: 'Download the program', href: PROGRAM_PDF },
   },
   {
     image: '/images/hero/slide-2.jpg',
     eyebrow: '30+ African mining countries',
     heading: { before: 'Build the partnerships that will power the', gold: 'clean energy transition' },
     paragraph: "Ministers, mining executives, institutional investors and suppliers gather to build tomorrow's partnerships.",
+    secondary: { label: 'Ministerial Roundtable', href: '/en/program/ministerial-roundtable' },
   },
   {
     image: '/images/hero/slide-3.jpg',
     eyebrow: 'Critical minerals',
     heading: { before: 'Join the deal-making platform transforming', gold: 'African mining' },
     paragraph: "Cobalt, lithium, copper, rare earths: access Africa's strategic resources through the world's leading mining finance market.",
+    secondary: { label: 'Download the program', href: PROGRAM_PDF },
   },
 ]
 
@@ -67,7 +72,6 @@ const heroInfo = [
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0)
   const trackRef = useRef<HTMLDivElement>(null)
-  const { openAccount } = useAccountDialog()
 
   const goTo = (next: number) => setIndex((next + slides.length) % slides.length)
 
@@ -122,7 +126,11 @@ export default function HeroCarousel() {
               />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
               <div className="mx-auto w-full a2m-cinema relative z-[1] flex min-h-[100svh] max-w-none flex-col justify-center px-4 pb-36 pt-[calc(var(--header-h,156px)_+_0.5rem)] sm:px-6 sm:pb-40 sm:pt-[calc(var(--header-h,156px)_+_1.5rem)] lg:px-6 lg:pb-44">
-                <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.28em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/60 bg-emerald-ink/50 px-3.5 py-1.5 font-semibold text-[10.5px] text-champagne uppercase tracking-[0.18em] backdrop-blur-sm [text-shadow:none]">
+                  <span aria-hidden="true" className="size-1.5 rounded-full bg-gold-light" />
+                  Pre-launch · Founding Delegate rate
+                </span>
+                <span className="mt-4 font-semibold text-[11px] text-champagne uppercase tracking-[0.28em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)] sm:mt-5">
                   {slide.eyebrow}
                 </span>
                 <h1 className="mt-3.5 max-w-[840px] font-bold text-[1.8rem] text-ivory leading-[1.12] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_22px_rgba(3,20,16,0.55)] sm:mt-5 sm:text-[2.9rem] sm:leading-[1.08] lg:text-[3.4rem]">
@@ -134,22 +142,27 @@ export default function HeroCarousel() {
                   {slide.paragraph}
                 </p>
                 <div className="mt-6 flex flex-nowrap gap-2 sm:mt-8 sm:flex-wrap sm:gap-4">
-                  <button
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-3.5 text-[10px] sm:h-14 sm:px-9 sm:text-[13px]"
-                    type="button"
-                    aria-haspopup="dialog"
-                    aria-expanded="false"
-                    data-state="closed"
-                    onClick={(e) => openAccount('register', e.currentTarget)}
+                  <Link
+                    to="/en/news#sign-up"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-3.5 text-[10px] sm:h-14 sm:px-9 sm:text-[13px]"
                   >
-                    Register
-                  </button>
-                  <a
-                    href={PROGRAM_PDF}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 border bg-transparent focus-visible:outline-emerald-cta h-10 border-champagne px-3.5 text-[10px] text-champagne hover:bg-champagne hover:text-emerald-deep sm:h-14 sm:px-9 sm:text-[13px]"
-                  >
-                    Download the program
-                  </a>
+                    Join the waitlist
+                  </Link>
+                  {slide.secondary.href.startsWith('http') ? (
+                    <a
+                      href={slide.secondary.href}
+                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 border bg-transparent focus-visible:outline-emerald-cta h-10 border-champagne px-3.5 text-[10px] text-champagne hover:bg-champagne hover:text-emerald-deep sm:h-14 sm:px-9 sm:text-[13px]"
+                    >
+                      {slide.secondary.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={slide.secondary.href}
+                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 border bg-transparent focus-visible:outline-emerald-cta h-10 border-champagne px-3.5 text-[10px] text-champagne hover:bg-champagne hover:text-emerald-deep sm:h-14 sm:px-9 sm:text-[13px]"
+                    >
+                      {slide.secondary.label}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
