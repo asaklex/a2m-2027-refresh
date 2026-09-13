@@ -20,6 +20,7 @@
   --color-hairline-soft: #1f1f1f14;
   --color-emerald-cta: #0f3d2e;
   --color-emerald-deep: #0f3d2e;
+  --color-emerald-ink: #052e24;
   --color-jade: #4a9c7e;
   --color-nightblue: #0f2440;
   --color-champagne: #e8d9a8;
@@ -126,6 +127,36 @@
   inset: 0;
   -webkit-mask-image: radial-gradient(120% 110%, #0000 24%, #000 80%);
   mask-image: radial-gradient(120% 110%, #0000 24%, #000 80%);
+}
+
+/* Announcement ticker (2026-09 redesign): a duplicated track scrolls one
+   full width so the loop is seamless; pauses on hover; static under
+   reduced motion (the !important outranks the global reduce rule). */
+.a2m-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.a2m-marquee-track {
+  display: inline-flex;
+  min-width: 200%;
+  animation: a2m-marquee-scroll 42s linear infinite;
+}
+.a2m-marquee:hover .a2m-marquee-track,
+.a2m-marquee:focus-within .a2m-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes a2m-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .a2m-marquee-track {
+    animation: none !important;
+  }
 }
 
 /* Entrance animations */

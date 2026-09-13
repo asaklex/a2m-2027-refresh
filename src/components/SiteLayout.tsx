@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
+import AnnouncementMarquee from './AnnouncementMarquee'
 import MobileMenu from './MobileMenu'
 import { NoticeDialog, TextSizeDialog, restoreTextSize } from './dialogs'
 import { AccountDialogContext } from './AccountDialogContext'
@@ -102,6 +103,7 @@ export default function SiteLayout() {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:rounded-sm focus:bg-emerald-cta focus:px-4 focus:py-2 focus:font-semibold focus:text-[12px] focus:text-white focus:uppercase focus:tracking-[0.06em]">
         Skip to main content
       </a>
+      <AnnouncementMarquee />
       <SiteHeader
         onOpenTextSize={(trigger) => {
           lastTriggerRef.current = trigger
