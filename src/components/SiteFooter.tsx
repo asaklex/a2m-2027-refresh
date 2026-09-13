@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { footerOverviewLinks, legacyFrenchOrigin } from '../data/navigation'
+import {
+  footerOverviewLinks,
+  footerVisitLinks,
+  footerPartnerLinks,
+  footerNewsLinks,
+  legacyFrenchOrigin,
+  type NavLink,
+} from '../data/navigation'
 
 function goFrench() {
   window.location.assign(`${legacyFrenchOrigin}/fr${window.location.pathname.replace(/^\/en/, '')}`)
@@ -20,7 +27,7 @@ function NewsletterForm() {
   }
   return (
     <form
-      className="flex flex-col gap-2"
+      className="flex w-full max-w-xl flex-col gap-2 sm:flex-row"
       onSubmit={(e) => {
         e.preventDefault()
         setDone(true)
@@ -28,26 +35,43 @@ function NewsletterForm() {
     >
       <input
         type="email"
-        className="w-full rounded-sm border border-hairline bg-card px-[18px] font-sans text-ink outline-none transition-all duration-[250ms] ease-discret placeholder:text-anthracite/35 focus:border-emerald-cta focus:shadow-[0_0_0_3px_rgba(15,61,46,0.14)] aria-[invalid=true]:border-deepred aria-[invalid=true]:shadow-[0_0_0_3px_rgba(122,31,31,0.1)] disabled:cursor-not-allowed disabled:bg-anthracite/4 disabled:text-subtle h-12"
+        className="w-full flex-1 rounded-sm border border-ivory/25 bg-emerald-ink px-[18px] font-sans text-ivory outline-none transition-all duration-[250ms] ease-discret placeholder:text-champagne/45 focus:border-gold focus:shadow-[0_0_0_3px_rgba(211,172,87,0.22)] disabled:cursor-not-allowed disabled:opacity-40 h-12"
         required
-        placeholder="Your email address"
-        aria-label="Your email address"
+        placeholder="Your email"
+        aria-label="Your email"
       />
       <button
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-5 text-[11px] w-full"
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-6 text-[11px]"
         type="submit"
       >
-        Subscribe
+        Sign up
       </button>
     </form>
   )
 }
 
+function LinkColumn({ heading, links, label }: { heading: string; links: NavLink[]; label: string }) {
+  return (
+    <nav aria-label={label} className="flex flex-col gap-3">
+      <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">{heading}</h2>
+      <ul className="flex flex-col gap-2">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link className="text-champagne/85 text-small transition-colors hover:text-gold" to={link.href}>
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
 export default function SiteFooter() {
   return (
-    <footer className="a2m-motif relative mt-20 overflow-hidden border-ivory/15 border-t bg-emerald-deep text-ivory">
-      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10 grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
-        <div className="lg:col-span-1">
+    <footer className="relative mt-20 overflow-hidden border-ivory/15 border-t bg-emerald-deep text-ivory">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-4 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-6 lg:px-16">
+        <div className="sm:col-span-2 lg:col-span-2">
           <img
             alt="A2M 2027"
             loading="lazy"
@@ -60,38 +84,25 @@ export default function SiteFooter() {
             srcSet="/images/brand/a2m-logo-light.png 1x, /images/brand/a2m-logo-light.png 2x"
             src="/images/brand/a2m-logo-light.png"
           />
-          <p className="mt-4 text-champagne/85 text-small">A2M is North America's premier platform for mining investment in Africa.</p>
+          <p className="mt-4 text-small text-champagne/85">Building critical partnerships in African mining.</p>
+          <p className="mt-1 text-small text-champagne/60">L&rsquo;événement phare du secteur minier africain.</p>
         </div>
-        <nav aria-label="A2M 2027" className="flex flex-col gap-3">
-          <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">A2M 2027</h2>
-          <ul className="flex flex-col gap-2">
-            {footerOverviewLinks.map((link) => (
-              <li key={link.href}>
-                <Link className="text-champagne/85 text-small transition-colors hover:text-gold" to={link.href}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="flex flex-col gap-3">
-          <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">Contacts</h2>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <a href="mailto:info@a2mevent.com" className="text-champagne/85 text-small transition-colors hover:text-gold">
-                info@a2mevent.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3 sm:col-span-2 lg:col-span-2">
-          <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">Newsletter</h2>
-          <p className="text-champagne/85 text-small">Get announcements and program updates.</p>
-          <NewsletterForm />
+        <LinkColumn heading="Event" links={footerOverviewLinks} label="A2M 2027" />
+        <LinkColumn heading="Visit" links={footerVisitLinks} label="Plan Your Visit" />
+        <LinkColumn heading="Partner" links={footerPartnerLinks} label="Partner with us" />
+        <LinkColumn heading="News" links={footerNewsLinks} label="News" />
+      </div>
+      <div className="relative z-10 border-ivory/15 border-t">
+        <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-5 px-4 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-16">
+          <div className="max-w-xl">
+            <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">Stay in the loop</h2>
+            <p className="mt-1 mb-3 text-small text-champagne/85">Get announcements and program updates.</p>
+            <NewsletterForm />
+          </div>
         </div>
       </div>
       <div className="relative z-10 border-ivory/15 border-t">
-        <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
+        <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-8 lg:px-16">
           <p className="text-[12px] text-champagne/60">© 2027 A2M 2027. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link className="text-[12px] text-champagne/60 transition-colors hover:text-gold" to="/en/sitemap-page">

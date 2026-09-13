@@ -93,6 +93,9 @@ export const navSections: NavSection[] = [
 ]
 
 export const footerOverviewLinks: NavLink[] = navSections[0].items
+export const footerVisitLinks: NavLink[] = navSections[5].items
+export const footerPartnerLinks: NavLink[] = navSections[4].items
+export const footerNewsLinks: NavLink[] = navSections[6].items
 
 /** The original site's French edition; the deployment is archived, so the
  *  link points at the recorded origin. Update if a French edition returns. */
