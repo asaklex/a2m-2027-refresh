@@ -112,19 +112,13 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
       {/* Utility bar */}
       <div className="hidden border-hairline border-b md:block">
         <div className="flex items-center justify-end gap-2.5 px-4 py-1 sm:px-6">
-          <div className="inline-flex items-center gap-1 text-[11px] font-semibold" aria-busy="false">
-            <span className="flex items-center">
-              <button type="button" onClick={goFrench} className="rounded-sm px-1 uppercase tracking-[0.08em] transition-colors text-muted hover:text-anthracite">
-                fr
-              </button>
-            </span>
-            <span className="flex items-center">
-              <span className="mx-1 text-hairline">/</span>
-              <button type="button" aria-current="true" className="rounded-sm px-1 uppercase tracking-[0.08em] transition-colors text-emerald-cta">
-                en
-              </button>
-            </span>
-          </div>
+          <button
+            type="button"
+            onClick={(e) => onOpenAccount('login', e.currentTarget)}
+            className="rounded-sm px-1 text-[11px] font-semibold tracking-[0.08em] text-muted transition-colors hover:text-emerald-cta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+          >
+            Log in
+          </button>
           <span aria-hidden="true" className="h-3.5 w-px bg-hairline" />
           <button
             type="button"
@@ -157,7 +151,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
               src="/images/brand/a2m-logo.png"
             />
           </Link>
-          <span className="hidden whitespace-nowrap border-hairline border-l pl-4 text-sm text-muted leading-tight md:block lg:hidden xl:block">
+          <span className="hidden whitespace-nowrap border-hairline border-l pl-4 text-sm text-muted leading-tight md:block">
             <span className="block font-bold text-anthracite uppercase tracking-[0.06em]">June 7–9, 2027</span>
             <span className="block">Centre Mont-Royal, Montréal</span>
           </span>
@@ -165,27 +159,22 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
 
         <div className="flex items-center gap-3">
           <div className="hidden flex-col items-end gap-2.5 lg:flex">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 border bg-transparent h-10 px-5 text-[11px] border-gold text-gold hover:bg-gold hover:text-anthracite focus-visible:outline-gold"
                 type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                data-state="closed"
-                onClick={(e) => onOpenAccount('login', e.currentTarget)}
+                onClick={goFrench}
+                aria-label="Switch to French"
+                className="inline-flex h-10 items-center gap-1 rounded-full border border-hairline px-3 text-[11px] font-semibold tracking-[0.08em] text-muted uppercase transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
               >
-                Log in
+                EN
+                <ChevronDown className="size-3 text-taupe" aria-hidden="true" />
               </button>
-              <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-5 text-[11px]"
-                type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                data-state="closed"
-                onClick={(e) => onOpenAccount('register', e.currentTarget)}
+              <Link
+                to="/en/news#sign-up"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-5 text-[11px]"
               >
-                Register
-              </button>
+                Join the waitlist
+              </Link>
             </div>
 
             <nav aria-label="Navigation principale" className="hidden lg:block">
