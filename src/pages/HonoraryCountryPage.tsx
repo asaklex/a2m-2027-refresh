@@ -46,6 +46,7 @@ export default function HonoraryCountryPage() {
         </span>
         , a continental showcase
       </h1>
+      <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
         Each A2M edition designates one African country as its Guest Honorary Country. For 2027, it is Côte d'Ivoire.
       </p>

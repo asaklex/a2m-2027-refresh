@@ -48,6 +48,7 @@ export default function InvestorsBreakfastPage() {
         </span>
         of your investment year
       </h1>
+      <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
         The most important 90 minutes of your Africa mining investment year.
       </p>

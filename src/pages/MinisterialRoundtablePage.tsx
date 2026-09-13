@@ -39,6 +39,7 @@ export default function MinisterialRoundtablePage() {
         </span>
         political dialogue on critical minerals
       </h1>
+      <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
       <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
         <div className="flex items-center gap-2.5">
           <div>
