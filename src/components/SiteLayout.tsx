@@ -5,6 +5,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
 import AnnouncementMarquee from './AnnouncementMarquee'
+import StickyWaitlistBar from './StickyWaitlistBar'
 import MobileMenu from './MobileMenu'
 import { NoticeDialog, TextSizeDialog, restoreTextSize } from './dialogs'
 import { AccountDialogContext } from './AccountDialogContext'
@@ -125,6 +126,9 @@ export default function SiteLayout() {
         </main>
       )}
       <SiteFooter />
+      {/* Clearance for the fixed waitlist bar so the legal line stays readable. */}
+      <div aria-hidden="true" className="h-[57px]" />
+      <StickyWaitlistBar />
       {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} onOpenAccount={openAccount} />}
       {(dialog === 'login' || dialog === 'register') && <NoticeDialog kind={dialog} onClose={() => setDialog(null)} />}
       {dialog === 'text-size' && <TextSizeDialog onClose={() => setDialog(null)} />}
