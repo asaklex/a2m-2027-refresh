@@ -369,7 +369,7 @@ export default function ExhibitSponsorPage() {
                     Brand visibility
                   </h3>
                   <p className="text-body text-muted">
-                    Before 1,500+ delegates from 35 countries, all with a stake in African mining.
+                    Before delegates from 35 countries, all with a stake in African mining.
                   </p>
                 </div>
               </div>

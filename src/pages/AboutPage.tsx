@@ -138,9 +138,6 @@ export default function AboutPage() {
               Who We Are
             </h3>
             <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-              <em className="font-medium [font-family:var(--font-display)] text-copper">
-                We are not another general mining conference.
-              </em>
               A2M 2027 is a purpose-built platform for a specific relationship: connecting a continent that holds 30% of the world's critical minerals with a country whose companies, capital markets, and technical expertise are among the best in the world at transforming mineral resources into producing assets.
             </p>
             <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">

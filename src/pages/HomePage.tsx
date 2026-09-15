@@ -421,6 +421,70 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex flex-col overflow-hidden p-0">
             <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-hairline bg-surface w-full rounded-none border-0">
+              <img alt="Visual: Côte d'Ivoire / mining sector" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/news/cote-divoire-honorary-country.jpg 256w, /images/news/cote-divoire-honorary-country.jpg 384w, /images/news/cote-divoire-honorary-country.jpg 640w, /images/news/cote-divoire-honorary-country.jpg 750w, /images/news/cote-divoire-honorary-country.jpg 828w, /images/news/cote-divoire-honorary-country.jpg 1080w, /images/news/cote-divoire-honorary-country.jpg 1200w, /images/news/cote-divoire-honorary-country.jpg 1920w, /images/news/cote-divoire-honorary-country.jpg 2048w, /images/news/cote-divoire-honorary-country.jpg 3840w" src="/images/news/cote-divoire-honorary-country.jpg" />
+            </div>
+            <div className="flex flex-1 flex-col gap-3 p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
+                  Internal
+                </span>
+                <span className="text-small text-subtle">
+                  Event
+                  ·
+                  September 15, 2026
+                </span>
+              </div>
+              <h3 className="font-display font-semibold text-h3 text-ink">
+                Côte d'Ivoire named Honorary Country for A2M 2027
+              </h3>
+              <p className="text-body text-muted">
+                The #1 gold exploration destination in West Africa will lead a high-level delegation to Montréal.
+              </p>
+              <div className="mt-auto pt-2">
+                <a className="inline-flex items-center gap-1.5 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" href="#">
+                  Read more
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right size-4" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex flex-col overflow-hidden p-0">
+            <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-hairline bg-surface w-full rounded-none border-0">
+              <img alt="Visual: ministerial dialogue" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/news/ministerial-round-table-agenda.jpg 256w, /images/news/ministerial-round-table-agenda.jpg 384w, /images/news/ministerial-round-table-agenda.jpg 640w, /images/news/ministerial-round-table-agenda.jpg 750w, /images/news/ministerial-round-table-agenda.jpg 828w, /images/news/ministerial-round-table-agenda.jpg 1080w, /images/news/ministerial-round-table-agenda.jpg 1200w, /images/news/ministerial-round-table-agenda.jpg 1920w, /images/news/ministerial-round-table-agenda.jpg 2048w, /images/news/ministerial-round-table-agenda.jpg 3840w" src="/images/news/ministerial-round-table-agenda.jpg" />
+            </div>
+            <div className="flex flex-1 flex-col gap-3 p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
+                  Internal
+                </span>
+                <span className="text-small text-subtle">
+                  Policy
+                  ·
+                  October 2, 2026
+                </span>
+              </div>
+              <h3 className="font-display font-semibold text-h3 text-ink">
+                Ministerial Roundtable agenda revealed
+              </h3>
+              <p className="text-body text-muted">
+                The first Canada-Africa political dialogue on critical minerals on North American soil sets out its focus areas.
+              </p>
+              <div className="mt-auto pt-2">
+                <a className="inline-flex items-center gap-1.5 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" href="#">
+                  Read more
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right size-4" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex flex-col overflow-hidden p-0">
+            <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-hairline bg-surface w-full rounded-none border-0">
               <img alt="Visual: community impact" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/news/sustainability-pledge.jpg 256w, /images/news/sustainability-pledge.jpg 384w, /images/news/sustainability-pledge.jpg 640w, /images/news/sustainability-pledge.jpg 750w, /images/news/sustainability-pledge.jpg 828w, /images/news/sustainability-pledge.jpg 1080w, /images/news/sustainability-pledge.jpg 1200w, /images/news/sustainability-pledge.jpg 1920w, /images/news/sustainability-pledge.jpg 2048w, /images/news/sustainability-pledge.jpg 3840w" src="/images/news/sustainability-pledge.jpg" />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-6">
@@ -439,70 +503,6 @@ export default function HomePage() {
               </h3>
               <p className="text-body text-muted">
                 A2M directs a share of its revenues to children's education and women's empowerment across Africa.
-              </p>
-              <div className="mt-auto pt-2">
-                <a className="inline-flex items-center gap-1.5 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" href="#">
-                  Read more
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right size-4" aria-hidden="true">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex flex-col overflow-hidden p-0">
-            <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-hairline bg-surface w-full rounded-none border-0">
-              <img alt="Visual: Women in Mining Forum" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/news/women-in-mining-programme.jpg 256w, /images/news/women-in-mining-programme.jpg 384w, /images/news/women-in-mining-programme.jpg 640w, /images/news/women-in-mining-programme.jpg 750w, /images/news/women-in-mining-programme.jpg 828w, /images/news/women-in-mining-programme.jpg 1080w, /images/news/women-in-mining-programme.jpg 1200w, /images/news/women-in-mining-programme.jpg 1920w, /images/news/women-in-mining-programme.jpg 2048w, /images/news/women-in-mining-programme.jpg 3840w" src="/images/news/women-in-mining-programme.jpg" />
-            </div>
-            <div className="flex flex-1 flex-col gap-3 p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
-                  Internal
-                </span>
-                <span className="text-small text-subtle">
-                  Event
-                  ·
-                  November 5, 2026
-                </span>
-              </div>
-              <h3 className="font-display font-semibold text-h3 text-ink">
-                Women in Mining Forum program announced
-              </h3>
-              <p className="text-body text-muted">
-                Keynotes, panels and networking dedicated to women's leadership in mining across Canada and Africa.
-              </p>
-              <div className="mt-auto pt-2">
-                <a className="inline-flex items-center gap-1.5 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" href="#">
-                  Read more
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right size-4" aria-hidden="true">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex flex-col overflow-hidden p-0">
-            <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-hairline bg-surface w-full rounded-none border-0">
-              <img alt="Visual: project showcase" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/news/investment-showcase-call.jpg 256w, /images/news/investment-showcase-call.jpg 384w, /images/news/investment-showcase-call.jpg 640w, /images/news/investment-showcase-call.jpg 750w, /images/news/investment-showcase-call.jpg 828w, /images/news/investment-showcase-call.jpg 1080w, /images/news/investment-showcase-call.jpg 1200w, /images/news/investment-showcase-call.jpg 1920w, /images/news/investment-showcase-call.jpg 2048w, /images/news/investment-showcase-call.jpg 3840w" src="/images/news/investment-showcase-call.jpg" />
-            </div>
-            <div className="flex flex-1 flex-col gap-3 p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
-                  Internal
-                </span>
-                <span className="text-small text-subtle">
-                  Investment
-                  ·
-                  October 20, 2026
-                </span>
-              </div>
-              <h3 className="font-display font-semibold text-h3 text-ink">
-                Investment Showcase opens its call for projects
-              </h3>
-              <p className="text-body text-muted">
-                Pre-screened African mining projects will be presented to institutional investors and DFIs.
               </p>
               <div className="mt-auto pt-2">
                 <a className="inline-flex items-center gap-1.5 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" href="#">

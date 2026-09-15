@@ -40,7 +40,7 @@ const slides: Slide[] = [
   {
     image: '/images/hero/slide-1.jpg',
     eyebrow: 'June 7–9, 2027 · Montréal',
-    heading: { before: 'Where', gold: 'African mineral wealth', after: 'meets Canadian capital, expertise and know how' },
+    heading: { before: 'Where', gold: 'African mineral wealth', after: 'meets Canadian capital, expertise and know-how' },
     paragraph: "North America's premier platform connecting African mining projects with Canadian investors, markets and expertise.",
     secondary: { label: 'Download the program', href: PROGRAM_PDF },
   },
@@ -50,13 +50,6 @@ const slides: Slide[] = [
     heading: { before: 'Build the partnerships that will power the', gold: 'clean energy transition' },
     paragraph: "Ministers, mining executives, institutional investors and suppliers gather to build tomorrow's partnerships.",
     secondary: { label: 'Ministerial Roundtable', href: '/en/program/ministerial-roundtable' },
-  },
-  {
-    image: '/images/hero/slide-3.jpg',
-    eyebrow: 'Critical minerals',
-    heading: { before: 'Join the deal-making platform transforming', gold: 'African mining' },
-    paragraph: "Cobalt, lithium, copper, rare earths: access Africa's strategic resources through the world's leading mining finance market.",
-    secondary: { label: 'Download the program', href: PROGRAM_PDF },
   },
 ]
 
