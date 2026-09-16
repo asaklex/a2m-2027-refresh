@@ -283,38 +283,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Honorary Country — photo treatment with side panel (shot 5.39.12) */}
-      <section className="relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/home/abidjan-bridge.jpg')" }}>
-        <div className="absolute inset-0 bg-emerald-deep/30" aria-hidden="true" />
-        <div className="relative bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:min-h-[39rem] lg:w-1/2 lg:px-16 lg:py-28">
-          <Eyebrow>Honorary Country 2027</Eyebrow>
-          <h2 className="mt-3 font-display text-h1 text-ivory">Côte d’Ivoire</h2>
-          <p className="mt-5 max-w-[520px] text-lead text-champagne/85">
-            The #1 gold exploration destination in West Africa, Côte d’Ivoire will lead a high-level delegation to
-            Montreal to present its flagship projects to Canadian investors.
-          </p>
-          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-ivory/20 pt-8">
-            {[
-              ['N°1', 'gold exploration in West Africa'],
-              ['10+', 'Canadian TSX companies (A2M estimate)'],
-              ['59 t', 'gold produced in 2024'],
-              ['100 t/yr', 'target by 2030'],
-            ].map(([value, label]) => (
-              <div key={value}>
-                <dt className="sr-only">{label}</dt>
-                <dd>
-                  <span className="font-display font-bold text-data-xl text-gold-light">{value}</span>
-                  <span className="mt-1 block text-small text-champagne/75">{label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
-          <Link
-            className={[goldOutlineButton, 'mt-10'].join(' ')}
-            to="/en/program/honorary-country"
-          >
-            Discover the Honorary Country
-          </Link>
+      {/* Honorary Country — standalone duotone photo card (shot 5.39.12) */}
+      <section className="bg-ivory px-4 py-14 sm:px-8 lg:px-16">
+        <div className="relative mx-auto min-h-[30rem] w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:min-h-[34rem]">
+          <img
+            alt="Abidjan skyline and bridge at dusk"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/images/home/abidjan-bridge.jpg"
+          />
+          <div className="absolute inset-0 bg-emerald-deep/55" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-emerald-deep/85 via-emerald-deep/45 to-transparent"
+            aria-hidden="true"
+          />
+          <div className="relative z-[2] px-6 py-14 text-ivory sm:px-10 lg:max-w-[46rem] lg:px-14 lg:py-16">
+            <Eyebrow>Honorary Country 2027</Eyebrow>
+            <h2 className="mt-3 font-display text-h1 text-ivory">Côte d’Ivoire</h2>
+            <p className="mt-5 max-w-[520px] text-lead text-champagne/85">
+              The #1 gold exploration destination in West Africa, Côte d’Ivoire will lead a high-level delegation to
+              Montreal to present its flagship projects to Canadian investors.
+            </p>
+            <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ivory/20 pt-8 sm:grid-cols-4">
+              {[
+                ['N°1', 'gold exploration in West Africa'],
+                ['10+', 'Canadian TSX companies (A2M estimate)'],
+                ['59 t', 'gold produced in 2024'],
+                ['100 t/yr', 'target by 2030'],
+              ].map(([value, label]) => (
+                <div key={value}>
+                  <dt className="sr-only">{label}</dt>
+                  <dd>
+                    <span className="font-display font-bold text-data-xl text-gold-light">{value}</span>
+                    <span className="mt-1 block text-small text-champagne/75">{label}</span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <Link
+              className={[goldOutlineButton, 'mt-10'].join(' ')}
+              to="/en/program/honorary-country"
+            >
+              Discover the Honorary Country
+            </Link>
+          </div>
         </div>
       </section>
 
