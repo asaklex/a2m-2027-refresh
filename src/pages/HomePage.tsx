@@ -287,27 +287,30 @@ export default function HomePage() {
       </section>
 
       {/* Honorary Country — standalone duotone photo card (shot 5.39.12) */}
-      <section className="bg-ivory px-4 py-14 sm:px-8 lg:px-16">
-        <div className="relative mx-auto min-h-[30rem] w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:min-h-[34rem]">
+      <section className="bg-ivory px-4 py-14 sm:px-8 lg:px-16 lg:py-20">
+        <div className="relative mx-auto min-h-[30rem] w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:min-h-0 lg:aspect-[2.91/1]">
           <img
             alt="Abidjan skyline and bridge at dusk"
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full origin-right scale-150 object-cover"
             src="/images/home/abidjan-bridge.jpg"
           />
-          <div className="absolute inset-0 bg-emerald-deep/55" aria-hidden="true" />
+          <div className="absolute inset-0 bg-emerald-deep/70" aria-hidden="true" />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-emerald-deep/85 via-emerald-deep/45 to-transparent"
+            className="absolute inset-0 bg-gradient-to-r from-emerald-deep/90 via-emerald-deep/48 to-transparent"
             aria-hidden="true"
           />
-          <div className="relative z-[2] px-6 py-14 text-ivory sm:px-10 lg:max-w-[46rem] lg:px-14 lg:py-16">
-            <Eyebrow>Honorary Country 2027</Eyebrow>
-            <h2 className="mt-3 font-display text-h1 text-ivory">Côte d’Ivoire</h2>
-            <p className="mt-5 max-w-[520px] text-lead text-champagne/85">
-              The #1 gold exploration destination in West Africa, Côte d’Ivoire will lead a high-level delegation to
-              Montreal to present its flagship projects to Canadian investors.
+          <div className="relative z-[2] px-6 py-14 text-ivory sm:px-10 lg:max-w-[54rem] lg:px-14 lg:py-[70px]">
+            <p className="text-[13px] font-semibold leading-[1.25] uppercase tracking-[0.26em] text-gold-light">
+              Honorary Country 2027
             </p>
-            <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-ivory/20 pt-8 sm:grid-cols-4">
+            <h2 className="mt-2 font-display text-h1 text-ivory">Côte d’Ivoire</h2>
+            <p className="mt-7 max-w-[740px] text-lead text-ivory/85">
+              The #1 gold exploration destination in West Africa. Côte d’Ivoire will lead a high-
+              <br className="hidden lg:block" />
+              level delegation to Montreal to present its flagship projects to Canadian investors.
+            </p>
+            <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
               {[
                 ['N°1', 'gold exploration in West Africa'],
                 ['10+', 'Canadian TSX companies (A2M estimate)'],
@@ -320,13 +323,13 @@ export default function HomePage() {
                     <span className="font-display font-bold text-[1.6rem] leading-none text-gold-light whitespace-nowrap">
                       {value}
                     </span>
-                    <span className="mt-1.5 block text-small text-champagne/75">{label}</span>
+                    <span className="mt-1.5 block text-[13px] leading-[1.45] text-ivory/70">{label}</span>
                   </dd>
                 </div>
               ))}
             </dl>
             <Link
-              className={[goldOutlineButton, 'mt-10'].join(' ')}
+              className={[goldOutlineButton, 'mt-[14px] border-gold-light px-12 text-gold-light'].join(' ')}
               to="/en/program/honorary-country"
             >
               Discover the Honorary Country
