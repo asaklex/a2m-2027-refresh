@@ -269,7 +269,7 @@ export default function HomePage() {
             className="h-96 w-full object-cover lg:h-full lg:min-h-[30rem]"
             src="/images/home/ministerial-roundtable.jpg"
           />
-          <div className="a2m-motif relative overflow-hidden px-6 py-16 text-ivory sm:px-10 lg:flex lg:items-center lg:px-14">
+          <div className="a2m-motif relative overflow-hidden bg-emerald-deep px-6 py-16 text-ivory sm:px-10 lg:flex lg:items-center lg:px-14">
             <div className="relative z-10 max-w-xl">
               <Eyebrow>Flagship · June 6 · Closed-door</Eyebrow>
               <h2 className="mt-3 font-display text-h1 text-ivory">Ministerial Roundtable</h2>
