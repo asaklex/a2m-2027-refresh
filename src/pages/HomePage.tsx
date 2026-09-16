@@ -259,8 +259,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ministerial Roundtable split — container-width card (shot 5.38.52) */}
-      <section className="bg-ivory px-4 pb-14 sm:px-8 lg:px-16">
+      {/* Ministerial Roundtable split — green band, content in the container card (shot 5.38.52) */}
+      <section className="bg-emerald-deep px-4 py-14 sm:px-8 lg:px-16">
         <div className="mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
           <img
             alt="African and Canadian representatives gathered around a ministerial roundtable"
