@@ -42,6 +42,7 @@ export const navSections: NavSection[] = [
     href: '/en/program',
     items: [
       { label: 'Highlights', href: '/en/program#highlights' },
+      { label: 'Speakers', href: '/en/speakers' },
       { label: 'Honorary Country', href: '/en/program/honorary-country' },
       { label: 'Women in Mining Forum', href: '/en/program/women-in-mining' },
       { label: "Investors' Breakfast", href: '/en/program/investors-breakfast' },

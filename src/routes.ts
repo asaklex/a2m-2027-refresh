@@ -6,6 +6,7 @@ import HonoraryCountryPage from './pages/HonoraryCountryPage'
 import WomenInMiningPage from './pages/WomenInMiningPage'
 import InvestorsBreakfastPage from './pages/InvestorsBreakfastPage'
 import NetworkingPage from './pages/NetworkingPage'
+import SpeakersPage from './pages/SpeakersPage'
 import ExhibitSponsorPage from './pages/ExhibitSponsorPage'
 import PartnerPage from './pages/PartnerPage'
 import PlanYourVisitPage from './pages/PlanYourVisitPage'
@@ -21,6 +22,7 @@ export const routes = [
   { path: '/en/program/women-in-mining', title: 'Women in Mining Forum · A2M 2027', component: WomenInMiningPage },
   { path: '/en/program/investors-breakfast', title: "Investors' Breakfast · A2M 2027", component: InvestorsBreakfastPage },
   { path: '/en/program/networking', title: 'Networking & Social Events · A2M 2027', component: NetworkingPage },
+  { path: '/en/speakers', title: 'Speakers · A2M 2027', component: SpeakersPage },
   { path: '/en/exhibit-sponsor', title: 'Exhibit or Sponsor · A2M 2027', component: ExhibitSponsorPage },
   { path: '/en/partner', title: 'Partner with us · A2M 2027', component: PartnerPage },
   { path: '/en/plan-your-visit', title: 'Plan Your Visit · A2M 2027', component: PlanYourVisitPage },
