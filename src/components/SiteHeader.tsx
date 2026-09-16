@@ -243,7 +243,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                             item.children ? (
                               <li
                                 className="relative"
-                                data-side="left"
+                                data-side="right"
                                 key={item.href}
                                 onMouseEnter={() => {
                                   cancelClose()
@@ -262,7 +262,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                                   data-flyout="true"
                                   onMouseEnter={() => cancelClose()}
                                   className={
-                                    'absolute top-0 right-full z-50 min-w-[240px] pr-1 transition-opacity duration-200 ease-discret ' +
+                                    'absolute top-0 left-full z-50 min-w-[240px] pl-1 transition-opacity duration-200 ease-discret ' +
                                     (flyoutHref === item.href && isOpen
                                       ? 'visible opacity-100 pointer-events-auto'
                                       : 'invisible opacity-0 pointer-events-none')
