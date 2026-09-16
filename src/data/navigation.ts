@@ -112,12 +112,11 @@ export const navSections: NavSection[] = [
   },
 ]
 
-// Footer columns per the target design — the EVENT column is ordered
-// independently of the About dropdown (Why Participate? leads, Conference
-// Themes/Agenda flattened in), and PROGRAM is the Features section.
-export const footerOverviewLinks: NavLink[] = [
-  { label: 'Why Participate?', href: '/en/about#why-participate' },
+// Footer columns per the target design (screenshot 5.39.43): four columns
+// with their own IA, independent of the header dropdowns.
+export const footerEventLinks: NavLink[] = [
   { label: 'A2M 2027', href: '/en/about#conference' },
+  { label: 'Why Participate?', href: '/en/about#why-participate' },
   { label: 'Conference Themes', href: '/en/program#sessions' },
   { label: 'Agenda', href: '/en/program#schedule' },
   { label: 'Institutional Endorsements', href: '/en/about#strategic-partners' },
@@ -126,10 +125,26 @@ export const footerOverviewLinks: NavLink[] = [
   { label: 'Sustainability', href: '/en/about#sustainability' },
   { label: 'Contact Us', href: '/en/about#contact' },
 ]
-export const footerVisitLinks: NavLink[] = navSections[5].items
-export const footerPartnerLinks: NavLink[] = navSections[4].items
-export const footerProgramLinks: NavLink[] = navSections[1].items
-export const footerNewsLinks: NavLink[] = navSections[6].items
+export const footerExhibitLinks: NavLink[] = [
+  { label: 'Exhibit or Sponsor', href: '/en/exhibit-sponsor' },
+  { label: 'Sponsorship Prospectus', href: '/en/exhibit-sponsor#sponsorship' },
+  { label: 'Partners & Exhibitors', href: '/en/exhibit-sponsor#exhibition' },
+  { label: 'Partner with us', href: '/en/partner' },
+]
+export const footerAttendLinks: NavLink[] = [
+  { label: 'Majors & Mid-tier', href: '/en/about#majors' },
+  { label: 'Juniors & Exploration', href: '/en/about#juniors' },
+  { label: 'Investors & DFIs', href: '/en/about#investors' },
+  { label: 'Service providers & tech', href: '/en/about#services' },
+  { label: 'Governments & Ministries', href: '/en/about#governments' },
+  { label: 'Buyers & traders', href: '/en/about#buyers' },
+]
+export const footerVisitLinks: NavLink[] = [
+  { label: 'Venue & access', href: '/en/plan-your-visit#venue' },
+  { label: 'Accommodation', href: '/en/plan-your-visit#where-to-stay' },
+  { label: 'Invitation letter', href: '/en/plan-your-visit#visa' },
+  { label: 'Discover Montreal', href: '/en/plan-your-visit#discover-montreal' },
+]
 
 /** The original site's French edition; the deployment is archived, so the
  *  link points at the recorded origin. Update if a French edition returns. */
