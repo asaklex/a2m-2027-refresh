@@ -6,25 +6,25 @@ const speakers = [
     name: 'H.E. Issoufou Mahamadou',
     title: 'Former President of Niger · AfCFTA Champion',
     org: 'Republic of Niger',
-    photo: '/images/people/portrait-1.jpg',
+    photo: '/images/people/issoufou-mahamadou.jpg',
   },
   {
     name: 'Tim Hodgson',
     title: 'Minister of Energy & Natural Resources',
     org: 'Government of Canada',
-    photo: '/images/people/portrait-2.jpg',
+    photo: '/images/people/tim-hodgson.jpg',
   },
   {
     name: 'Kateri Champagne Jourdain',
     title: 'Minister of Natural Resources and Forests',
     org: 'Government of Québec',
-    photo: '/images/people/portrait-3.jpg',
+    photo: '/images/people/kateri-champagne-jourdain.jpg',
   },
   {
     name: 'Mamadou Sangafowa-Coulibaly',
     title: 'Minister of Mines, Petroleum and Energy',
     org: "Côte d'Ivoire · Honorary Country 2027",
-    photo: '/images/people/portrait-4.jpg',
+    photo: '/images/people/mamadou-sangafowa-coulibaly.jpg',
   },
 ]
 
