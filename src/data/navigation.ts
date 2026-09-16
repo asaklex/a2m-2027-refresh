@@ -112,9 +112,23 @@ export const navSections: NavSection[] = [
   },
 ]
 
-export const footerOverviewLinks: NavLink[] = navSections[0].items
+// Footer columns per the target design — the EVENT column is ordered
+// independently of the About dropdown (Why Participate? leads, Conference
+// Themes/Agenda flattened in), and PROGRAM is the Features section.
+export const footerOverviewLinks: NavLink[] = [
+  { label: 'Why Participate?', href: '/en/about#why-participate' },
+  { label: 'A2M 2027', href: '/en/about#conference' },
+  { label: 'Conference Themes', href: '/en/program#sessions' },
+  { label: 'Agenda', href: '/en/program#schedule' },
+  { label: 'Institutional Endorsements', href: '/en/about#strategic-partners' },
+  { label: 'Advisory Board', href: '/en/about#advisory-board' },
+  { label: 'Meet the Team', href: '/en/about#meet-the-team' },
+  { label: 'Sustainability', href: '/en/about#sustainability' },
+  { label: 'Contact Us', href: '/en/about#contact' },
+]
 export const footerVisitLinks: NavLink[] = navSections[5].items
 export const footerPartnerLinks: NavLink[] = navSections[4].items
+export const footerProgramLinks: NavLink[] = navSections[1].items
 export const footerNewsLinks: NavLink[] = navSections[6].items
 
 /** The original site's French edition; the deployment is archived, so the
