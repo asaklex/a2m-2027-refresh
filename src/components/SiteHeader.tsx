@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ALargeSmall, ChevronDown, ChevronRight, Menu } from 'lucide-react'
+import { ALargeSmall, ChevronDown, ChevronRight, Globe, House, Menu } from 'lucide-react'
 import { navSections, legacyFrenchOrigin } from '../data/navigation'
 
 type Props = {
@@ -9,9 +9,15 @@ type Props = {
   onOpenMobileMenu: (trigger: HTMLElement) => void
 }
 
-const navLinkClass = (active: boolean) =>
+// Open (hover/focus) fills the trigger like the target design; the current
+// section just tints the text.
+const navLinkClass = (active: boolean, open = false) =>
   'flex items-center gap-1 rounded-sm px-3 py-2 font-sans font-medium text-[13.5px] transition-colors duration-200 ease-discret ' +
-  (active ? 'text-emerald-cta' : 'text-muted hover:bg-anthracite/4 hover:text-anthracite')
+  (open
+    ? 'bg-emerald-deep text-white'
+    : active
+      ? 'text-emerald-cta hover:bg-anthracite/4'
+      : 'text-muted hover:bg-anthracite/4 hover:text-anthracite')
 
 const dropLinkClass = 'block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep'
 
@@ -33,7 +39,9 @@ const CLOSE_DELAY_MS = 260
  *  delay. Keyboard users get the same menu via focus. */
 function useDropdownController() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-  const [flyoutOpen, setFlyoutOpen] = useState(false)
+  // Which dropdown row (by href) has its nested flyout open — a single
+  // boolean would show every flyout in the panel at once.
+  const [flyoutHref, setFlyoutHref] = useState<string | null>(null)
   const openTimer = useRef<number>(0)
   const closeTimer = useRef<number>(0)
   const rootRef = useRef<HTMLElement>(null)
@@ -56,7 +64,7 @@ function useDropdownController() {
     clearTimers()
     closeTimer.current = window.setTimeout(() => {
       setOpenIndex(null)
-      setFlyoutOpen(false)
+      setFlyoutHref(null)
     }, CLOSE_DELAY_MS)
   }
 
@@ -65,7 +73,7 @@ function useDropdownController() {
   useEffect(() => {
     clearTimers()
     setOpenIndex(null)
-    setFlyoutOpen(false)
+    setFlyoutHref(null)
   }, [pathname, hash])
 
   // Escape closes and re-focuses the section link; outside pointer-down closes.
@@ -73,9 +81,9 @@ function useDropdownController() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Escape' || openIndex === null) return
       event.stopPropagation()
-      const link = rootRef.current?.querySelectorAll<HTMLAnchorElement>('nav > ul > li > a')[openIndex]
+      const link = rootRef.current?.querySelector<HTMLAnchorElement>(`li[data-nav-section='${openIndex}'] > a`)
       setOpenIndex(null)
-      setFlyoutOpen(false)
+      setFlyoutHref(null)
       link?.focus()
     }
     const onPointerDown = (event: PointerEvent) => {
@@ -83,7 +91,7 @@ function useDropdownController() {
       if (rootRef.current && !rootRef.current.contains(event.target as Node)) {
         clearTimers()
         setOpenIndex(null)
-        setFlyoutOpen(false)
+        setFlyoutHref(null)
       }
     }
     document.addEventListener('keydown', onKeyDown)
@@ -95,13 +103,13 @@ function useDropdownController() {
     }
   }, [openIndex])
 
-  return { rootRef, openIndex, flyoutOpen, openMenu, scheduleClose, cancelClose: clearTimers, setFlyoutOpen }
+  return { rootRef, openIndex, flyoutHref, openMenu, scheduleClose, cancelClose: clearTimers, setFlyoutHref }
 }
 
 export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobileMenu }: Props) {
   const { pathname } = useLocation()
   const activeSection = navSections.find((s) => pathname === s.href || pathname.startsWith(s.href + '/'))
-  const { rootRef, openIndex, flyoutOpen, openMenu, scheduleClose, cancelClose, setFlyoutOpen } = useDropdownController()
+  const { rootRef, openIndex, flyoutHref, openMenu, scheduleClose, cancelClose, setFlyoutHref } = useDropdownController()
 
   const panelVisibility = (open: boolean) =>
     'transition-opacity duration-200 ease-discret ' +
@@ -166,12 +174,13 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                 aria-label="Switch to French"
                 className="inline-flex h-10 items-center gap-1 rounded-full border border-hairline px-3 text-[11px] font-semibold tracking-[0.08em] text-muted uppercase transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
               >
+                <Globe className="size-3 text-taupe" aria-hidden="true" />
                 EN
                 <ChevronDown className="size-3 text-taupe" aria-hidden="true" />
               </button>
               <Link
                 to="/en/news#sign-up"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-10 px-5 text-[11px]"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 bg-emerald-deep text-gold-light hover:-translate-y-0.5 hover:shadow-emerald focus-visible:outline-gold-light h-10 px-5 text-[11px]"
               >
                 Join the waitlist
               </Link>
@@ -179,12 +188,22 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
 
             <nav aria-label="Navigation principale" className="hidden lg:block">
               <ul className="flex items-center gap-1">
+                <li className="group relative" key="home">
+                  <Link
+                    aria-label="Home"
+                    to="/en"
+                    className="flex items-center rounded-sm px-3 py-2 text-anthracite transition-colors duration-200 ease-discret hover:bg-anthracite/4 hover:text-emerald-cta"
+                  >
+                    <House className="size-4" aria-hidden="true" />
+                  </Link>
+                </li>
                 {navSections.map((section, index) => {
                   const isOpen = openIndex === index
                   return (
                     <li
                       className="group relative"
                       key={section.href}
+                      data-nav-section={index}
                       onMouseEnter={() => openMenu(index)}
                       onMouseLeave={scheduleClose}
                       onFocusCapture={() => {
@@ -196,17 +215,23 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                       }}
                     >
                       <Link
-                        className={navLinkClass(section === activeSection)}
+                        className={navLinkClass(section === activeSection, isOpen)}
                         to={section.href}
-                        aria-expanded={isOpen}
-                        aria-haspopup="true"
+                        aria-expanded={section.plain ? undefined : isOpen}
+                        aria-haspopup={section.plain ? undefined : 'true'}
                       >
                         {section.label}
-                        <ChevronDown
-                          className={'size-3.5 text-taupe transition-transform duration-200' + (isOpen ? ' rotate-180' : '')}
-                          aria-hidden="true"
-                        />
+                        {!section.plain && (
+                          <ChevronDown
+                            className={
+                              'size-3.5 transition-transform duration-200 ' +
+                              (isOpen ? 'rotate-180 text-white' : 'text-taupe')
+                            }
+                            aria-hidden="true"
+                          />
+                        )}
                       </Link>
+                      {!section.plain && (
                       <div
                         data-dropdown="true"
                         onMouseEnter={() => cancelClose()}
@@ -222,14 +247,14 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                                 key={item.href}
                                 onMouseEnter={() => {
                                   cancelClose()
-                                  setFlyoutOpen(true)
+                                  setFlyoutHref(item.href)
                                 }}
-                                onMouseLeave={() => setFlyoutOpen(false)}
+                                onMouseLeave={() => setFlyoutHref(null)}
                               >
                                 <Link className={subLinkClass} to={item.href}>
                                   <span>{item.label}</span>
                                   <ChevronRight
-                                    className={'size-3.5 shrink-0 text-taupe transition-transform duration-200' + (flyoutOpen ? ' rotate-180' : '')}
+                                    className={'size-3.5 shrink-0 text-taupe transition-transform duration-200' + (flyoutHref === item.href ? ' rotate-180' : '')}
                                     aria-hidden="true"
                                   />
                                 </Link>
@@ -238,7 +263,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                                   onMouseEnter={() => cancelClose()}
                                   className={
                                     'absolute top-0 right-full z-50 min-w-[240px] pr-1 transition-opacity duration-200 ease-discret ' +
-                                    (flyoutOpen && isOpen
+                                    (flyoutHref === item.href && isOpen
                                       ? 'visible opacity-100 pointer-events-auto'
                                       : 'invisible opacity-0 pointer-events-none')
                                   }
@@ -264,6 +289,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                           )}
                         </ul>
                       </div>
+                      )}
                     </li>
                   )
                 })}

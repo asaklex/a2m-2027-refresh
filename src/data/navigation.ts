@@ -3,17 +3,33 @@
 
 export type NavLink = { label: string; href: string }
 export type NavFlyoutItem = NavLink & { children?: NavLink[] }
-export type NavSection = { label: string; href: string; items: NavFlyoutItem[] }
+export type NavSection = { label: string; href: string; items: NavFlyoutItem[]; plain?: boolean }
 
 export const navSections: NavSection[] = [
   {
-    label: 'A2M 2027',
+    label: 'About',
     href: '/en/about',
     items: [
-      { label: 'A2M 2027', href: '/en/about#conference' },
-      { label: 'Conference Themes', href: '/en/program#sessions' },
-      { label: 'Agenda', href: '/en/program#schedule' },
-      { label: 'Why Participate?', href: '/en/about#why-participate' },
+      {
+        label: 'A2M 2027',
+        href: '/en/about#conference',
+        children: [
+          { label: 'Conference Themes', href: '/en/program#sessions' },
+          { label: 'Agenda', href: '/en/program#schedule' },
+        ],
+      },
+      {
+        label: 'Why Participate?',
+        href: '/en/about#why-participate',
+        children: [
+          { label: 'Majors & mid-tier', href: '/en/about#majors' },
+          { label: 'Juniors & exploration', href: '/en/about#juniors' },
+          { label: 'Investors & DFIs', href: '/en/about#investors' },
+          { label: 'Service providers & tech', href: '/en/about#services' },
+          { label: 'Governments & ministries', href: '/en/about#governments' },
+          { label: 'Buyers & traders', href: '/en/about#buyers' },
+        ],
+      },
       { label: 'Institutional Endorsements', href: '/en/about#strategic-partners' },
       { label: 'Advisory Board', href: '/en/about#advisory-board' },
       { label: 'Meet the Team', href: '/en/about#meet-the-team' },
@@ -84,6 +100,9 @@ export const navSections: NavSection[] = [
   {
     label: 'News',
     href: '/en/news',
+    // Target header renders News as a plain link (no dropdown); items stay
+    // for the footer News column.
+    plain: true,
     items: [
       { label: 'News Release', href: '/en/news#news-release' },
       { label: 'Market News', href: '/en/news#market-news' },

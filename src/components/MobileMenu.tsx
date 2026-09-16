@@ -42,15 +42,28 @@ export default function MobileMenu({ onClose, onOpenAccount }: Props) {
             const isOpen = expanded === section.label
             return (
               <div className="border-b border-[#e5e5e2]" key={section.label}>
-                <button
-                  type="button"
-                  aria-expanded={isOpen}
-                  className={'flex min-h-[58px] w-full items-center justify-between px-[22px] text-left text-sm font-semibold text-emerald-deep ' + (isOpen ? '[&>svg]:rotate-180' : '')}
-                  onClick={() => setExpanded((current) => (current === section.label ? null : section.label))}
-                >
-                  <span>{section.label}</span>
-                  <ChevronDown size={18} aria-hidden="true" className="transition-transform" />
-                </button>
+                {section.plain ? (
+                  <button
+                    type="button"
+                    className="flex min-h-[58px] w-full items-center px-[22px] text-left text-sm font-semibold text-emerald-deep"
+                    onClick={() => {
+                      onClose()
+                      navigate(section.href)
+                    }}
+                  >
+                    {section.label}
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    className={'flex min-h-[58px] w-full items-center justify-between px-[22px] text-left text-sm font-semibold text-emerald-deep ' + (isOpen ? '[&>svg]:rotate-180' : '')}
+                    onClick={() => setExpanded((current) => (current === section.label ? null : section.label))}
+                  >
+                    <span>{section.label}</span>
+                    <ChevronDown size={18} aria-hidden="true" className="transition-transform" />
+                  </button>
+                )}
                 {isOpen && (
                   <ul className="list-none rounded-none bg-[#f3f5f1] px-0 pb-3.5 pt-1.5">
                     {section.items.map((item) => (
