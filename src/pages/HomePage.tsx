@@ -1,69 +1,79 @@
+// Homepage rebuilt from the target redesign screenshots 5.38.01 → 5.39.43
+// (section order, copy and treatments transcribed verbatim from the PNGs).
+// Sections whose reference content was template filler from the previous
+// dev's scaffold (When & where / Venue / Partners) keep the design but use
+// A2M's real event facts.
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/HeroCarousel'
+import { legacyFrenchOrigin } from '../data/navigation'
 
-const programPdf =
-  'https://africa-mining-montreal.netlify.app/program/a2m-2027-program.pdf'
+const PROGRAM_PDF = `${legacyFrenchOrigin}/program/a2m-2027-program.pdf`
 
 const speakers = [
   {
-    name: 'H.E. Mahamadou Issoufou',
-    title: 'Former President of Niger',
+    name: 'H.E. Issoufou Mahamadou',
+    title: 'Former President of Niger · AfCFTA Champion',
+    org: 'Republic of Niger',
     image: '/images/people/issoufou-mahamadou.jpg',
   },
   {
-    name: 'The Hon. Tim Hodgson',
-    title: 'Minister of Energy and Natural Resources of Canada',
+    name: 'Tim Hodgson',
+    title: 'Minister of Energy & Natural Resources',
+    org: 'Government of Canada',
     image: '/images/people/tim-hodgson.jpg',
   },
   {
     name: 'Kateri Champagne Jourdain',
-    title: 'Minister of Employment and Social Development',
+    title: 'Minister of Natural Resources and Forests',
+    org: 'Government of Québec',
     image: '/images/people/kateri-champagne-jourdain.jpg',
   },
   {
-    name: 'Mamadou Sangafowa Coulibaly',
-    title: 'Minister of Mines, Petroleum and Energy of Côte d’Ivoire',
+    name: 'Mamadou Sangafowa-Coulibaly',
+    title: 'Minister of Mines, Petroleum and Energy',
+    org: 'Republic of Côte d’Ivoire',
     image: '/images/people/mamadou-sangafowa-coulibaly.jpg',
   },
 ]
 
+const visitSteps = [
+  { number: '01', title: 'Getting there', sub: 'Direct flights from major African cities' },
+  { number: '02', title: 'Where to stay', sub: 'Partner hotels near the venue' },
+  { number: '03', title: 'Book your hotel room', sub: 'Discounted rates for delegates' },
+  { number: '04', title: 'Register', sub: 'Founding Delegate rate — via the waitlist' },
+]
+
 const experiences = [
   {
-    number: '01',
     label: 'Flagship · June 6',
     title: 'Ministerial Roundtable',
-    body: 'Closed-door dialogue between African ministers, Canadian officials and industry leaders.',
+    body: 'The closed-door political dialogue on June 6.',
   },
   {
-    number: '02',
-    label: 'Flagship · June 7',
+    label: 'Honorary Country',
     title: 'Honorary Country',
-    body: 'A dedicated spotlight on Côte d’Ivoire — its projects, policies and partnerships.',
+    body: 'Côte d’Ivoire, the 2027 edition’s showcase.',
   },
   {
-    number: '03',
     label: 'Forum',
-    title: 'Women in Mining',
-    body: 'Recognising the women driving transformation across African mining.',
+    title: 'Women in Mining Forum',
+    body: 'Women’s leadership, from site to boardroom.',
   },
   {
-    number: '04',
-    label: 'Capital-side',
-    title: 'Investors Programme',
-    body: 'Curated access for funds, family offices and institutional investors.',
+    label: 'Capital side',
+    title: 'Investors’ Breakfast',
+    body: '90 closed-door minutes, capital side only.',
   },
   {
-    number: '05',
     label: 'B2B',
     title: 'Business Matchmaking',
-    body: 'Pre-qualified meetings that turn introductions into opportunities.',
+    body: 'Your B2B agenda confirmed before you land.',
   },
   {
-    number: '06',
     label: 'Social',
-    title: 'Networking',
-    body: 'From opening receptions to private dinners — the conversations that count.',
+    title: 'Networking & Social Events',
+    body: 'Reception, gala and evenings where deals close.',
   },
 ]
 
@@ -71,60 +81,61 @@ const reasons = [
   {
     number: '01',
     title: 'Meet the decision-makers',
-    body: '30+ African ministers, leading financiers, investors, operators and innovators — all in one room.',
+    body: '30+ African Mining Ministers, Canadian officials, TSX/TSX-V CEOs and DFI leaders.',
   },
   {
     number: '02',
     title: 'Build your pipeline',
-    body: 'Identify projects, partners and capital sources aligned with your strategic priorities.',
+    body: 'The Investment Showcase presents pre-screened African projects to investors. Capital Markets Lounge offers private negotiation space.',
   },
   {
     number: '03',
     title: 'Discover Côte d’Ivoire',
-    body: 'Explore one of Africa’s fastest-growing mining jurisdictions, our Honorary Country for 2027.',
+    body: 'The #1 gold exploration destination in West Africa. 10+ Canadian TSX companies already operating (A2M estimate).',
   },
   {
     number: '04',
     title: 'Shape the future',
-    body: 'Join the conversations defining how Africa’s mineral wealth powers the global energy transition.',
+    body: 'Co-create the first bilateral Canada-Africa political instrument on critical minerals.',
   },
   {
     number: '05',
     title: 'Access African capital',
-    body: 'Connect with African mining companies, developers and capital providers seeking North American partnerships.',
+    body: 'Meet key African bankers and financiers co-financing Africa’s next generation of mines.',
   },
   {
     number: '06',
-    title: 'Leverage diplomatic ties',
-    body: 'Benefit from the relationships and facilitation of governments, embassies and trade agencies.',
+    title: 'Leverage the diplomatic platform',
+    body: 'A ministerial structure that reduces political and regulatory risk on both sides of the Atlantic.',
   },
 ]
 
-const announcements = [
+const news = [
   {
-    date: '14 Sep 2026',
+    date: 'September 14, 2026',
     title: 'Côte d’Ivoire named Honorary Country for A2M 2027',
+    body: 'The #1 gold exploration destination in West Africa will lead a high-level delegation to Montreal.',
     image: '/images/news/cote-divoire-honorary-country.jpg',
   },
   {
-    date: '01 Oct 2026',
-    title: 'Ministerial Roundtable agenda announced',
+    date: 'October 1, 2026',
+    title: 'Ministerial Roundtable agenda revealed',
+    body: 'The first Canada-Africa political dialogue on critical minerals sets out its focus areas.',
     image: '/images/news/ministerial-round-table-agenda.jpg',
   },
   {
-    date: '17 Nov 2026',
-    title: 'A2M 2027 launches sustainability pledge',
+    date: 'November 17, 2026',
+    title: 'Sustainability Program: up to 10% of revenues pledged',
+    body: 'A2M directs a share of its revenues to host & Indigenous communities, women in mining, and children’s education.',
     image: '/images/news/sustainability-pledge.jpg',
   },
 ]
 
-function Eyebrow({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
+function Eyebrow({ children, center = false }: { children: ReactNode; center?: boolean }) {
   return (
     <p
       className={
-        dark
-          ? 'mb-5 text-xs font-bold uppercase tracking-[0.18em] text-gold'
-          : 'mb-5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-cta'
+        'text-small font-semibold uppercase tracking-[0.26em] text-copper ' + (center ? 'text-center' : '')
       }
     >
       {children}
@@ -132,233 +143,282 @@ function Eyebrow({ children, dark = false }: { children: ReactNode; dark?: boole
   )
 }
 
+const goldButton =
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-6 text-[11px]'
+
 const outlineButton =
-  'inline-flex items-center justify-center border border-current px-7 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-colors hover:bg-emerald-cta hover:text-white'
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 h-12 border border-emerald-cta px-6 text-[11px] text-emerald-cta hover:bg-emerald-cta hover:text-ivory focus-visible:outline-emerald-cta'
 
 const goldOutlineButton =
-  'inline-flex items-center justify-center border border-gold px-7 py-3 text-xs font-bold uppercase tracking-[0.14em] text-gold transition-colors hover:bg-gold hover:text-emerald-cta'
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 h-12 border border-gold px-6 text-[11px] text-gold hover:bg-gold hover:text-emerald-deep focus-visible:outline-gold'
 
 export default function HomePage() {
   return (
     <main>
       <HeroCarousel />
 
-      <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Eyebrow>Speakers</Eyebrow>
-          <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-            <h2 className="max-w-xl font-display text-4xl leading-[0.98] text-emerald-cta sm:text-5xl">
-              Speakers &amp; panellists
-            </h2>
-            <Link className={outlineButton} to="/en/speakers">
-              Meet all speakers
-            </Link>
+      {/* Speakers — dark panel, centered header (shot 5.38.36) */}
+      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:px-16">
+        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
+          <div className="mx-auto max-w-[720px] text-center">
+            <Eyebrow center>Speakers</Eyebrow>
+            <h2 className="mt-4 font-display text-h1 text-ivory">Speakers &amp; panellists</h2>
+            <span className="mx-auto mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+            <p className="mt-5 text-lead text-champagne/85">
+              A lineup of ministers, CEOs, investors and technical leaders shaping the future of African mining.
+            </p>
           </div>
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {speakers.map((speaker) => (
-              <article key={speaker.name}>
-                <img
-                  alt={speaker.name}
-                  className="aspect-[0.84] w-full object-cover grayscale"
-                  src={speaker.image}
-                />
-                <h3 className="mt-5 font-display text-xl leading-tight text-emerald-cta">{speaker.name}</h3>
-                <p className="mt-2 max-w-[17rem] text-sm leading-relaxed text-emerald-cta/70">{speaker.title}</p>
-              </article>
+              <li key={speaker.name}>
+                <article>
+                  <img
+                    alt={speaker.name}
+                    loading="lazy"
+                    className="aspect-square w-full rounded-sm object-cover"
+                    src={speaker.image}
+                  />
+                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-gold-light">
+                    {speaker.name}
+                  </h3>
+                  <p className="mt-1 text-small text-ivory">{speaker.title}</p>
+                  <p className="mt-0.5 text-small text-champagne/65">{speaker.org}</p>
+                </article>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="a2m-motif relative overflow-hidden bg-emerald-cta px-6 py-20 text-white sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Eyebrow dark>Invest · Deal · Decide</Eyebrow>
-          <h2 className="max-w-2xl font-display text-4xl leading-[0.98] sm:text-5xl">
-            Three pillars, one platform
-          </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75">
-            A2M brings African mining supply and North American capital together around concrete
-            goals.
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {[
-              ['Invest', 'Capital meets opportunity.', 'Connect with the people and projects shaping Africa’s mining future.'],
-              ['Deal', 'Relationships become partnerships.', 'Move from introductions to transactions through curated, high-value exchanges.'],
-              ['Decide', 'Strategy meets insight.', 'Access the intelligence, policy dialogue and network to make better decisions.'],
-            ].map(([title, lead, body]) => (
-              <article className="border border-white/40 p-7 lg:p-8" key={title}>
-                <h3 className="font-display text-3xl text-white">{title}</h3>
-                <p className="mt-6 font-medium leading-relaxed text-white">{lead}</p>
-                <p className="mt-3 text-sm leading-relaxed text-white/65">{body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Eyebrow>Highlights</Eyebrow>
-          <h2 className="max-w-xl font-display text-4xl leading-[0.98] text-emerald-cta sm:text-5xl">
-            Six signature experiences
-          </h2>
-          <div className="mt-12 grid border-l border-t border-forest/20 sm:grid-cols-2 lg:grid-cols-3">
-            {experiences.map((experience) => (
-              <article className="border-b border-r border-forest/20 p-7 lg:p-8" key={experience.title}>
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-gold">
-                  {experience.number} · {experience.label}
-                </p>
-                <h3 className="mt-8 font-display text-2xl leading-tight text-emerald-cta">{experience.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-emerald-cta/70">{experience.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="grid bg-emerald-cta lg:grid-cols-2">
-        <img
-          alt="African and Canadian representatives gathered around a ministerial roundtable"
-          className="h-80 w-full object-cover lg:order-2 lg:h-full"
-          src="/images/home/ministerial-roundtable.jpg"
-        />
-        <div className="a2m-motif relative overflow-hidden px-6 py-16 text-white sm:px-10 lg:order-1 lg:flex lg:min-h-[29rem] lg:items-center lg:px-16">
-          <div className="max-w-xl">
-            <Eyebrow dark>Flagship · June 6</Eyebrow>
-            <h2 className="font-display text-4xl leading-[0.98] sm:text-5xl">Ministerial Roundtable</h2>
-            <p className="mt-7 leading-relaxed text-white/75">
-              A closed-door forum for African ministers, Canadian government officials and
-              industry leaders to align on investment priorities, policy frameworks and
-              cross-border partnerships.
-            </p>
-            <Link className={[goldOutlineButton, 'mt-9'].join(' ')} to="/en/program/ministerial-roundtable">
-              Explore the roundtable
+          </ul>
+          <div className="mt-12 text-center">
+            <Link className={goldButton} to="/en/speakers">
+              See all speakers
             </Link>
           </div>
         </div>
       </section>
 
-      <section
-        className="relative overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/home/abidjan-bridge.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-emerald-cta/30" />
-        <div className="relative bg-emerald-cta px-6 py-20 text-white sm:px-10 lg:min-h-[39rem] lg:w-[48%] lg:px-16 lg:py-28">
-          <div className="max-w-md">
-            <Eyebrow dark>Honorary Country 2027</Eyebrow>
-            <h2 className="font-display text-5xl leading-none sm:text-6xl">Côte d’Ivoire</h2>
-            <p className="mt-7 leading-relaxed text-white/75">
-              A dynamic mining jurisdiction at the heart of West Africa — and our Honorary
-              Country for A2M 2027.
-            </p>
-            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-white/25 pt-8">
-              {[
-                ['N°1', 'Gold producer in francophone West Africa'],
-                ['10+', 'Operating gold mines'],
-                ['59 t', 'Gold produced in 2025'],
-                ['100 t/yr', 'Target production by 2030'],
-              ].map(([value, label]) => (
-                <div key={value}>
-                  <p className="font-display text-3xl text-gold">{value}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-white/70">{label}</p>
-                </div>
-              ))}
-            </div>
-            <Link className={[goldOutlineButton, 'mt-10'].join(' ')} to="/en/honorary-country">
-              Discover Côte d’Ivoire
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#f4f6f2] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Eyebrow>Attend</Eyebrow>
-          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-            <h2 className="max-w-xl font-display text-4xl leading-[0.98] text-emerald-cta sm:text-5xl">
-              Why A2M 2027?
-            </h2>
-            <Link className={outlineButton} to="/en/attend">
-              Why attend
-            </Link>
-          </div>
-          <div className="mt-12 grid border-l border-t border-forest/20 sm:grid-cols-2 lg:grid-cols-3">
-            {reasons.map((reason) => (
-              <article className="border-b border-r border-forest/20 p-7 lg:p-8" key={reason.number}>
-                <p className="text-xs font-bold tracking-[0.14em] text-gold">{reason.number}</p>
-                <h3 className="mt-7 font-display text-2xl leading-tight text-emerald-cta">{reason.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-emerald-cta/70">{reason.body}</p>
-              </article>
+      {/* When & where — pale strip with numbered steps (shot 5.38.44) */}
+      <section className="bg-surface px-4 py-16 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <Eyebrow>June 7–9, 2027 · When &amp; where</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ink">Plan your visit</h2>
+          <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {visitSteps.map((step) => (
+              <li key={step.number}>
+                <p className="font-display font-bold text-data-xl text-gold">{step.number}</p>
+                <h3 className="mt-3 font-display font-semibold text-h3 text-ink">{step.title}</h3>
+                <p className="mt-1.5 text-small text-muted">{step.sub}</p>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="a2m-motif relative overflow-hidden bg-emerald-cta px-6 py-16 text-white sm:px-10 lg:px-16 lg:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 lg:flex-row lg:items-center">
-          <div>
-            <Eyebrow dark>Programme</Eyebrow>
-            <h2 className="font-display text-4xl leading-[0.98] sm:text-5xl">Plan your A2M experience</h2>
-            <p className="mt-5 max-w-xl leading-relaxed text-white/75">
-              Explore the sessions, meetings and conversations that will shape the week.
-            </p>
-          </div>
-          <a className={goldOutlineButton} href={programPdf} rel="noreferrer" target="_blank">
-            Download the programme
+          </ol>
+          <a
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite mt-10 h-12 px-6 text-[11px]"
+            href="https://www.google.com/maps/search/?api=1&query=Centre+Mont-Royal+Montreal"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on Google Maps
           </a>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Eyebrow>News</Eyebrow>
-          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-            <h2 className="font-display text-4xl leading-[0.98] text-emerald-cta sm:text-5xl">Latest announcements</h2>
-            <Link className={outlineButton} to="/en/news">
-              See all news
-            </Link>
-          </div>
-          <div className="mt-12 grid gap-7 md:grid-cols-3">
-            {announcements.map((announcement) => (
-              <article key={announcement.title}>
-                <img
-                  alt=""
-                  className="aspect-[1.52] w-full object-cover"
-                  src={announcement.image}
-                />
-                <p className="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-gold">
-                  {announcement.date}
-                </p>
-                <h3 className="mt-3 font-display text-2xl leading-tight text-emerald-cta">{announcement.title}</h3>
-                <Link className="mt-5 inline-flex border-b border-gold pb-1 text-xs font-bold uppercase tracking-[0.14em] text-emerald-cta" to="/en/news">
-                  Read more
-                </Link>
-              </article>
+      {/* The venue — dark panel (shot 5.38.44) */}
+      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-16 text-ivory sm:px-8 lg:px-16">
+        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
+          <Eyebrow>The venue</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ivory">Centre Mont-Royal</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <p className="mt-5 max-w-[640px] text-lead text-champagne/85">
+            Montréal’s premier meeting venue in the heart of the city — a venue as dynamic as the conversations it
+            hosts.
+          </p>
+          <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/plan-your-visit#venue">
+            Explore the venue
+          </Link>
+        </div>
+      </section>
+
+      {/* Partners band (shot 5.38.44) */}
+      <section className="bg-emerald-ink px-4 py-14 text-ivory sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <Eyebrow>Partners</Eyebrow>
+          <h2 className="mt-3 font-display text-h2 text-ivory">Become a Partner or Sponsor</h2>
+          <p className="mt-4 max-w-[640px] text-lead text-champagne/85">
+            Position your brand at the intersection of African mining and Canadian capital — where deals are made.
+          </p>
+          <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/exhibit-sponsor">
+            Associate your brand
+          </Link>
+        </div>
+      </section>
+
+      {/* Six signature experiences (shot 5.38.52) */}
+      <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <Eyebrow>Highlights</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ink">Six signature experiences</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <p className="mt-5 max-w-[640px] text-lead text-muted">
+            Six signature experiences make up A2M 2027 — each engineered for a precise outcome, from ministerial
+            dialogue to deal-making meetings.
+          </p>
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {experiences.map((experience) => (
+              <li key={experience.title}>
+                <article className="h-full rounded-sm border border-hairline bg-card p-6 shadow-card">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">
+                    {experience.label}
+                  </p>
+                  <h3 className="mt-5 font-display font-semibold text-h3 text-emerald-deep">{experience.title}</h3>
+                  <p className="mt-2 text-small text-muted">{experience.body}</p>
+                </article>
+              </li>
             ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Ministerial Roundtable split — photo left, dark panel right (shot 5.38.52) */}
+      <section className="grid bg-emerald-deep lg:grid-cols-2">
+        <img
+          alt="African and Canadian representatives gathered around a ministerial roundtable"
+          loading="lazy"
+          className="h-80 w-full object-cover lg:h-full"
+          src="/images/home/ministerial-roundtable.jpg"
+        />
+        <div className="a2m-motif relative overflow-hidden px-4 py-16 text-ivory sm:px-8 lg:flex lg:min-h-[29rem] lg:items-center lg:px-16">
+          <div className="relative z-10 max-w-xl">
+            <Eyebrow>Flagship · June 6 · Closed-door</Eyebrow>
+            <h2 className="mt-3 font-display text-h1 text-ivory">Ministerial Roundtable</h2>
+            <p className="mt-5 text-lead text-champagne/85">
+              The political dialogue that opens A2M 2027 — ministers of mines, Canadian officials and institutional
+              leaders shaping the Canada–Africa mining partnership behind closed doors. 30 signatory ministers, one
+              table.
+            </p>
+            <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/program/ministerial-roundtable">
+              Discover the Roundtable
+            </Link>
           </div>
         </div>
       </section>
 
-      <section
-        className="relative overflow-hidden bg-cover bg-center px-6 py-24 sm:px-10 lg:px-16 lg:py-32"
-        style={{ backgroundImage: "url('/images/hero/slide-1.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-emerald-cta/90 backdrop-blur-[3px]" />
-        <div className="relative mx-auto max-w-7xl text-center text-white">
-          <h2 className="mx-auto max-w-3xl font-display text-5xl leading-[0.98] sm:text-6xl">
-            Be part of African Mining in Montreal
-          </h2>
-          <p className="mx-auto mt-7 max-w-xl leading-relaxed text-white/75">
-            Join the people, partnerships and conversations driving the future of African mining.
+      {/* Honorary Country — photo treatment with side panel (shot 5.39.12) */}
+      <section className="relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/home/abidjan-bridge.jpg')" }}>
+        <div className="absolute inset-0 bg-emerald-deep/30" aria-hidden="true" />
+        <div className="relative bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:min-h-[39rem] lg:w-1/2 lg:px-16 lg:py-28">
+          <Eyebrow>Honorary Country 2027</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ivory">Côte d’Ivoire</h2>
+          <p className="mt-5 max-w-[520px] text-lead text-champagne/85">
+            The #1 gold exploration destination in West Africa, Côte d’Ivoire will lead a high-level delegation to
+            Montreal to present its flagship projects to Canadian investors.
           </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link className={goldOutlineButton} to="/en/register">
-              Register your interest
-            </Link>
-            <Link className={goldOutlineButton} to="/en/contact">
-              Talk to our team
+          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-ivory/20 pt-8">
+            {[
+              ['N°1', 'gold exploration in West Africa'],
+              ['10+', 'Canadian TSX companies (A2M estimate)'],
+              ['59 t', 'gold produced in 2024'],
+              ['100 t/yr', 'target by 2030'],
+            ].map(([value, label]) => (
+              <div key={value}>
+                <dt className="sr-only">{label}</dt>
+                <dd>
+                  <span className="font-display font-bold text-data-xl text-gold-light">{value}</span>
+                  <span className="mt-1 block text-small text-champagne/75">{label}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <Link
+            className={[goldOutlineButton, 'mt-10'].join(' ')}
+            to="/en/program/honorary-country"
+          >
+            Discover the Honorary Country
+          </Link>
+        </div>
+      </section>
+
+      {/* Top reasons to attend (shot 5.39.21) */}
+      <section className="bg-surface px-4 py-20 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <div className="mx-auto max-w-[720px] text-center">
+            <Eyebrow center>Attend</Eyebrow>
+            <h2 className="mt-3 font-display text-h1 text-ink">Top reasons to attend</h2>
+          </div>
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {reasons.map((reason) => (
+              <li key={reason.number}>
+                <article className="h-full rounded-sm border border-hairline bg-card p-6 shadow-card">
+                  <p className="font-display font-bold text-data-xl text-gold">{reason.number}</p>
+                  <h3 className="mt-4 font-display font-semibold text-h3 text-ink">{reason.title}</h3>
+                  <p className="mt-2 text-small text-muted">{reason.body}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-12 text-center">
+            <Link className={outlineButton} to="/en/news#sign-up">
+              Join the waitlist
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Program download band (shot 5.39.21) */}
+      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-14 text-ivory sm:px-8 lg:px-16">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col justify-between gap-8 lg:flex-row lg:items-center">
+          <div>
+            <h2 className="font-display text-h2 text-ivory">Download the A2M 2027 program</h2>
+            <p className="mt-3 max-w-xl text-lead text-champagne/85">
+              Keynotes, panels, roundtables and the three-day agenda — the full program in one document.
+            </p>
+          </div>
+          <a className={goldOutlineButton} href={PROGRAM_PDF} target="_blank" rel="noreferrer">
+            Download the program
+          </a>
+        </div>
+      </section>
+
+      {/* News (shot 5.39.29) */}
+      <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <Eyebrow>News</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ink">Latest announcements</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+            {news.map((item) => (
+              <li key={item.title}>
+                <article>
+                  <img
+                    alt=""
+                    loading="lazy"
+                    className="aspect-[1.52] w-full rounded-sm object-cover shadow-card"
+                    src={item.image}
+                  />
+                  <p className="mt-5 text-small font-semibold text-copper">{item.date}</p>
+                  <h3 className="mt-2 font-display font-semibold text-h3 text-ink">{item.title}</h3>
+                  <p className="mt-2 text-small text-muted">{item.body}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-12 text-center">
+            <Link className={outlineButton} to="/en/news">
+              See all news
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA band (shot 5.39.29) */}
+      <section className="bg-emerald-ink px-4 py-14 text-ivory sm:px-8 lg:px-16">
+        <div className="mx-auto flex w-full max-w-[1280px] flex-col justify-between gap-6 lg:flex-row lg:items-center">
+          <div>
+            <p className="font-display font-bold text-h3 text-ivory">A2M 2027 — June 7–9, Montreal</p>
+            <p className="mt-1 text-small text-champagne/75">
+              Registration not open yet · join the waitlist for the Founding Delegate rate
+            </p>
+          </div>
+          <Link className={goldButton} to="/en/news#sign-up">
+            Join the waitlist
+          </Link>
         </div>
       </section>
     </main>

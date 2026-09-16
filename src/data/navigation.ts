@@ -112,14 +112,18 @@ export const navSections: NavSection[] = [
   },
 ]
 
-// Footer columns per the target design (screenshot 5.42.41): four columns
+// Footer columns per the target design (screenshot 5.39.43): four columns
 // with their own IA, independent of the header dropdowns.
 export const footerEventLinks: NavLink[] = [
-  { label: 'About A2M', href: '/en/about#conference' },
+  { label: 'A2M 2027', href: '/en/about#conference' },
+  { label: 'Why Participate?', href: '/en/about#why-participate' },
+  { label: 'Conference Themes', href: '/en/program#sessions' },
+  { label: 'Agenda', href: '/en/program#schedule' },
+  { label: 'Institutional Endorsements', href: '/en/about#strategic-partners' },
   { label: 'Advisory Board', href: '/en/about#advisory-board' },
-  { label: 'Speakers', href: '/en/speakers' },
   { label: 'Meet the Team', href: '/en/about#meet-the-team' },
-  { label: 'Contact us', href: '/en/about#contact' },
+  { label: 'Sustainability', href: '/en/about#sustainability' },
+  { label: 'Contact Us', href: '/en/about#contact' },
 ]
 export const footerExhibitLinks: NavLink[] = [
   { label: 'Exhibit or Sponsor', href: '/en/exhibit-sponsor' },
@@ -131,7 +135,9 @@ export const footerAttendLinks: NavLink[] = [
   { label: 'Majors & Mid-tier', href: '/en/about#majors' },
   { label: 'Juniors & Exploration', href: '/en/about#juniors' },
   { label: 'Investors & DFIs', href: '/en/about#investors' },
+  { label: 'Service providers & tech', href: '/en/about#services' },
   { label: 'Governments & Ministries', href: '/en/about#governments' },
+  { label: 'Buyers & traders', href: '/en/about#buyers' },
 ]
 export const footerVisitLinks: NavLink[] = [
   { label: 'Venue & access', href: '/en/plan-your-visit#venue' },
