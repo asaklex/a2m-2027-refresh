@@ -37,11 +37,22 @@ const speakers = [
   },
 ]
 
-const visitSteps = [
-  { number: '01', title: 'Getting there', sub: 'Direct flights from major African cities' },
-  { number: '02', title: 'Where to stay', sub: 'Partner hotels near the venue' },
-  { number: '03', title: 'Book your hotel room', sub: 'Discounted rates for delegates' },
-  { number: '04', title: 'Register', sub: 'Founding Delegate rate — via the waitlist' },
+const pillars = [
+  {
+    label: 'Invest',
+    title: 'Invest',
+    body: 'Connect with high-potential projects, leading institutions, and key government decision-makers — all in one powerful platform. Gain access to a curated deal flow of vetted opportunities.',
+  },
+  {
+    label: 'Deal',
+    title: 'Deal',
+    body: 'Showcase your projects, products or services at the A2M Marketplace and through high-impact, structured meetings. Leave with real deals and concrete partnerships, not just business cards.',
+  },
+  {
+    label: 'Decide',
+    title: 'Decide',
+    body: 'Meet African Mining Ministers and Canadian government officials, plus the Honorary Country delegation — all the critical decision-makers in one room, at one time.',
+  },
 ]
 
 const experiences = [
@@ -157,17 +168,15 @@ export default function HomePage() {
     <main>
       <HeroCarousel />
 
-      {/* Speakers — dark panel, centered header (shot 5.38.36) */}
-      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:px-16">
-        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
-          <div className="mx-auto max-w-[720px] text-center">
-            <Eyebrow center>Speakers</Eyebrow>
-            <h2 className="mt-4 font-display text-h1 text-ivory">Speakers &amp; panellists</h2>
-            <span className="mx-auto mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-            <p className="mt-5 text-lead text-champagne/85">
-              A lineup of ministers, CEOs, investors and technical leaders shaping the future of African mining.
-            </p>
-          </div>
+      {/* Speakers — white section, left-aligned (shot 5.38.36) */}
+      <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <Eyebrow>Speakers</Eyebrow>
+          <h2 className="mt-3 font-display text-h1 text-ink">Speakers &amp; panellists</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <p className="mt-5 max-w-[640px] text-lead text-muted">
+            A lineup of ministers, CEOs, investors and technical leaders shaping the future of African mining.
+          </p>
           <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {speakers.map((speaker) => (
               <li key={speaker.name}>
@@ -175,78 +184,52 @@ export default function HomePage() {
                   <img
                     alt={speaker.name}
                     loading="lazy"
-                    className="aspect-square w-full rounded-sm object-cover"
+                    className="aspect-square w-full rounded-sm object-cover shadow-card"
                     src={speaker.image}
                   />
-                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-gold-light">
+                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
                     {speaker.name}
                   </h3>
-                  <p className="mt-1 text-small text-ivory">{speaker.title}</p>
-                  <p className="mt-0.5 text-small text-champagne/65">{speaker.org}</p>
+                  <p className="mt-1 text-small text-ink">{speaker.title}</p>
+                  <p className="mt-0.5 text-small text-muted">{speaker.org}</p>
                 </article>
               </li>
             ))}
           </ul>
-          <div className="mt-12 text-center">
-            <Link className={goldButton} to="/en/speakers">
+          <div className="mt-12">
+            <Link className={outlineButton} to="/en/speakers">
               See all speakers
             </Link>
           </div>
         </div>
       </section>
 
-      {/* When & where — pale strip with numbered steps (shot 5.38.44) */}
-      <section className="bg-surface px-4 py-16 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
-          <Eyebrow>June 7–9, 2027 · When &amp; where</Eyebrow>
-          <h2 className="mt-3 font-display text-h1 text-ink">Plan your visit</h2>
-          <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {visitSteps.map((step) => (
-              <li key={step.number}>
-                <p className="font-display font-bold text-data-xl text-gold">{step.number}</p>
-                <h3 className="mt-3 font-display font-semibold text-h3 text-ink">{step.title}</h3>
-                <p className="mt-1.5 text-small text-muted">{step.sub}</p>
+      {/* Three pillars — dark band with white cards (shot 5.38.44) */}
+      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:px-16">
+        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
+          <div className="mx-auto max-w-[720px] text-center">
+            <p className="text-small font-semibold uppercase tracking-[0.26em] text-gold">Invest · Deal · Decide</p>
+            <h2 className="mt-4 font-display text-h1 text-ivory">Three pillars, one platform</h2>
+            <p className="mt-5 text-lead text-champagne/85">
+              A2M brings African mining supply and North American capital together around concrete goals.
+            </p>
+          </div>
+          <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {pillars.map((pillar) => (
+              <li key={pillar.title}>
+                <article className="h-full rounded-sm bg-card p-7 shadow-card">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">{pillar.label}</p>
+                  <h3 className="mt-4 font-display font-bold text-h2 text-ink">{pillar.title}</h3>
+                  <p className="mt-3 text-small text-muted">{pillar.body}</p>
+                </article>
               </li>
             ))}
-          </ol>
-          <a
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite mt-10 h-12 px-6 text-[11px]"
-            href="https://www.google.com/maps/search/?api=1&query=Centre+Mont-Royal+Montreal"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on Google Maps
-          </a>
-        </div>
-      </section>
-
-      {/* The venue — dark panel (shot 5.38.44) */}
-      <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-16 text-ivory sm:px-8 lg:px-16">
-        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
-          <Eyebrow>The venue</Eyebrow>
-          <h2 className="mt-3 font-display text-h1 text-ivory">Centre Mont-Royal</h2>
-          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-          <p className="mt-5 max-w-[640px] text-lead text-champagne/85">
-            Montréal’s premier meeting venue in the heart of the city — a venue as dynamic as the conversations it
-            hosts.
-          </p>
-          <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/plan-your-visit#venue">
-            Explore the venue
-          </Link>
-        </div>
-      </section>
-
-      {/* Partners band (shot 5.38.44) */}
-      <section className="bg-emerald-ink px-4 py-14 text-ivory sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
-          <Eyebrow>Partners</Eyebrow>
-          <h2 className="mt-3 font-display text-h2 text-ivory">Become a Partner or Sponsor</h2>
-          <p className="mt-4 max-w-[640px] text-lead text-champagne/85">
-            Position your brand at the intersection of African mining and Canadian capital — where deals are made.
-          </p>
-          <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/exhibit-sponsor">
-            Associate your brand
-          </Link>
+          </ul>
+          <div className="mt-12 text-center">
+            <Link className={goldOutlineButton} to="/en/program">
+              See the program
+            </Link>
+          </div>
         </div>
       </section>
 
