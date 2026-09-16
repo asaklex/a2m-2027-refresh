@@ -12,7 +12,7 @@ type Props = {
 // Open (hover/focus) fills the trigger like the target design; the current
 // section just tints the text.
 const navLinkClass = (active: boolean, open = false) =>
-  'flex items-center gap-1 rounded-sm px-3 py-2 font-sans font-medium text-[13.5px] transition-colors duration-200 ease-discret ' +
+  'flex items-center gap-1 xl:whitespace-nowrap rounded-sm px-2.5 py-2 font-sans font-semibold text-[14px] transition-colors duration-200 ease-discret ' +
   (open
     ? 'bg-emerald-deep text-white'
     : active
@@ -192,7 +192,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                   <Link
                     aria-label="Home"
                     to="/en"
-                    className="flex items-center rounded-sm px-3 py-2 text-anthracite transition-colors duration-200 ease-discret hover:bg-anthracite/4 hover:text-emerald-cta"
+                    className="flex items-center whitespace-nowrap rounded-sm px-2.5 py-2 text-anthracite transition-colors duration-200 ease-discret hover:bg-anthracite/4 hover:text-emerald-cta"
                   >
                     <House className="size-4" aria-hidden="true" />
                   </Link>
