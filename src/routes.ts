@@ -18,7 +18,7 @@ export const routes = [
   { path: '/en/about', title: 'A2M 2027 · African Mining in Montreal', component: AboutPage },
   { path: '/en/program', title: 'Features · A2M 2027', component: ProgramPage },
   { path: '/en/program/ministerial-roundtable', title: 'Ministerial Roundtable · A2M 2027', component: MinisterialRoundtablePage },
-  { path: '/en/program/honorary-country', title: 'Honorary Country · A2M 2027', component: HonoraryCountryPage },
+  { path: '/en/program/honorary-country', title: "Côte d'Ivoire · Honorary Country · A2M 2027", component: HonoraryCountryPage },
   { path: '/en/program/women-in-mining', title: 'Women in Mining Forum · A2M 2027', component: WomenInMiningPage },
   { path: '/en/program/investors-breakfast', title: "Investors' Breakfast · A2M 2027", component: InvestorsBreakfastPage },
   { path: '/en/program/networking', title: 'Networking & Social Events · A2M 2027', component: NetworkingPage },
