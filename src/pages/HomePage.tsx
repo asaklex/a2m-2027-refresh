@@ -307,7 +307,7 @@ export default function HomePage() {
               The #1 gold exploration destination in West Africa, Côte d’Ivoire will lead a high-level delegation to
               Montreal to present its flagship projects to Canadian investors.
             </p>
-            <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ivory/20 pt-8 sm:grid-cols-4">
+            <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-ivory/20 pt-8 sm:grid-cols-4">
               {[
                 ['N°1', 'gold exploration in West Africa'],
                 ['10+', 'Canadian TSX companies (A2M estimate)'],
@@ -317,8 +317,10 @@ export default function HomePage() {
                 <div key={value}>
                   <dt className="sr-only">{label}</dt>
                   <dd>
-                    <span className="font-display font-bold text-data-xl text-gold-light">{value}</span>
-                    <span className="mt-1 block text-small text-champagne/75">{label}</span>
+                    <span className="font-display font-bold text-[1.6rem] leading-none text-gold-light whitespace-nowrap">
+                      {value}
+                    </span>
+                    <span className="mt-1.5 block text-small text-champagne/75">{label}</span>
                   </dd>
                 </div>
               ))}
