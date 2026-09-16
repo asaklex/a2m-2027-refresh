@@ -259,26 +259,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ministerial Roundtable split — photo left, dark panel right (shot 5.38.52) */}
-      <section className="grid bg-emerald-deep lg:grid-cols-2">
-        <img
-          alt="African and Canadian representatives gathered around a ministerial roundtable"
-          loading="lazy"
-          className="h-80 w-full object-cover lg:h-full"
-          src="/images/home/ministerial-roundtable.jpg"
-        />
-        <div className="a2m-motif relative overflow-hidden px-4 py-16 text-ivory sm:px-8 lg:flex lg:min-h-[29rem] lg:items-center lg:px-16">
-          <div className="relative z-10 max-w-xl">
-            <Eyebrow>Flagship · June 6 · Closed-door</Eyebrow>
-            <h2 className="mt-3 font-display text-h1 text-ivory">Ministerial Roundtable</h2>
-            <p className="mt-5 text-lead text-champagne/85">
-              The political dialogue that opens A2M 2027 — ministers of mines, Canadian officials and institutional
-              leaders shaping the Canada–Africa mining partnership behind closed doors. 30 signatory ministers, one
-              table.
-            </p>
-            <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/program/ministerial-roundtable">
-              Discover the Roundtable
-            </Link>
+      {/* Ministerial Roundtable split — container-width card (shot 5.38.52) */}
+      <section className="bg-ivory px-4 pb-14 sm:px-8 lg:px-16">
+        <div className="mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
+          <img
+            alt="African and Canadian representatives gathered around a ministerial roundtable"
+            loading="lazy"
+            className="h-80 w-full object-cover lg:h-full lg:min-h-[26rem]"
+            src="/images/home/ministerial-roundtable.jpg"
+          />
+          <div className="a2m-motif relative overflow-hidden px-6 py-14 text-ivory sm:px-10 lg:flex lg:items-center lg:px-14">
+            <div className="relative z-10 max-w-xl">
+              <Eyebrow>Flagship · June 6 · Closed-door</Eyebrow>
+              <h2 className="mt-3 font-display text-h1 text-ivory">Ministerial Roundtable</h2>
+              <p className="mt-5 text-lead text-champagne/85">
+                The political dialogue that opens A2M 2027 — ministers of mines, Canadian officials and institutional
+                leaders shaping the Canada–Africa mining partnership behind closed doors. 30 signatory ministers, one
+                table.
+              </p>
+              <Link className={[goldOutlineButton, 'mt-8'].join(' ')} to="/en/program/ministerial-roundtable">
+                Discover the Roundtable
+              </Link>
+            </div>
           </div>
         </div>
       </section>
