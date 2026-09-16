@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Zap } from 'lucide-react'
 import {
   footerEventLinks,
   footerExhibitLinks,
@@ -81,34 +80,13 @@ function LinkColumn({ heading, links, label }: { heading: string; links: NavLink
 export default function SiteFooter() {
   return (
     <footer className="a2m-motif relative mt-20 overflow-hidden border-ivory/15 border-t bg-emerald-deep text-ivory">
-      {/* Date/venue/contact column + newsletter */}
+      {/* Event details + newsletter */}
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pt-14 sm:px-8 lg:px-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <p className="font-display font-bold text-lead text-gold-light">June 7–9, 2027</p>
             <p className="mt-2 text-small text-champagne/85">Centre Mont-Royal</p>
             <p className="text-small text-champagne/85">Montreal, Québec, Canada</p>
-            <a
-              href="mailto:info@a2mevent.com"
-              className="mt-2 inline-block text-small text-champagne/85 transition-colors hover:text-gold"
-            >
-              info@a2mevent.com
-            </a>
-            <ul className="mt-4 flex items-center gap-3">
-              {socials.map((label) => (
-                <li key={label}>
-                  <a
-                    href="#"
-                    aria-label={label}
-                    className="inline-flex size-9 items-center justify-center rounded-sm border border-ivory/20 text-champagne/85 transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-                  >
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-4 fill-current">
-                      <path d={brandPaths[label]} />
-                    </svg>
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
           <div className="w-full max-w-md">
             <h2 className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">Newsletter</h2>
@@ -119,8 +97,33 @@ export default function SiteFooter() {
           </div>
         </div>
       </div>
-      {/* Link columns */}
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-2 gap-x-6 gap-y-10 px-4 pb-14 pt-12 sm:grid-cols-3 sm:px-8 lg:grid-cols-4 lg:px-16">
+      {/* Contact details + navigation columns */}
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-2 gap-x-6 gap-y-10 px-4 pb-14 pt-12 sm:grid-cols-3 sm:px-8 lg:grid-cols-5 lg:px-16">
+        <div className="flex flex-col text-small text-champagne/85">
+          <p>Centre Mont-Royal</p>
+          <p className="mt-2">Montreal, Québec, Canada</p>
+          <a
+            href="mailto:info@a2mevent.com"
+            className="mt-2 inline-block transition-colors hover:text-gold"
+          >
+            info@a2mevent.com
+          </a>
+          <ul className="mt-6 flex items-center gap-3">
+            {socials.map((label) => (
+              <li key={label}>
+                <a
+                  href="#"
+                  aria-label={label}
+                  className="inline-flex size-9 items-center justify-center rounded-full border border-ivory/20 text-champagne/85 transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-4 fill-current">
+                    <path d={brandPaths[label]} />
+                  </svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
         <LinkColumn heading="Event" links={footerEventLinks} label="Event" />
         <LinkColumn heading="Exhibit & Sponsor" links={footerExhibitLinks} label="Exhibit and Sponsor" />
         <LinkColumn heading="Attend" links={footerAttendLinks} label="Attend" />
@@ -129,18 +132,14 @@ export default function SiteFooter() {
       {/* Legal row */}
       <div className="relative z-10 border-t border-ivory/15 bg-emerald-ink">
         <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-16">
+          <span className="text-[12px] text-champagne/60">© 2027 A2M. All rights reserved.</span>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-champagne/60">
-            <span>© 2027 A2M. All rights reserved.</span>
             {legalLinks.map((label) => (
               <a key={label} href="#" className="transition-colors hover:text-gold">
                 {label}
               </a>
             ))}
           </div>
-          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-gold/40 px-3 py-1 text-[11px] font-semibold text-gold-light">
-            <Zap className="size-3" aria-hidden="true" />
-            Pre-launch preview — not yet public
-          </span>
         </div>
       </div>
     </footer>
