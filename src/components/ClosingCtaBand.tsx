@@ -18,18 +18,15 @@ export default function ClosingCtaBand() {
         alt=""
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/images/hero/slide-3.jpg"
+        className="absolute inset-0 h-full w-full scale-[1.02] object-cover blur-[2px]"
+        src="/images/hero/slide-1.jpg"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-emerald-ink/95 via-emerald-deep/85 to-emerald-deep/55"
+        className="absolute inset-0 bg-gradient-to-r from-emerald-ink/95 via-emerald-deep/85 to-emerald-deep/55 backdrop-blur-[2px]"
       />
-      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 py-8 sm:px-8 lg:px-16">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-light">
-          June 7–9 2027 · Centre Mont-Royal · Montreal
-        </p>
-        <h2 className="mt-2 max-w-[400px] font-display text-h2 text-ivory">
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pb-6 pt-14 sm:px-8 lg:px-16">
+        <h2 className="max-w-[400px] font-display text-h2 text-ivory">
           Be part of African Mining in Montreal
         </h2>
         <p className="mt-2 max-w-[760px] text-lead text-champagne/85">
