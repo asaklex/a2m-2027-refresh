@@ -23,7 +23,11 @@ export default function ClosingCtaBand() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-emerald-ink/95 via-emerald-deep/85 to-emerald-deep/55 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-gradient-to-r from-[#2a3a2e]/60 via-[#241d10]/55 to-[#1c160b]/60 backdrop-blur-[2px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0b150f]/75"
       />
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pb-6 pt-14 sm:px-8 lg:px-16">
         <h2 className="max-w-[400px] font-display text-h2 text-ivory">
