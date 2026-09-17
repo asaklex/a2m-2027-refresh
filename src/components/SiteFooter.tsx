@@ -79,7 +79,7 @@ function LinkColumn({ heading, links, label }: { heading: string; links: NavLink
 
 export default function SiteFooter() {
   return (
-    <footer className="a2m-motif relative mt-20 overflow-hidden border-ivory/15 border-t bg-emerald-deep text-ivory">
+    <footer className="a2m-motif relative overflow-hidden bg-emerald-deep text-ivory">
       {/* Event details + newsletter */}
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pt-14 sm:px-8 lg:px-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">

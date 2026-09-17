@@ -154,9 +154,6 @@ function Eyebrow({ children, center = false }: { children: ReactNode; center?: b
   )
 }
 
-const goldButton =
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite h-12 px-6 text-[11px]'
-
 const outlineButton =
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 h-12 border border-emerald-cta px-6 text-[11px] text-emerald-cta hover:bg-emerald-cta hover:text-ivory focus-visible:outline-emerald-cta'
 
@@ -410,20 +407,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Closing CTA band (shot 5.39.29) */}
-      <section className="bg-emerald-ink px-4 py-14 text-ivory sm:px-8 lg:px-16">
-        <div className="mx-auto flex w-full max-w-[1280px] flex-col justify-between gap-6 lg:flex-row lg:items-center">
-          <div>
-            <p className="font-display font-bold text-h3 text-ivory">A2M 2027 — June 7–9, Montreal</p>
-            <p className="mt-1 text-small text-champagne/75">
-              Registration not open yet · join the waitlist for the Founding Delegate rate
-            </p>
-          </div>
-          <Link className={goldButton} to="/en/news#sign-up">
-            Join the waitlist
-          </Link>
-        </div>
-      </section>
     </main>
   )
 }

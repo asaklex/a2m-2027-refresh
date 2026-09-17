@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
+import ClosingCtaBand from './ClosingCtaBand'
 import AnnouncementMarquee from './AnnouncementMarquee'
 import StickyWaitlistBar from './StickyWaitlistBar'
 import MobileMenu from './MobileMenu'
@@ -125,6 +126,8 @@ export default function SiteLayout() {
           </div>
         </main>
       )}
+      {/* Closing CTA band glued flush to the footer (shot 5.39.43). */}
+      <ClosingCtaBand />
       <SiteFooter />
       {/* Clearance for the fixed waitlist bar so the legal line stays readable. */}
       <div aria-hidden="true" className="h-[57px]" />
