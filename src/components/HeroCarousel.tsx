@@ -1,10 +1,12 @@
 // Home hero carousel: two full-viewport slides with an autoplaying track
-// (paused for prefers-reduced-motion) — copy and chrome per the target
-// screenshots (5.38.01 / 5.38.18): no info bar, no dots/arrows, gold
-// outline CTAs, pre-launch badge pill bottom-left.
+// (paused for prefers-reduced-motion) — copy per the target screenshots
+// (5.38.01 / 5.38.18) plus the lost-version chrome (shot 5.40.42): event
+// info bar (DATES / VENUE / HONORARY COUNTRY) above pagination dots,
+// next-slide chevron at the bar's right end, gold outline CTAs,
+// pre-launch badge pill above the info bar.
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Zap } from 'lucide-react'
+import { ChevronRight, Zap } from 'lucide-react'
 import { legacyFrenchOrigin } from '../data/navigation'
 
 const PROGRAM_PDF = `${legacyFrenchOrigin}/program/a2m-2027-program.pdf`
@@ -39,6 +41,13 @@ const slides: Slide[] = [
 
 const srcSetFor = (image: string) =>
   [640, 750, 828, 1080, 1200, 1920, 2048, 3840].map((w) => `${image} ${w}w`).join(', ')
+
+/** Static event facts under the slides (shot 5.40.42) — identical on every slide. */
+const infoColumns: { label: string; value: string }[] = [
+  { label: 'Dates', value: 'June 7–9, 2027' },
+  { label: 'Venue', value: 'Centre Mont-Royal, Montréal, Québec, Canada' },
+  { label: 'Honorary Country', value: 'Côte d’Ivoire' },
+]
 
 /** Both hero CTAs share the target's thin gold outline treatment. */
 const heroCtaClass =
@@ -98,7 +107,7 @@ export default function HeroCarousel() {
                 }}
               />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
-              <div className="mx-auto w-full a2m-cinema relative z-[1] flex min-h-[100svh] max-w-none flex-col justify-center px-4 pb-36 pt-[calc(var(--header-h,156px)_+_0.5rem)] sm:px-6 sm:pb-40 sm:pt-[calc(var(--header-h,156px)_+_1.5rem)] lg:px-6 lg:pb-44">
+              <div className="mx-auto w-full a2m-cinema relative z-[1] flex min-h-[100svh] max-w-none flex-col justify-center px-4 pb-[26rem] pt-[calc(var(--header-h,156px)_+_0.5rem)] sm:px-6 sm:pb-[21.5rem] sm:pt-[calc(var(--header-h,156px)_+_1.5rem)] lg:px-6 lg:pb-80">
                 <span className="mt-4 font-semibold text-[11px] text-champagne uppercase tracking-[0.28em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)] sm:mt-5">
                   {slide.eyebrow}
                 </span>
@@ -130,8 +139,61 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Pre-launch badge pill, bottom-left (target chrome) */}
-      <span className="absolute bottom-24 left-4 z-20 inline-flex items-center gap-1.5 rounded-full border border-gold/50 bg-emerald-ink/70 px-3.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-champagne backdrop-blur-sm sm:left-6 lg:left-6">
+      {/* Event info bar — DATES / VENUE / HONORARY COUNTRY (shot 5.40.42).
+          Offsets clear the fixed bottom sticky bar: the hero overshoots the
+          fold by (marquee + header − --header-h), worst case ~125px on lg. */}
+      <div className="absolute inset-x-0 bottom-[13.5rem] z-20">
+        <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-12">
+            {infoColumns.map((column, i) => (
+              <div key={column.label} className="flex min-w-0 items-center">
+                {i > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="mr-12 hidden h-8 w-px shrink-0 bg-ivory/25 sm:block"
+                  />
+                )}
+                <div className="min-w-0">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-champagne">
+                    {column.label}
+                  </p>
+                  <p className="mt-1 whitespace-nowrap text-[13px] text-ivory">{column.value}</p>
+                </div>
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() => setIndex((current) => (current + 1) % slides.length)}
+              aria-label="Next slide"
+              className="ml-auto hidden h-10 w-10 shrink-0 items-center justify-center rounded-sm text-champagne/90 transition-colors duration-[250ms] hover:text-champagne focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:inline-flex"
+            >
+              <ChevronRight className="size-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Pagination dots (shot 5.40.42): active = champagne pill */}
+      <div className="absolute inset-x-0 bottom-[12rem] z-20 flex items-center justify-center gap-2">
+        {slides.map((slide, i) => (
+          <button
+            key={slide.image}
+            type="button"
+            onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === index}
+            className={[
+              'transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold',
+              i === index
+                ? 'h-1.5 w-7 rounded-full bg-champagne'
+                : 'h-1.5 w-1.5 rounded-full bg-champagne/40 hover:bg-champagne/70',
+            ].join(' ')}
+          />
+        ))}
+      </div>
+
+      {/* Pre-launch badge pill, above the info bar (target chrome) */}
+      <span className="absolute bottom-[23rem] left-4 z-20 inline-flex items-center gap-1.5 rounded-full border border-gold/50 bg-emerald-ink/70 px-3.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-champagne backdrop-blur-sm sm:bottom-[17rem] sm:left-6 lg:left-6">
         <Zap className="size-3 text-gold-light" aria-hidden="true" />
         Pre-launch preview — not yet public
       </span>

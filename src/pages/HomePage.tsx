@@ -165,6 +165,30 @@ export default function HomePage() {
     <main>
       <HeroCarousel />
 
+      {/* Event stats — emerald band under the hero (shot 5.40.42) */}
+      <section className="bg-emerald-deep px-4 py-10 sm:px-8 lg:px-16 lg:py-12" aria-label="A2M 2027 in numbers">
+        <dl className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ['30%', 'Of global mineral reserves held in Africa'],
+            ['CAD 45B+', 'Canadian investments deployed on the continent'],
+            ['120+', 'TSX-listed companies active in Africa'],
+            ['30+', 'African mining countries (to be) represented'],
+          ].map(([value, label]) => (
+            <div key={value}>
+              <dt className="sr-only">{label}</dt>
+              <dd>
+                <span className="font-display font-bold text-[1.6rem] leading-none whitespace-nowrap text-champagne">
+                  {value}
+                </span>
+                <span className="mt-1.5 block text-[11px] uppercase leading-[1.5] tracking-[0.14em] text-[#cdd8d5]">
+                  {label}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       {/* Speakers — white section, left-aligned (shot 5.38.36) */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
         <div className="mx-auto w-full max-w-[1280px]">
