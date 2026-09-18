@@ -151,6 +151,13 @@ const news = [
     body: 'A2M directs a share of its revenues to host & Indigenous communities, women in mining, and children’s education.',
     image: '/images/news/sustainability-pledge.jpg',
   },
+  {
+    date: 'December 2, 2026',
+    category: 'Investment',
+    title: 'Early-bird delegate registration opens January 2027',
+    body: 'Founding Delegate rates will be available for a limited window when registration opens in the new year.',
+    image: '/images/news/early-bird-open.jpg',
+  },
 ]
 
 function Eyebrow({ children, center = false }: { children: ReactNode; center?: boolean }) {
@@ -417,10 +424,10 @@ export default function HomePage() {
           <Eyebrow>News</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">Latest announcements</h2>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-          <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {news.map((item) => (
               <li key={item.title}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-md bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover focus-within:-translate-y-1 focus-within:shadow-card-hover">
+                <article className="group flex h-full flex-col overflow-hidden rounded-md border border-anthracite/20 bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-emerald-cta/50 hover:shadow-card-hover focus-within:-translate-y-1 focus-within:shadow-card-hover">
                   <div className="relative">
                     <img
                       alt=""
@@ -437,7 +444,7 @@ export default function HomePage() {
                     <p className="mt-2 line-clamp-3 text-small leading-relaxed text-muted">{item.body}</p>
                     <div className="mt-5 pt-1">
                       <a
-                        className="inline-flex items-center gap-1.5 rounded-full bg-emerald-cta px-4 py-2 text-small font-semibold text-ivory transition-colors duration-200 hover:bg-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+                        className="inline-flex items-center gap-1.5 rounded-sm border border-emerald-cta bg-ivory px-4 py-2 text-small font-semibold tracking-wide text-emerald-cta transition-colors duration-200 hover:bg-emerald-cta hover:text-ivory focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
                         href="/en/news"
                       >
                         Read more

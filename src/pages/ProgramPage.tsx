@@ -53,10 +53,7 @@ export default function ProgramPage() {
       </span>
       <div className="relative min-w-0 flex-1">
         <nav aria-label="In this section" className="flex items-center gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <a href="#highlights" data-nav-id="highlights" aria-current="true" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors bg-mist text-emerald-deep">
-            Highlights
-          </a>
-          <a href="#sessions" data-nav-id="sessions" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors text-muted hover:bg-anthracite/5 hover:text-anthracite">
+          <a href="#sessions" data-nav-id="sessions" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors bg-mist text-emerald-deep">
             Conference Themes
           </a>
           <a href="#schedule" data-nav-id="schedule" className="whitespace-nowrap rounded-sm px-3 py-1.5 font-medium transition-colors text-muted hover:bg-anthracite/5 hover:text-anthracite">

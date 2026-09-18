@@ -90,11 +90,6 @@ export default function SitemapPage() {
           </Link>
           <ul className="mt-4 flex flex-col gap-2 border-hairline border-l pl-4">
             <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#highlights">
-                Highlights
-              </Link>
-            </li>
-            <li>
               <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program/honorary-country">
                 Honorary Country
               </Link>
