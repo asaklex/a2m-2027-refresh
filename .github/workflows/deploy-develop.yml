@@ -25,6 +25,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build -- --base=/kossoko-africa-mining-montreal-2026/
+      - name: Rewrite root-absolute asset refs for the sub-path (images hardcoded as /images/...)
+        run: |
+          BASE=/kossoko-africa-mining-montreal-2026/
+          find dist/assets -name '*.js' -exec sed -i \
+            -e "s|\"/images/|\"${BASE}images/|g" \
+            -e "s|'/images/|'${BASE}images/|g" \
+            -e 's|`/images/|`'"${BASE}"'images/|g' \
+            -e "s|, /images/|, ${BASE}images/|g" \
+            -e "s| /images/| ${BASE}images/|g" {} +
       - name: SPA fallback for deep routes
         run: cp dist/index.html dist/404.html
       - uses: actions/configure-pages@v5

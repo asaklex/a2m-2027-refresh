@@ -3,8 +3,11 @@ import SiteLayout from './components/SiteLayout'
 import { routes } from './routes'
 
 export default function App() {
+  // Strip the Pages sub-path so routing works identically at the domain root
+  // (Netlify) and under /kossoko-africa-mining-montreal-2026/ (GitHub Pages staging).
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Navigate to="/en" replace />} />
