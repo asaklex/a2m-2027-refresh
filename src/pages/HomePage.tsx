@@ -287,17 +287,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ministerial Roundtable split — 1280px card on white, photo fills the
-          card height, green panel right (pixel-measured from shot 5.38.52) */}
-      <section className="bg-ivory px-4 py-14 sm:px-8 lg:px-16">
-        <div className="mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
+      {/* Ministerial Roundtable split — 1280px card floating on a full-bleed
+          emerald-motif band (owner 2026-09-18: panel background fills both
+          sides), photo fills the card height, text right */}
+      <section className="a2m-motif relative bg-emerald-deep px-4 py-14 sm:px-8 lg:px-16">
+        <div className="relative z-10 mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
           <img
             alt="African and Canadian representatives gathered around a ministerial roundtable"
             loading="lazy"
             className="h-96 w-full object-cover lg:h-full lg:min-h-[30rem]"
             src="/images/home/ministerial-roundtable.jpg"
           />
-          <div className="a2m-motif relative overflow-hidden bg-emerald-deep px-6 py-16 text-ivory sm:px-10 lg:flex lg:items-center lg:px-14">
+          <div className="relative px-6 py-16 text-ivory sm:px-10 lg:flex lg:items-center lg:px-14">
             <div className="relative z-10 max-w-xl">
               <Eyebrow>Flagship · June 6 · Closed-door</Eyebrow>
               <h2 className="mt-3 font-display text-h1 text-ivory">Ministerial Roundtable</h2>
