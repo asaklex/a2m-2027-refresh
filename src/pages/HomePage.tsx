@@ -5,6 +5,7 @@
 // A2M's real event facts.
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
 import HeroCarousel from '../components/HeroCarousel'
 import KpiBand from '../components/KpiBand'
 import { legacyFrenchOrigin } from '../data/navigation'
@@ -61,31 +62,37 @@ const experiences = [
     label: 'Flagship · June 6',
     title: 'Ministerial Roundtable',
     body: 'The closed-door political dialogue on June 6.',
+    href: '/en/program/ministerial-roundtable',
   },
   {
     label: 'Honorary Country',
     title: 'Honorary Country',
     body: 'Côte d’Ivoire, the 2027 edition’s showcase.',
+    href: '/en/program/honorary-country',
   },
   {
     label: 'Forum',
     title: 'Women in Mining Forum',
     body: 'Women’s leadership, from site to boardroom.',
+    href: '/en/program/women-in-mining',
   },
   {
     label: 'Capital side',
     title: 'Investors’ Breakfast',
     body: '90 closed-door minutes, capital side only.',
+    href: '/en/program/investors-breakfast',
   },
   {
     label: 'B2B',
     title: 'Business Matchmaking',
     body: 'Your B2B agenda confirmed before you land.',
+    href: '/en/program#matchmaking',
   },
   {
     label: 'Social',
     title: 'Networking & Social Events',
     body: 'Reception, gala and evenings where deals close.',
+    href: '/en/program/networking',
   },
 ]
 
@@ -256,13 +263,24 @@ export default function HomePage() {
           <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {experiences.map((experience) => (
               <li key={experience.title}>
-                <article className="h-full rounded-sm border border-hairline bg-card p-6 shadow-card">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">
+                <Link
+                  to={experience.href}
+                  className="group relative block h-full rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1.5 hover:border-gold hover:shadow-card-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-deep"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 rounded-full bg-gold transition-transform duration-[300ms] ease-discret group-hover:scale-x-100"
+                  />
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="absolute right-5 top-5 size-4 translate-x-1 translate-y-1 text-gold opacity-0 transition-all duration-[300ms] ease-discret group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
+                  />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper transition-colors duration-[250ms] group-hover:text-gold">
                     {experience.label}
                   </p>
                   <h3 className="mt-5 font-display font-semibold text-h3 text-emerald-deep">{experience.title}</h3>
                   <p className="mt-2 text-small text-muted">{experience.body}</p>
-                </article>
+                </Link>
               </li>
             ))}
           </ul>
