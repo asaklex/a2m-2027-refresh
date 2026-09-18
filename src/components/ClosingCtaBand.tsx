@@ -29,7 +29,7 @@ export default function ClosingCtaBand() {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0b150f]/75"
       />
-      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pb-6 pt-14 sm:px-8 lg:px-16">
+      <div className="relative z-10 mx-auto w-full max-w-[max(1280px,80vw)] px-4 pb-6 pt-14 sm:px-8 lg:px-16">
         <h2 className="max-w-[400px] font-display text-h2 text-ivory">
           Be part of African Mining in Montreal
         </h2>

@@ -37,7 +37,7 @@ export default function PersonaTabs() {
 
   return (
     <section className={personaSectionClassName}>
-      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+      <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
         <PersonaSectionHeader />
         <div className="mt-10">
           <div dir="ltr" data-orientation="horizontal">

@@ -87,7 +87,7 @@ export default function PlanYourVisitPage() {
     ]}
   />
   <section id="register" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Register as a Delegate
       </h2>
@@ -252,7 +252,7 @@ export default function PlanYourVisitPage() {
     </div>
   </section>
   <section id="where-to-stay" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Book Accommodation
       </h2>
@@ -388,7 +388,7 @@ export default function PlanYourVisitPage() {
     </div>
   </section>
   <section id="visa" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Request invitation letter
       </h2>
@@ -429,7 +429,7 @@ export default function PlanYourVisitPage() {
     </div>
   </section>
   <section id="discover-montreal" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Discover Montréal
       </h2>
@@ -574,7 +574,7 @@ export default function PlanYourVisitPage() {
     </div>
   </section>
   <section id="venue" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Venue & Accessibility
       </h2>
@@ -679,7 +679,7 @@ export default function PlanYourVisitPage() {
     </div>
   </section>
   <section id="useful-info" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Useful Information
       </h2>

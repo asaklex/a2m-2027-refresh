@@ -28,7 +28,7 @@ export default function KpiBand({ items, footnote }: { items: Kpi[]; footnote?: 
   return (
     <section className="a2m-motif relative overflow-hidden bg-emerald-deep text-ivory">
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-28 bg-gradient-to-b from-emerald-deep to-transparent" />
-      <div className={'mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10 py-12 lg:py-14' + (on ? ' a2m-kpi-on' : '')} ref={ref}>
+      <div className={'mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10 py-12 lg:py-14' + (on ? ' a2m-kpi-on' : '')} ref={ref}>
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {items.map((kpi) => (
             <div className="flex flex-col items-center text-center" key={kpi.label}>

@@ -4,7 +4,7 @@ export default function SitemapPage() {
   return (
     <>
   <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10 py-12 lg:py-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10 py-12 lg:py-16">
       <div className="mb-6 [&_a]:text-champagne/80 [&_[aria-current]]:text-champagne [&_svg]:text-champagne/40">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
@@ -30,7 +30,7 @@ export default function SitemapPage() {
     </div>
   </div>
   <section className="a2m-reveal py-14 lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <nav aria-label="A2M 2027">
           <Link className="font-display font-semibold text-h3 text-emerald-deep hover:text-emerald-cta" to="/en/about">

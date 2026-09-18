@@ -43,7 +43,7 @@ export default function OnThisPageNav({ items }: { items: Item[] }) {
     <>
       {/* Desktop sticky bar */}
       <div className="sticky top-20 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-[155px] lg:block">
-        <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 flex items-center gap-3">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 flex items-center gap-3">
           <span className="shrink-0 font-semibold text-[10px] text-taupe uppercase tracking-[0.18em]">On this page :</span>
           <div className="relative min-w-0 flex-1">
             <nav aria-label="On this page" className="flex items-center gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
