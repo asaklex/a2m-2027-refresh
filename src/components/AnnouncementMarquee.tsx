@@ -15,7 +15,10 @@ const REPEATS = 4
 
 export default function AnnouncementMarquee() {
   return (
-    <div className="a2m-marquee border-b border-ivory/10 bg-emerald-deep">
+    // relative+z-40: the hero pulls up under the marquee+header via its
+    // negative --header-h margin; without this it would paint over the
+    // marquee (positioned elements stack above static ones).
+    <div className="a2m-marquee relative z-40 border-b border-ivory/10 bg-emerald-deep">
       <p className="sr-only">
         <Message />
       </p>

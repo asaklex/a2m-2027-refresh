@@ -6,6 +6,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/HeroCarousel'
+import KpiBand from '../components/KpiBand'
 import { legacyFrenchOrigin } from '../data/navigation'
 
 const PROGRAM_PDF = `${legacyFrenchOrigin}/program/a2m-2027-program.pdf`
@@ -165,29 +166,17 @@ export default function HomePage() {
     <main>
       <HeroCarousel />
 
-      {/* Event stats — emerald band under the hero (shot 5.40.42) */}
-      <section className="bg-emerald-deep px-4 py-10 sm:px-8 lg:px-16 lg:py-12" aria-label="A2M 2027 in numbers">
-        <dl className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            ['30%', 'Of global mineral reserves held in Africa'],
-            ['CAD 45B+', 'Canadian investments deployed on the continent'],
-            ['120+', 'TSX-listed companies active in Africa'],
-            ['30+', 'African mining countries (to be) represented'],
-          ].map(([value, label]) => (
-            <div key={value}>
-              <dt className="sr-only">{label}</dt>
-              <dd>
-                <span className="font-display font-bold text-[1.6rem] leading-none whitespace-nowrap text-champagne">
-                  {value}
-                </span>
-                <span className="mt-1.5 block text-[11px] uppercase leading-[1.5] tracking-[0.14em] text-[#cdd8d5]">
-                  {label}
-                </span>
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      {/* Event stats — emerald band under the hero (shot 5.40.42), rendered
+          with the reference KpiBand (gold rule, centred champagne values,
+          scroll-in animation) as the target redesign does. */}
+      <KpiBand
+        items={[
+          { value: '30%', label: 'of global mineral reserves held in Africa' },
+          { value: 'CAD 45B+', label: 'Canadian investments deployed on the continent' },
+          { value: '120+', label: 'TSX-listed companies active in Africa' },
+          { value: '30+', label: 'African mining countries (to be) represented' },
+        ]}
+      />
 
       {/* Speakers — white section, left-aligned (shot 5.38.36) */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">

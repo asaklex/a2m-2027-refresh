@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 type Kpi = { value: string; label: string }
 
-export default function KpiBand({ items, footnote }: { items: Kpi[]; footnote: ReactNode }) {
+export default function KpiBand({ items, footnote }: { items: Kpi[]; footnote?: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null)
   const [on, setOn] = useState(false)
 
@@ -38,7 +38,9 @@ export default function KpiBand({ items, footnote }: { items: Kpi[]; footnote: R
             </div>
           ))}
         </div>
-        <p className="mt-8 text-center font-medium text-[11px] text-champagne/60 uppercase tracking-[0.14em]">{footnote}</p>
+        {footnote ? (
+          <p className="mt-8 text-center font-medium text-[11px] text-champagne/60 uppercase tracking-[0.14em]">{footnote}</p>
+        ) : null}
       </div>
     </section>
   )
