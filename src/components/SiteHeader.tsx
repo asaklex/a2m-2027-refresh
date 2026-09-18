@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ALargeSmall, ChevronDown, ChevronRight, Globe, House, Menu } from 'lucide-react'
+import { ALargeSmall, ChevronDown, ChevronRight, House, Menu, User } from 'lucide-react'
 import { navSections, legacyFrenchOrigin } from '../data/navigation'
 
 type Props = {
@@ -117,17 +117,10 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
 
   return (
     <header ref={rootRef} className="sticky top-0 z-40 border-hairline border-b transition-colors duration-300 bg-ivory">
-      {/* Utility bar */}
+      {/* Utility bar — account icon / EN ▾ / waitlist as plain emerald text
+          over hairline rules (shot 5.40.48); text-size control kept first. */}
       <div className="hidden border-hairline border-b md:block">
-        <div className="flex items-center justify-end gap-2.5 px-4 py-1 sm:px-6">
-          <button
-            type="button"
-            onClick={(e) => onOpenAccount('login', e.currentTarget)}
-            className="rounded-sm px-1 text-[11px] font-semibold tracking-[0.08em] text-muted transition-colors hover:text-emerald-cta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
-          >
-            Log in
-          </button>
-          <span aria-hidden="true" className="h-3.5 w-px bg-hairline" />
+        <div className="flex items-center justify-end gap-3 px-4 py-1 sm:px-6">
           <button
             type="button"
             aria-label="Text size"
@@ -140,6 +133,31 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
           >
             <ALargeSmall className="size-4" aria-hidden="true" />
           </button>
+          <button
+            type="button"
+            aria-label="Log in"
+            title="Log in"
+            onClick={(e) => onOpenAccount('login', e.currentTarget)}
+            className="inline-flex size-8 items-center justify-center rounded-sm text-emerald-cta transition-colors hover:bg-anthracite/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+          >
+            <User className="size-4" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={goFrench}
+            aria-label="Switch to French"
+            className="inline-flex h-8 items-center gap-1 rounded-sm text-[11.5px] font-semibold uppercase tracking-[0.08em] text-emerald-cta transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+          >
+            EN
+            <ChevronDown className="size-3" aria-hidden="true" />
+          </button>
+          <span aria-hidden="true" className="h-3.5 w-px bg-emerald-cta" />
+          <Link
+            to="/en/news#sign-up"
+            className="inline-flex h-8 items-center rounded-sm text-[12px] font-semibold text-emerald-cta transition-colors hover:text-gold hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+          >
+            Join the waitlist
+          </Link>
         </div>
       </div>
 
@@ -166,27 +184,8 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden flex-col items-end gap-2.5 lg:flex">
-            <div className="flex items-center gap-2.5">
-              <button
-                type="button"
-                onClick={goFrench}
-                aria-label="Switch to French"
-                className="inline-flex h-10 items-center gap-1 rounded-full border border-hairline px-3 text-[11px] font-semibold tracking-[0.08em] text-muted uppercase transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
-              >
-                <Globe className="size-3 text-taupe" aria-hidden="true" />
-                EN
-                <ChevronDown className="size-3 text-taupe" aria-hidden="true" />
-              </button>
-              <Link
-                to="/en/news#sign-up"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 bg-emerald-deep text-gold-light hover:-translate-y-0.5 hover:shadow-emerald focus-visible:outline-gold-light h-10 px-5 text-[11px]"
-              >
-                Join the waitlist
-              </Link>
-            </div>
-
-            <nav aria-label="Navigation principale" className="hidden lg:block">
+          {/* EN ▾ and Join the waitlist moved to the utility bar (shot 5.40.48) */}
+          <nav aria-label="Navigation principale" className="hidden lg:block">
               <ul className="flex items-center gap-1">
                 <li className="group relative" key="home">
                   <Link
@@ -295,7 +294,6 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                 })}
               </ul>
             </nav>
-          </div>
 
           <button
             type="button"
