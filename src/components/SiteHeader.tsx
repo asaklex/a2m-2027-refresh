@@ -172,7 +172,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
                 type="button"
                 onClick={goFrench}
                 aria-label="Switch to French"
-                className="inline-flex h-10 items-center gap-1 rounded-full border border-hairline px-3 text-[11px] font-semibold tracking-[0.08em] text-muted uppercase transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+                className="inline-flex h-10 items-center gap-1 rounded-sm border border-hairline px-3 text-[11px] font-semibold tracking-[0.08em] text-muted uppercase transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
               >
                 <Globe className="size-3 text-taupe" aria-hidden="true" />
                 EN
@@ -180,7 +180,7 @@ export default function SiteHeader({ onOpenTextSize, onOpenAccount, onOpenMobile
               </button>
               <Link
                 to="/en/news#sign-up"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 bg-emerald-deep text-gold-light hover:-translate-y-0.5 hover:shadow-emerald focus-visible:outline-gold-light h-10 px-5 text-[11px]"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 border border-emerald-cta bg-ivory text-emerald-cta hover:bg-emerald-cta hover:text-ivory focus-visible:outline-emerald-cta h-10 px-5 text-[11px]"
               >
                 Join the waitlist
               </Link>
