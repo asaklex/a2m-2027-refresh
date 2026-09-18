@@ -5,6 +5,7 @@
 // A2M's real event facts.
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
 import HeroCarousel from '../components/HeroCarousel'
 import KpiBand from '../components/KpiBand'
 import { legacyFrenchOrigin } from '../data/navigation'
@@ -264,9 +265,17 @@ export default function HomePage() {
               <li key={experience.title}>
                 <Link
                   to={experience.href}
-                  className="block h-full rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-deep"
+                  className="group relative block h-full rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1.5 hover:border-gold hover:shadow-card-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-deep"
                 >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper">
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 rounded-full bg-gold transition-transform duration-[300ms] ease-discret group-hover:scale-x-100"
+                  />
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="absolute right-5 top-5 size-4 translate-x-1 translate-y-1 text-gold opacity-0 transition-all duration-[300ms] ease-discret group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
+                  />
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper transition-colors duration-[250ms] group-hover:text-gold">
                     {experience.label}
                   </p>
                   <h3 className="mt-5 font-display font-semibold text-h3 text-emerald-deep">{experience.title}</h3>
