@@ -132,18 +132,21 @@ const reasons = [
 const news = [
   {
     date: 'September 14, 2026',
+    category: 'Announcement',
     title: 'Côte d’Ivoire named Honorary Country for A2M 2027',
     body: 'The #1 gold exploration destination in West Africa will lead a high-level delegation to Montreal.',
     image: '/images/news/cote-divoire-honorary-country.jpg',
   },
   {
     date: 'October 1, 2026',
+    category: 'Program',
     title: 'Ministerial Roundtable agenda revealed',
     body: 'The first Canada-Africa political dialogue on critical minerals sets out its focus areas.',
     image: '/images/news/ministerial-round-table-agenda.jpg',
   },
   {
     date: 'November 17, 2026',
+    category: 'Sustainability',
     title: 'Sustainability Program: up to 10% of revenues pledged',
     body: 'A2M directs a share of its revenues to host & Indigenous communities, women in mining, and children’s education.',
     image: '/images/news/sustainability-pledge.jpg',
@@ -417,16 +420,31 @@ export default function HomePage() {
           <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
             {news.map((item) => (
               <li key={item.title}>
-                <article>
-                  <img
-                    alt=""
-                    loading="lazy"
-                    className="aspect-[1.52] w-full rounded-sm object-cover shadow-card"
-                    src={item.image}
-                  />
-                  <p className="mt-5 text-small font-semibold text-copper">{item.date}</p>
-                  <h3 className="mt-2 font-display font-semibold text-h3 text-ink">{item.title}</h3>
-                  <p className="mt-2 text-small text-muted">{item.body}</p>
+                <article className="group flex h-full flex-col overflow-hidden rounded-md bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover focus-within:-translate-y-1 focus-within:shadow-card-hover">
+                  <div className="relative">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      className="aspect-[1.52] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      src={item.image}
+                    />
+                    <p className="absolute inset-x-0 bottom-0 bg-emerald-cta/95 px-4 py-2 text-small font-semibold tracking-wide text-ivory backdrop-blur-sm">
+                      {item.date} <span aria-hidden="true" className="mx-1 opacity-60">|</span> {item.category}
+                    </p>
+                  </div>
+                  <div className="flex flex-1 flex-col px-5 pb-6 pt-5">
+                    <h3 className="font-display font-semibold text-h3 leading-snug text-ink">{item.title}</h3>
+                    <p className="mt-2 line-clamp-3 text-small leading-relaxed text-muted">{item.body}</p>
+                    <div className="mt-5 pt-1">
+                      <a
+                        className="inline-flex items-center gap-1.5 rounded-full bg-emerald-cta px-4 py-2 text-small font-semibold text-ivory transition-colors duration-200 hover:bg-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-cta"
+                        href="/en/news"
+                      >
+                        Read more
+                        <svg aria-hidden="true" className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+                      </a>
+                    </div>
+                  </div>
                 </article>
               </li>
             ))}
