@@ -33,7 +33,7 @@ export default function SpeakersPage() {
     <main>
       {/* Hero */}
       <section className="bg-ivory px-4 pb-10 pt-14 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <p className="text-small font-semibold uppercase tracking-[0.26em] text-copper">Speakers</p>
           <h1 className="mt-4 font-display text-h1 text-ink">Speakers &amp; panellists</h1>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
@@ -46,7 +46,7 @@ export default function SpeakersPage() {
 
       {/* Speaker cards */}
       <section className="bg-ivory px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {speakers.map((speaker) => (
               <li key={speaker.name} className="a2m-reveal">

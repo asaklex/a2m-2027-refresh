@@ -86,7 +86,7 @@ export default function NewsPage() {
     ]}
   />
   <section id="news-release" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         News Release
       </h2>
@@ -312,7 +312,7 @@ export default function NewsPage() {
     </div>
   </section>
   <section id="market-news" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Market News
       </h2>
@@ -435,7 +435,7 @@ export default function NewsPage() {
     </div>
   </section>
   <section id="sign-up" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Sign up
       </h2>

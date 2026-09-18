@@ -124,7 +124,7 @@ export default function HonoraryCountryPage() {
     <main>
       {/* All-features band — sticky under the header, current feature active */}
       <div className="sticky top-20 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-[155px] lg:block">
-        <div className="mx-auto flex w-full max-w-[1280px] items-center gap-3 px-4 py-2.5 sm:px-8 lg:px-16">
+        <div className="mx-auto flex w-full max-w-[max(1280px,80vw)] items-center gap-3 px-4 py-2.5 sm:px-8 lg:px-16">
           <Link
             to="/en/program"
             className="shrink-0 text-small font-semibold uppercase tracking-[0.18em] text-taupe transition-colors hover:text-emerald-deep"
@@ -168,7 +168,7 @@ export default function HonoraryCountryPage() {
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-emerald-ink/90 to-transparent"
         />
-        <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col justify-center px-4 py-16 sm:px-8 lg:min-h-[640px] lg:px-16 lg:pb-32 lg:pt-24">
+        <div className="relative z-10 mx-auto flex w-full max-w-[max(1280px,80vw)] flex-col justify-center px-4 py-16 sm:px-8 lg:min-h-[640px] lg:px-16 lg:pb-32 lg:pt-24">
           <p className="text-[13px] font-semibold uppercase tracking-[0.26em] text-gold-light [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
             Honorary Country 2027
           </p>
@@ -213,7 +213,7 @@ export default function HonoraryCountryPage() {
 
       {/* 2 · A rising force — three photo cards on white */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>Côte d&rsquo;Ivoire » Honorary Country 2027</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">A rising force in West African mining</h2>
           <GoldRule />
@@ -253,7 +253,7 @@ export default function HonoraryCountryPage() {
         />
         <div aria-hidden="true" className="absolute inset-0 bg-emerald-deep/78" />
         <div className="a2m-motif absolute inset-0" aria-hidden="true" />
-        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
+        <div className="relative z-10 mx-auto w-full max-w-[max(1280px,80vw)]">
           <GoldEyebrow>Côte d&rsquo;Ivoire</GoldEyebrow>
           <h2 className="mt-3 font-display text-h1 text-ivory">A Country in Full Ascent</h2>
           <GoldRule light />
@@ -295,7 +295,7 @@ export default function HonoraryCountryPage() {
 
       {/* 4 · The Gold Story — production timeline, six stat cards */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>The Gold Story</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">From Promise to Production</h2>
           <GoldRule />
@@ -350,7 +350,7 @@ export default function HonoraryCountryPage() {
         />
         <div aria-hidden="true" className="absolute inset-0 bg-emerald-deep/80" />
         <div className="a2m-motif absolute inset-0" aria-hidden="true" />
-        <div className="relative z-10 mx-auto grid w-full max-w-[1280px] items-center gap-12 lg:grid-cols-[1fr_360px]">
+        <div className="relative z-10 mx-auto grid w-full max-w-[max(1280px,80vw)] items-center gap-12 lg:grid-cols-[1fr_360px]">
           <div>
             <GoldEyebrow>Africa&rsquo;s number one exploration destination</GoldEyebrow>
             <h2 className="mt-3 font-display text-h1 text-ivory">
@@ -381,7 +381,7 @@ export default function HonoraryCountryPage() {
 
       {/* 6 · Beyond Gold — strategic minerals pills */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>Beyond Gold</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">
             Strategic Minerals for the Energy Transition
@@ -414,7 +414,7 @@ export default function HonoraryCountryPage() {
 
       {/* 7 · A Proven Partner — split with the Minister's portrait */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto grid w-full max-w-[1280px] items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid w-full max-w-[max(1280px,80vw)] items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Eyebrow>A proven partner for Canadian mining</Eyebrow>
             <h2 className="mt-3 font-display text-h1 text-ink">
@@ -458,7 +458,7 @@ export default function HonoraryCountryPage() {
 
       {/* 8 · The Vision — industrial transformation, 3 stat cards */}
       <section className="bg-ivory px-4 pb-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>The Vision</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">Industrial Transformation</h2>
           <GoldRule />
@@ -491,7 +491,7 @@ export default function HonoraryCountryPage() {
 
       {/* 9 · Closing CTA — photo left, emerald panel right */}
       <section className="bg-ivory px-4 pb-20 sm:px-8 lg:px-16">
-        <div className="mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-[max(1280px,80vw)] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
           <img
             alt="Ministerial delegation gathered on stage at an African mining summit"
             loading="lazy"
@@ -526,7 +526,7 @@ export default function HonoraryCountryPage() {
       </section>
 
       {/* Prev / next */}
-      <div className="mx-auto w-full max-w-[1280px] border-hairline border-t px-4 py-8 sm:px-8 lg:px-16">
+      <div className="mx-auto w-full max-w-[max(1280px,80vw)] border-hairline border-t px-4 py-8 sm:px-8 lg:px-16">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex min-h-10 items-center">
             <Link

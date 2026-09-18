@@ -81,7 +81,7 @@ export default function SiteFooter() {
   return (
     <footer className="a2m-motif relative overflow-hidden bg-emerald-deep text-ivory">
       {/* Event details + newsletter */}
-      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 pt-14 sm:px-8 lg:px-16">
+      <div className="relative z-10 mx-auto w-full max-w-[max(1280px,80vw)] px-4 pt-14 sm:px-8 lg:px-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <p className="font-display font-bold text-lead text-gold-light">June 7–9, 2027</p>
@@ -98,7 +98,7 @@ export default function SiteFooter() {
         </div>
       </div>
       {/* Contact details + navigation columns */}
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-2 gap-x-6 gap-y-10 px-4 pb-14 pt-12 sm:grid-cols-3 sm:px-8 lg:grid-cols-5 lg:px-16">
+      <div className="relative z-10 mx-auto grid w-full max-w-[max(1280px,80vw)] grid-cols-2 gap-x-6 gap-y-10 px-4 pb-14 pt-12 sm:grid-cols-3 sm:px-8 lg:grid-cols-5 lg:px-16">
         <div className="flex flex-col text-small text-champagne/85">
           <p>Centre Mont-Royal</p>
           <p className="mt-2">Montreal, Québec, Canada</p>
@@ -131,7 +131,7 @@ export default function SiteFooter() {
       </div>
       {/* Legal row */}
       <div className="relative z-10 border-t border-ivory/15 bg-emerald-ink">
-        <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-16">
+        <div className="mx-auto flex w-full max-w-[max(1280px,80vw)] flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-16">
           <span className="text-[12px] text-champagne/60">© 2027 A2M. All rights reserved.</span>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-champagne/60">
             {legalLinks.map((label) => (

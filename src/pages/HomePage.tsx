@@ -187,7 +187,7 @@ export default function HomePage() {
 
       {/* Speakers — white section, left-aligned (shot 5.38.36) */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>Speakers</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">Speakers &amp; panellists</h2>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
@@ -223,7 +223,7 @@ export default function HomePage() {
 
       {/* Three pillars — dark band with white cards (shot 5.38.44) */}
       <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-20 text-ivory sm:px-8 lg:px-16">
-        <div className="relative z-10 mx-auto w-full max-w-[1280px]">
+        <div className="relative z-10 mx-auto w-full max-w-[max(1280px,80vw)]">
           <div className="mx-auto max-w-[720px] text-center">
             <p className="text-small font-semibold uppercase tracking-[0.26em] text-gold">Invest · Deal · Decide</p>
             <h2 className="mt-4 font-display text-h1 text-ivory">Three pillars, one platform</h2>
@@ -252,7 +252,7 @@ export default function HomePage() {
 
       {/* Six signature experiences (shot 5.38.52) */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>Highlights</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">Six signature experiences</h2>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
@@ -291,7 +291,7 @@ export default function HomePage() {
           emerald-motif band (owner 2026-09-18: panel background fills both
           sides), photo fills the card height, text right */}
       <section className="a2m-motif relative bg-emerald-deep px-4 py-14 sm:px-8 lg:px-16">
-        <div className="relative z-10 mx-auto grid w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
+        <div className="relative z-10 mx-auto grid w-full max-w-[max(1280px,80vw)] overflow-hidden rounded-sm shadow-card lg:grid-cols-2">
           <img
             alt="African and Canadian representatives gathered around a ministerial roundtable"
             loading="lazy"
@@ -317,7 +317,7 @@ export default function HomePage() {
 
       {/* Honorary Country — standalone duotone photo card (shot 5.39.12) */}
       <section className="bg-ivory px-4 py-14 sm:px-8 lg:px-16 lg:py-20">
-        <div className="relative mx-auto min-h-[30rem] w-full max-w-[1280px] overflow-hidden rounded-sm shadow-card lg:min-h-0 lg:aspect-[2.91/1]">
+        <div className="relative mx-auto min-h-[30rem] w-full max-w-[max(1280px,80vw)] overflow-hidden rounded-sm shadow-card lg:min-h-0 lg:aspect-[2.91/1]">
           <img
             alt="Abidjan skyline and bridge at dusk"
             loading="lazy"
@@ -369,7 +369,7 @@ export default function HomePage() {
 
       {/* Top reasons to attend (shot 5.39.21) */}
       <section className="bg-surface px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <div className="mx-auto max-w-[720px] text-center">
             <Eyebrow center>Attend</Eyebrow>
             <h2 className="mt-3 font-display text-h1 text-ink">Top reasons to attend</h2>
@@ -395,7 +395,7 @@ export default function HomePage() {
 
       {/* Program download band (shot 5.39.21) */}
       <section className="a2m-motif relative overflow-hidden bg-emerald-deep px-4 py-14 text-ivory sm:px-8 lg:px-16">
-        <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col justify-between gap-8 lg:flex-row lg:items-center">
+        <div className="relative z-10 mx-auto flex w-full max-w-[max(1280px,80vw)] flex-col justify-between gap-8 lg:flex-row lg:items-center">
           <div>
             <h2 className="font-display text-h2 text-ivory">Download the A2M 2027 program</h2>
             <p className="mt-3 max-w-xl text-lead text-champagne/85">
@@ -410,7 +410,7 @@ export default function HomePage() {
 
       {/* News (shot 5.39.29) */}
       <section className="bg-ivory px-4 py-20 sm:px-8 lg:px-16">
-        <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
           <Eyebrow>News</Eyebrow>
           <h2 className="mt-3 font-display text-h1 text-ink">Latest announcements</h2>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />

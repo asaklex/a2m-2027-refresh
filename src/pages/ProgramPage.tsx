@@ -46,7 +46,7 @@ export default function ProgramPage() {
     </div>
   </div>
   <div className="sticky top-20 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-[155px] lg:block">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 flex items-center gap-3">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 flex items-center gap-3">
       <span className="shrink-0 font-semibold text-[10px] text-taupe uppercase tracking-[0.18em]">
         In this section
         :
@@ -120,7 +120,7 @@ export default function ProgramPage() {
     </button>
   </div>
   <section id="highlights" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Highlights
       </h2>
@@ -303,7 +303,7 @@ export default function ProgramPage() {
     </div>
   </section>
   <section id="sessions" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Conference Themes
       </h2>
@@ -937,7 +937,7 @@ export default function ProgramPage() {
     </div>
   </section>
   <section id="schedule" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Agenda
       </h2>
@@ -1302,7 +1302,7 @@ export default function ProgramPage() {
     </div>
   </section>
   <section id="matchmaking" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Business Matchmaking
       </h2>

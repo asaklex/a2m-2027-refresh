@@ -74,7 +74,7 @@ export default function NetworkingPage() {
       </div>
     </div>
   </div>
-  <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+  <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
     <div className="py-14 lg:py-16">
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-8">
@@ -143,7 +143,7 @@ export default function NetworkingPage() {
       </div>
     </div>
   </div>
-  <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
+  <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
     <div className="flex flex-wrap items-center justify-between gap-4">
       <div className="flex min-h-10 items-center">
         <Link className="group inline-flex items-center gap-2 font-semibold text-emerald-cta text-small transition-colors hover:text-emerald-deep" to="/en/program/investors-breakfast">

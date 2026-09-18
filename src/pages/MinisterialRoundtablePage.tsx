@@ -74,7 +74,7 @@ export default function MinisterialRoundtablePage() {
       </div>
     </div>
   </div>
-  <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+  <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
     <section id="ministerial-round-table" className="a2m-reveal scroll-mt-24 py-10 lg:py-12">
       <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
         Overview
@@ -484,7 +484,7 @@ export default function MinisterialRoundtablePage() {
       </div>
     </section>
   </div>
-  <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
+  <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
     <div className="flex flex-wrap items-center justify-between gap-4">
       <div className="flex min-h-10 items-center" />
       <Link className="font-semibold text-muted text-small underline-offset-4 transition-colors hover:text-emerald-cta hover:underline" to="/en">

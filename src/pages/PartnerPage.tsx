@@ -85,7 +85,7 @@ export default function PartnerPage() {
     ]}
   />
   <section id="speaker" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Become a speaker
       </h2>
@@ -135,7 +135,7 @@ export default function PartnerPage() {
     </div>
   </section>
   <section id="strategic" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Become a Strategic Partner
       </h2>
@@ -188,7 +188,7 @@ export default function PartnerPage() {
     </div>
   </section>
   <section id="media" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Become a Media Partner
       </h2>

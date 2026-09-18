@@ -90,7 +90,7 @@ export default function AboutPage() {
     ]}
   />
   <section id="conference" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         A2M 2027
       </h2>
@@ -551,7 +551,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="why-participate" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Why Participate?
       </h2>
@@ -1265,7 +1265,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="strategic-partners" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Institutional Endorsements
       </h2>
@@ -1328,7 +1328,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="advisory-board" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Advisory Board
       </h2>
@@ -1412,7 +1412,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="meet-the-team" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Meet the Team
       </h2>
@@ -1482,7 +1482,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="sustainability" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16 relative z-10">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Sustainability
       </h2>
@@ -1545,7 +1545,7 @@ export default function AboutPage() {
     </div>
   </section>
   <section id="contact" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
-    <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-16">
+    <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
         Contact Us
       </h2>
