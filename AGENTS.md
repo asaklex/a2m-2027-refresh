@@ -40,6 +40,16 @@ this repo's `main` (SPA fallback via `public/_redirects`). Treat a merge to
 routes on the feature branch first. Keep the small, dated, revertible
 commits on the feature branch so a client flip-flop reverts cleanly.
 
+**Staging (since 2026-09-18).** `develop` auto-deploys to GitHub Pages at
+`https://asaklex.github.io/kossoko-africa-mining-montreal-2026/` via
+`.github/workflows/deploy-develop.yml` (builds with the repo sub-path as
+Vite `--base`, rewrites root-absolute `/images/` refs in the bundle, adds a
+`404.html` SPA fallback; the `github-pages` environment allows `main` +
+`develop`). The router reads its `basename` from `import.meta.env.BASE_URL`
+(`src/App.tsx`), so the same code serves at the domain root (Netlify) and
+the Pages sub-path. Note: Pages does NOT run Netlify's `_redirects`; deep
+routes rely on the copied `404.html`.
+
 Consequences:
 
 - **Never try to fetch the reference origin** (`a2m-website-git...vercel.app`)
