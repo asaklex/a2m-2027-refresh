@@ -6,19 +6,6 @@ import type { ReactNode } from 'react'
 const btnGold =
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite'
 
-function IconPeople() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-6">
-      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="9" cy="6" r="4" />
-        <path strokeLinecap="round" d="M15 9a3 3 0 1 0 0-6" />
-        <ellipse cx="9" cy="17" rx="7" ry="4" />
-        <path strokeLinecap="round" d="M18 14c1.754.385 3 1.359 3 2.5c0 1.03-1.014 1.923-2.5 2.37" />
-      </g>
-    </svg>
-  )
-}
-
 function Check({ children }: { children: ReactNode }) {
   return (
     <li className="flex items-start gap-3 text-body text-muted">
@@ -83,6 +70,33 @@ const strategyNumbers = [
   {
     value: 'Juin 2025',
     note: 'launch of the Critical Minerals Production Alliance, identifying Africa as a priority partner',
+  },
+]
+
+const chairpersons = [
+  {
+    name: 'H.E. Issoufou Mahamadou',
+    title: 'Former President of Niger · AfCFTA Champion',
+    org: 'Republic of Niger',
+    image: '/images/people/issoufou-mahamadou.jpg',
+  },
+  {
+    name: 'Tim Hodgson',
+    title: 'Minister of Energy & Natural Resources',
+    org: 'Government of Canada',
+    image: '/images/people/tim-hodgson.jpg',
+  },
+  {
+    name: 'Kateri Champagne Jourdain',
+    title: 'Minister of Natural Resources and Forests',
+    org: 'Government of Québec',
+    image: '/images/people/kateri-champagne-jourdain.jpg',
+  },
+  {
+    name: 'Mamadou Sangafowa-Coulibaly',
+    title: 'Minister of Mines, Petroleum and Energy',
+    org: 'Republic of Côte d’Ivoire',
+    image: '/images/people/mamadou-sangafowa-coulibaly.jpg',
   },
 ]
 
@@ -194,13 +208,13 @@ export default function MinisterialRoundtablePage() {
             </div>
             <div className="flex min-w-0 flex-col gap-10">
               <div className="flex flex-col gap-5">
-                <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="text-lead text-muted leading-[1.7]">
                   Governments are the decisive factor in African mining. They issue licences, set fiscal and regulatory terms, define stability, and determine which international partners receive privileged access to strategic resources.
                 </p>
-                <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="text-lead text-muted leading-[1.7]">
                   The Ministerial Roundtable brings African mining ministers and the Canadian Minister of Natural Resources together as active negotiating partners. In a structured, closed-door, three-hour high-level political dialogue, participating governments will tackle the core issues shaping the future of Canada-Africa mining relations: regulatory certainty, fiscal terms, local content and value addition, critical minerals supply chain security, responsible mining standards, and project de-risking mechanisms.
                 </p>
-                <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="text-lead text-muted leading-[1.7]">
                   This will be the first time such a dedicated, ministerial-level bilateral (and plurilateral) dialogue takes place on North American soil — a milestone that signals Canada's seriousness and creates a repeatable framework for ongoing engagement.
                 </p>
               </div>
@@ -208,16 +222,16 @@ export default function MinisterialRoundtablePage() {
                 <h3 className="font-display font-semibold text-h3 text-ink">
                   Why this roundtable matters
                 </h3>
-                <p className="mt-3 max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="mt-3 text-lead text-muted leading-[1.7]">
                   According to Natural Resources Canada (NRCan), Canada is one of the largest foreign mining investors in Africa, with mining assets exceeding $45 billion and more than 100 Canadian companies active across the continent. Canadian mining and exploration companies bring not only substantial capital but also world-class technical expertise, responsible mining practices, and a long-term commitment to the region.
                 </p>
-                <p className="mt-3 max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="mt-3 text-lead text-muted leading-[1.7]">
                   This positions Canada uniquely to support Africa's development priorities at a pivotal moment. African governments are leveraging the African Continental Free Trade Area (AfCFTA), championed by H.E. Issoufou Mahamadou, to pursue collective bargaining on value addition, local content requirements, and improved investment frameworks. Complementing this, Canada's Africa Strategy, A Partnership for Shared Prosperity and Security (launched March 2025), provides a clear policy foundation for deeper economic and security cooperation.
                 </p>
-                <p className="mt-3 max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="mt-3 text-lead text-muted leading-[1.7]">
                   The proposed Canada-Africa Ministerial Roundtable bridges a critical gap. While high-level commitments exist on both sides, there is often a missing operational government-to-government framework to translate policy into de-risked, bankable projects. The Roundtable would:
                 </p>
-                <ul className="mt-4 flex max-w-[760px] flex-col gap-3">
+                <ul className="mt-4 flex flex-col gap-3">
                   <Check>
                     Reduce political and regulatory risk through structured dialogue and bilateral mechanisms.
                   </Check>
@@ -228,7 +242,7 @@ export default function MinisterialRoundtablePage() {
                     Convert strategic partnerships into actionable outcomes, delivering mutual benefits for Canadian companies (market access, project pipelines) and African priorities (jobs, skills transfer, industrialization, and revenue generation).
                   </Check>
                 </ul>
-                <p className="mt-5 max-w-[760px] text-lead text-muted leading-[1.7]">
+                <p className="mt-5 text-lead text-muted leading-[1.7]">
                   By fostering direct, high-level engagement between Canadian and African policymakers, regulators, and industry leaders, the Roundtable can accelerate responsible resource development that supports Africa's economic transformation while strengthening Canada's supply chain security for critical minerals.
                 </p>
               </div>
@@ -236,7 +250,7 @@ export default function MinisterialRoundtablePage() {
                 <h3 className="font-display font-semibold text-h3 text-ink">
                   Focus areas
                 </h3>
-                <ul className="mt-4 flex max-w-[760px] flex-col gap-3">
+                <ul className="mt-4 flex flex-col gap-3">
                   <Check>
                     Securing equitable terms for Canada-Africa mining partnerships
                   </Check>
@@ -254,7 +268,7 @@ export default function MinisterialRoundtablePage() {
                   </Check>
                 </ul>
               </div>
-              <div className="max-w-[760px]">
+              <div>
                 <Callout label="By official invitation">
                   Attendance at the Ministerial Roundtable is by official invitation only.
                 </Callout>
@@ -459,24 +473,27 @@ export default function MinisterialRoundtablePage() {
               <p className="mt-4 text-lead text-muted">
                 The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
               </p>
-              <div className="mt-6">
-                <Callout label="To be unveiled">
-                  The chairpersons of the 2027 Ministerial Roundtable will be announced soon.
-                </Callout>
-              </div>
             </div>
-            <div className="flex min-w-0 flex-col justify-center">
-              <div className="flex flex-col items-center justify-center gap-3 rounded-sm border border-dashed border-taupe/45 bg-card px-6 py-14 text-center">
-                <span className="inline-flex size-14 items-center justify-center rounded-full bg-mist text-emerald-cta">
-                  <IconPeople />
-                </span>
-                <p className="font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-                  Portraits · To be unveiled
-                </p>
-                <p className="max-w-[44ch] text-body text-muted">
-                  Official portraits of the Roundtable chairpersons (name + title)
-                </p>
-              </div>
+            <div className="flex min-w-0 flex-col">
+              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {chairpersons.map((person) => (
+                  <li key={person.name}>
+                    <article>
+                      <img
+                        alt={person.name}
+                        loading="lazy"
+                        className="aspect-square w-full rounded-sm object-cover shadow-card"
+                        src={person.image}
+                      />
+                      <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
+                        {person.name}
+                      </h3>
+                      <p className="mt-1 text-small text-ink">{person.title}</p>
+                      <p className="mt-0.5 text-small text-muted">{person.org}</p>
+                    </article>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
