@@ -257,7 +257,7 @@ export default function PartnerPage() {
               </p>
               <div className="mt-6">
                 <CalloutDark label="Contact the partnerships team">
-                  For more information on how to become a partner of the event, please contact us by email at partners@africanmininginmontreal.com. Our team looks forward to collaborating with you and creating a customized partnership that meets your organization's unique needs and objectives.
+                  For more information on how to become a partner of the event, please contact us. Our team looks forward to collaborating with you and creating a customized partnership that meets your organization's unique needs and objectives.
                 </CalloutDark>
               </div>
             </div>
