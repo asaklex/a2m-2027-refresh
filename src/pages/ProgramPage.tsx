@@ -1,15 +1,27 @@
 import Tabs from '../components/ui/Tabs'
 import { Link } from 'react-router-dom'
 
+const btnGold =
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite'
+
+const btnGhostLight =
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm border border-ivory/30 font-sans font-semibold uppercase tracking-[0.06em] text-ivory transition-all duration-[250ms] ease-discret hover:border-champagne hover:text-champagne focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne'
+
 export default function ProgramPage() {
   return (
     <>
-  <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
-    <img alt="" aria-hidden="true" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="100vw" srcSet="/images/program/keynote-1.jpg 640w, /images/program/keynote-1.jpg 750w, /images/program/keynote-1.jpg 828w, /images/program/keynote-1.jpg 1080w, /images/program/keynote-1.jpg 1200w, /images/program/keynote-1.jpg 1920w, /images/program/keynote-1.jpg 2048w, /images/program/keynote-1.jpg 3840w" src="/images/program/keynote-1.jpg" />
-    <div aria-hidden="true" className="absolute inset-0 backdrop-blur-[6px]" style={{ maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 36%, rgba(0,0,0,0) 72%)', WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 36%, rgba(0,0,0,0) 72%)' }} />
-    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-emerald-deep/95 via-emerald-deep/70 to-emerald-deep/25" />
-    <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-emerald-deep/90 to-transparent" />
-    <div className="mx-auto w-full relative z-10 flex min-h-[420px] max-w-none flex-col justify-center px-4 py-12 sm:px-6 lg:min-h-[520px] lg:px-6 lg:py-16">
+  <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-ink text-ivory">
+    <img
+      alt=""
+      aria-hidden="true"
+      decoding="async"
+      loading="eager"
+      className="absolute inset-0 size-full object-cover"
+      src="/images/program/program-hero.jpg"
+    />
+    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-emerald-ink/95 via-emerald-deep/80 to-emerald-deep/25" />
+    <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-emerald-ink/95 to-transparent" />
+    <div className="relative z-10 mx-auto w-full max-w-none px-4 py-14 sm:px-6 lg:px-6 lg:py-20">
       <div className="mb-6 [&_[aria-current]]:text-champagne [&_a]:text-champagne/80 [&_svg]:text-champagne/40">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
@@ -29,20 +41,50 @@ export default function ProgramPage() {
           </ol>
         </nav>
       </div>
-      <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
+      <span className="font-semibold text-[11px] text-gold-light uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
         Features
       </span>
-      <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.75rem]">
-        Three days of
-        <span className="text-gold">
-          deal-making
-        </span>
-        , dialogue and discovery
+      <h1 className="mt-3 max-w-[820px] font-bold text-[1.9rem] text-ivory leading-[1.12] tracking-[-0.01em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.6rem] lg:text-[3.1rem]">
+        Three days of <span className="text-gold-light">deal-making</span>, dialogue and discovery
       </h1>
       <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
       <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
         Three days of keynotes, panels, B2B meetings and networking events.
       </p>
+      <div className="mt-10 flex flex-wrap items-center gap-4">
+        <Link className={`${btnGold} h-12 px-7 text-[12px]`} to="/en/plan-your-visit#register">
+          Get your pass
+        </Link>
+        <Link className={`${btnGhostLight} h-12 px-7 text-[12px]`} to="#schedule">
+          Explore the agenda
+        </Link>
+      </div>
+      <dl className="mt-12 grid max-w-[720px] grid-cols-1 gap-6 border-ivory/15 border-t pt-8 sm:grid-cols-3">
+        <div>
+          <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+            Days in Montréal
+          </dt>
+          <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
+            3
+          </dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+            B2B meetings
+          </dt>
+          <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
+            3,000+
+          </dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+            Conference themes
+          </dt>
+          <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
+            3
+          </dd>
+        </div>
+      </dl>
     </div>
   </div>
   <div className="sticky top-20 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-[155px] lg:block">
@@ -112,13 +154,16 @@ export default function ProgramPage() {
         <path d="M8 19h13" />
       </svg>
       <span className="hidden max-w-[170px] truncate font-semibold text-[12px] uppercase tracking-[0.06em] sm:inline">
-        Highlights
+        Program
       </span>
     </button>
   </div>
   <section id="sessions" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-      <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+      <span className="font-semibold text-[11px] text-copper uppercase tracking-[0.22em]">
+        Program
+      </span>
+      <h2 className="mt-2 font-display font-bold tracking-[-0.01em] text-h2">
         Conference Themes
       </h2>
       <div className="mt-8">
@@ -146,7 +191,8 @@ export default function ProgramPage() {
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden rounded-sm border border-hairline bg-surface w-full mb-1">
                     <img alt="Signing a mining investment agreement" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/program/theme-investing.jpg 256w, /images/program/theme-investing.jpg 384w, /images/program/theme-investing.jpg 640w, /images/program/theme-investing.jpg 750w, /images/program/theme-investing.jpg 828w, /images/program/theme-investing.jpg 1080w, /images/program/theme-investing.jpg 1200w, /images/program/theme-investing.jpg 1920w, /images/program/theme-investing.jpg 2048w, /images/program/theme-investing.jpg 3840w" src="/images/program/theme-investing.jpg" />
                   </div>
@@ -167,7 +213,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden rounded-sm border border-hairline bg-surface w-full mb-1">
                     <img alt="Ore processing line toward finished components" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/program/theme-transforming.jpg 256w, /images/program/theme-transforming.jpg 384w, /images/program/theme-transforming.jpg 640w, /images/program/theme-transforming.jpg 750w, /images/program/theme-transforming.jpg 828w, /images/program/theme-transforming.jpg 1080w, /images/program/theme-transforming.jpg 1200w, /images/program/theme-transforming.jpg 1920w, /images/program/theme-transforming.jpg 2048w, /images/program/theme-transforming.jpg 3840w" src="/images/program/theme-transforming.jpg" />
                   </div>
@@ -189,7 +236,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden rounded-sm border border-hairline bg-surface w-full mb-1">
                     <img alt="Rehabilitated, revegetated mine site at golden hour" loading="lazy" decoding="async" data-nimg="fill" className="object-cover" style={{ position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent' }} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/program/theme-sharing.jpg 256w, /images/program/theme-sharing.jpg 384w, /images/program/theme-sharing.jpg 640w, /images/program/theme-sharing.jpg 750w, /images/program/theme-sharing.jpg 828w, /images/program/theme-sharing.jpg 1080w, /images/program/theme-sharing.jpg 1200w, /images/program/theme-sharing.jpg 1920w, /images/program/theme-sharing.jpg 2048w, /images/program/theme-sharing.jpg 3840w" src="/images/program/theme-sharing.jpg" />
                   </div>
@@ -212,7 +260,8 @@ export default function ProgramPage() {
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
                     Africa, Canada & AfCFTA
                   </h3>
@@ -237,7 +286,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
                     From extraction to transformation
                   </h3>
@@ -262,7 +312,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
                     Quebec, a strategic partner
                   </h3>
@@ -752,7 +803,10 @@ export default function ProgramPage() {
   </section>
   <section id="schedule" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-      <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+      <span className="font-semibold text-[11px] text-copper uppercase tracking-[0.22em]">
+        Day by day
+      </span>
+      <h2 className="mt-2 font-display font-bold tracking-[-0.01em] text-h2">
         Agenda
       </h2>
       <div className="mt-8">
@@ -1117,7 +1171,10 @@ export default function ProgramPage() {
   </section>
   <section id="matchmaking" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-      <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+      <span className="font-semibold text-[11px] text-copper uppercase tracking-[0.22em]">
+        Deal flow
+      </span>
+      <h2 className="mt-2 font-display font-bold tracking-[-0.01em] text-h2">
         Business Matchmaking
       </h2>
       <div className="mt-8">
@@ -1534,7 +1591,8 @@ export default function ProgramPage() {
             </h3>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                       <g fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -1552,7 +1610,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                       <g fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -1570,7 +1629,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                       <g fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -1588,7 +1648,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                       <g fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -1607,7 +1668,8 @@ export default function ProgramPage() {
                 </div>
               </div>
               <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                <div className="group relative overflow-hidden rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-light via-gold to-gold-deep opacity-0 transition-opacity duration-[250ms] ease-discret group-hover:opacity-100" />
                   <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                       <g fill="none" stroke="currentColor" strokeWidth="1.5">
