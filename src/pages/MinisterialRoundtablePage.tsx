@@ -6,9 +6,6 @@ import type { ReactNode } from 'react'
 const btnGold =
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0 gold-metallic text-anthracite hover:-translate-y-0.5 hover:brightness-105 hover:shadow-gold focus-visible:outline-anthracite'
 
-const btnGhostLight =
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm border border-ivory/30 font-sans font-semibold uppercase tracking-[0.06em] text-ivory transition-all duration-[250ms] ease-discret hover:border-champagne hover:text-champagne focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-champagne'
-
 function IconPeople() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-6">
@@ -42,32 +39,6 @@ function Callout({ label, children }: { label?: string; children: ReactNode }) {
         <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">{label}</p>
       )}
       <div className="text-body text-muted">{children}</div>
-    </div>
-  )
-}
-
-function FormatCard({ img, alt, eyebrow, title, children }: { img: string; alt: string; eyebrow: string; title: string; children: ReactNode }) {
-  return (
-    <div className="flex flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:shadow-card-hover">
-      <div className="relative">
-        <img
-          src={img}
-          alt={alt}
-          loading="lazy"
-          decoding="async"
-          className="aspect-[16/9] w-full object-cover"
-        />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-emerald-deep/85 via-emerald-deep/10 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-6">
-          <span className="font-semibold text-[11px] text-gold-light uppercase tracking-[0.22em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
-            {eyebrow}
-          </span>
-          <h3 className="mt-1 font-display font-bold tracking-[-0.01em] text-h2 text-ivory [text-shadow:0_2px_16px_rgba(3,20,16,0.6)]">
-            {title}
-          </h3>
-        </div>
-      </div>
-      <div className="flex flex-1 flex-col gap-5 p-6 lg:p-8">{children}</div>
     </div>
   )
 }
@@ -110,7 +81,7 @@ const strategyNumbers = [
     note: 'in merchandise trade with African countries in 2024 (up nearly 30% in 5 years)',
   },
   {
-    value: 'June 2025',
+    value: 'Juin 2025',
     note: 'launch of the Critical Minerals Production Alliance, identifying Africa as a priority partner',
   },
 ]
@@ -136,7 +107,7 @@ export default function MinisterialRoundtablePage() {
           decoding="async"
           loading="eager"
           className="absolute inset-0 size-full object-cover"
-          src="/images/roundtable/roundtable-hero.jpg"
+          src="/images/news/ministerial-round-table-agenda.jpg"
         />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-emerald-ink/95 via-emerald-deep/80 to-emerald-deep/25" />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-emerald-ink/95 to-transparent" />
@@ -167,44 +138,29 @@ export default function MinisterialRoundtablePage() {
             The first <span className="text-gold-light">Canada-Africa</span> political dialogue on critical minerals
           </h1>
           <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-          <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-            African mining ministers and the Canadian Minister of Natural Resources, around one table, as active negotiating partners.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a className={`${btnGold} h-12 px-7 text-[12px]`} href="https://international.canada.ca/international-canada/assets/pdfs/africa-strategy-strategie/africa-strategy-en.pdf" target="_blank" rel="noopener noreferrer">
-              Read the Strategy (PDF)
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
-            <Link className={`${btnGhostLight} h-12 px-7 text-[12px]`} to="/en/program/ministerial-roundtable#ministerial-round-table">
-              Explore the roundtable
-            </Link>
-          </div>
-          <dl className="mt-12 grid max-w-[720px] grid-cols-1 gap-6 border-ivory/15 border-t pt-8 sm:grid-cols-3">
+          <dl className="mt-12 flex flex-wrap items-start gap-x-12 gap-y-6 border-ivory/15 border-t pt-8">
             <div>
               <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Canadian mining assets in Africa
+                Date
               </dt>
-              <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
-                $45B+
+              <dd className="tnum mt-1 font-display font-bold text-data text-ivory">
+                June 6, 2027
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Canadian companies active across the continent
+                Venue
               </dt>
-              <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
-                100+
+              <dd className="mt-1 font-display font-bold text-data text-ivory">
+                Fairmont The Queen Elizabeth
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Closed-door political dialogue
+                Access
               </dt>
-              <dd className="tnum mt-1 font-display font-bold text-data-xl text-ivory">
-                3h
+              <dd className="mt-1 font-display font-bold text-data text-ivory">
+                By invitation only
               </dd>
             </div>
           </dl>
@@ -232,7 +188,7 @@ export default function MinisterialRoundtablePage() {
               </p>
               <div className="mt-6">
                 <Callout label="June 6, 2027 · by invitation only · Fairmont">
-                  A structured, closed-door, three-hour high-level political dialogue at the Fairmont The Queen Elizabeth.
+                  A structured, closed-door, three-hour high-level political dialogue.
                 </Callout>
               </div>
             </div>
@@ -305,34 +261,6 @@ export default function MinisterialRoundtablePage() {
               </div>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <FormatCard
-              img="/images/roundtable/strategy-dialogue.jpg"
-              alt="Two officials in conversation in an emerald-and-gold lounge at the Ministerial Roundtable"
-              eyebrow="Closed-door · Three hours"
-              title="Ministers around one table"
-            >
-              <p className="text-lead text-muted">
-                A high-level political dialogue — not a panel, not a pitch. Governments meet as negotiating partners.
-              </p>
-              <p className="text-body text-muted leading-[1.7]">
-                Participating governments tackle the core issues shaping Canada-Africa mining relations directly: regulatory certainty, fiscal terms, local content and value addition, critical minerals supply chain security, responsible mining standards, and project de-risking mechanisms.
-              </p>
-            </FormatCard>
-            <FormatCard
-              img="/images/roundtable/signing.jpg"
-              alt="Hands signing a cooperation document with a gold pen on a dark wood table"
-              eyebrow="From dialogue to deals"
-              title="Outcomes that endure"
-            >
-              <p className="text-lead text-muted">
-                A milestone that signals Canada's seriousness — and a repeatable framework for ongoing engagement.
-              </p>
-              <p className="text-body text-muted leading-[1.7]">
-                By fostering direct, high-level engagement between Canadian and African policymakers, regulators, and industry leaders, the Roundtable turns high-level commitments into de-risked, bankable projects.
-              </p>
-            </FormatCard>
-          </div>
         </div>
       </section>
       <section id="canada-africa-strategy" className="a2m-motif relative scroll-mt-24 overflow-hidden bg-emerald-deep py-16 text-ivory sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-24">
@@ -346,7 +274,7 @@ export default function MinisterialRoundtablePage() {
                 Canada's Africa Strategy
               </h2>
               <p className="mt-4 text-lead text-champagne/90">
-                "A Partnership for Shared Prosperity and Security" — launched March 2025. A2M 2027 is its operational platform.
+                "A Partnership for Shared Prosperity and Security" — launched March 2025, A2M 2027 is its operational platform.
               </p>
               <div className="mt-6">
                 <div className="rounded-sm border border-gold/40 bg-gold/10 px-6 py-5">
@@ -546,7 +474,7 @@ export default function MinisterialRoundtablePage() {
                   Portraits · To be unveiled
                 </p>
                 <p className="max-w-[44ch] text-body text-muted">
-                  Official portraits of the Roundtable chairpersons (name + title) will appear here once announced.
+                  Official portraits of the Roundtable chairpersons (name + title)
                 </p>
               </div>
             </div>
