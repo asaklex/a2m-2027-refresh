@@ -155,14 +155,6 @@ export default function PartnerPage() {
           <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
             Speaker, strategic partner or media: contribute to A2M 2027.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link className={`${btnGold} h-12 px-7 text-[12px]`} to="/en/about?interest=interestPartnership#contact">
-              Start a partnership
-            </Link>
-            <Link className={`${btnGhostLight} h-12 px-7 text-[12px]`} to="/en/partner#speaker">
-              Speakers, partners &amp; media
-            </Link>
-          </div>
           <dl className="mt-12 grid max-w-[720px] grid-cols-1 gap-6 border-ivory/15 border-t pt-8 sm:grid-cols-3">
             <div>
               <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
