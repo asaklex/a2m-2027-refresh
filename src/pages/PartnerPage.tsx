@@ -220,7 +220,7 @@ export default function PartnerPage() {
             <div className="flex min-w-0 flex-col gap-8">
               <ImagePanel
                 img="/images/partner/keynote-stage.jpg"
-                alt="Speaker at a gold lectern before an A2M audience, emerald curtain behind"
+                alt="Speaker addressing delegates from a lectern in front of an emerald curtain"
                 eyebrow="Keynotes & panels"
               />
               <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
