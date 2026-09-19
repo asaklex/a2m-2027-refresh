@@ -213,7 +213,7 @@ export default function PartnerPage() {
               </p>
               <div className="mt-6">
                 <Callout label="Submit a proposal">
-                  Please submit your proposal through our contact form if you are interested to join our lineup of esteemed speakers. You can also write to us at info@a2mevent.com.
+                  Please submit your proposal through our contact form if you are interested to join our lineup of esteemed speakers.
                 </Callout>
               </div>
             </div>
