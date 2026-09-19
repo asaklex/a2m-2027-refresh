@@ -2,6 +2,7 @@ import ContactForm from '../components/ContactForm'
 import OnThisPageNav from '../components/OnThisPageNav'
 import Tabs from '../components/ui/Tabs'
 import { Link } from 'react-router-dom'
+import { AgendaSection, ConferenceThemesSection } from './programSections'
 
 export default function AboutPage() {
   return (
@@ -81,6 +82,8 @@ export default function AboutPage() {
   <OnThisPageNav
     items={[
       { id: "conference", label: "A2M 2027" },
+      { id: "sessions", label: "Conference Themes" },
+      { id: "schedule", label: "Agenda" },
       { id: "why-participate", label: "Why Participate?" },
       { id: "strategic-partners", label: "Institutional Endorsements" },
       { id: "advisory-board", label: "Advisory Board" },
@@ -550,6 +553,8 @@ export default function AboutPage() {
       </div>
     </div>
   </section>
+  <ConferenceThemesSection />
+  <AgendaSection />
   <section id="why-participate" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
