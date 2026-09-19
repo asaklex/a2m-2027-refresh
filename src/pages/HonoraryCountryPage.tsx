@@ -397,7 +397,7 @@ export default function HonoraryCountryPage() {
             {minerals.map((mineral) => (
               <li
                 key={mineral}
-                className="rounded-full bg-mist px-4 py-2 text-[13px] font-medium text-emerald-deep"
+                className="rounded-sm bg-mist px-4 py-2 text-[13px] font-medium text-emerald-deep"
               >
                 {mineral}
               </li>
