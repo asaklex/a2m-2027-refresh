@@ -14,8 +14,8 @@ export const navSections: NavSection[] = [
         label: 'A2M 2027',
         href: '/en/about#conference',
         children: [
-          { label: 'Conference Themes', href: '/en/program#sessions' },
-          { label: 'Agenda', href: '/en/program#schedule' },
+          { label: 'Conference Themes', href: '/en/about#sessions' },
+          { label: 'Agenda', href: '/en/about#schedule' },
           { label: 'Speakers', href: '/en/speakers' },
         ],
       },
