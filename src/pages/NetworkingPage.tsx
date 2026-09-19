@@ -1,4 +1,26 @@
 import { Link } from 'react-router-dom'
+import OnThisPageNav from '../components/OnThisPageNav'
+
+const introLead =
+  'Where the real conversations happen — a social program designed to accelerate trusted relationships.'
+
+const socialEvents = [
+  {
+    index: '01',
+    title: 'Welcome Reception',
+    body: 'Kickstart your A2M experience with fellow delegates before the inaugural sessions. A2M-App networking suggestions activate in real time. The first meetings happen here.',
+  },
+  {
+    index: '02',
+    title: 'Networking evenings',
+    body: 'Every evening before the Gala Dinner, informal gatherings provide the space to deepen conversations started earlier in the day. Music, atmosphere, no agenda — just deals continuing.',
+  },
+  {
+    index: '03',
+    title: 'Gala Dinner',
+    body: 'An evening of fine dining and high-value networking. Mixed Canada/Africa seating arrangements, curated for maximum business affinity.',
+  },
+]
 
 export default function NetworkingPage() {
   return (
@@ -9,49 +31,52 @@ export default function NetworkingPage() {
     <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-emerald-deep/95 via-emerald-deep/70 to-emerald-deep/25" />
     <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-emerald-deep/90 to-transparent" />
     <div className="mx-auto w-full relative z-10 flex min-h-[420px] max-w-none flex-col justify-center px-4 py-12 sm:px-6 lg:min-h-[520px] lg:px-6 lg:py-16">
-      <div className="mb-6 [&_[aria-current]]:text-champagne [&_a]:text-champagne/80 [&_svg]:text-champagne/40">
-        <nav aria-label="Breadcrumb">
-          <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
-            <li>
-              <Link className="transition-colors hover:text-emerald-cta" to="/en">
-                Home
-              </Link>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-              <Link className="transition-colors hover:text-emerald-cta" to="/en/program">
-                Features
-              </Link>
-            </li>
-            <li className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-              <span aria-current="page" className="text-muted">
-                Networking & Social Events
-              </span>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
-        Features
-      </span>
-      <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.75rem]">
-        Where the
-        <span className="text-gold">
-          real conversations
+      <div className="a2m-cinema w-full max-w-[820px]">
+        <div className="mb-6 [&_[aria-current]]:text-champagne [&_a]:text-champagne/80 [&_svg]:text-champagne/40">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
+              <li>
+                <Link className="transition-colors hover:text-emerald-cta" to="/en">
+                  Home
+                </Link>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                <Link className="transition-colors hover:text-emerald-cta" to="/en/program">
+                  Features
+                </Link>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                <span aria-current="page" className="text-muted">
+                  Networking & Social Events
+                </span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
+          Features
         </span>
-        happen
-      </h1>
-      <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-      <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
-        Where the real conversations happen — a social program designed to accelerate trusted relationships.
-      </p>
-      <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
-        <div className="flex items-center gap-2.5">
+        <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.9rem]">
+          Where the
+          <span className="text-gold">
+            real conversations
+          </span>
+          happen
+        </h1>
+        <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+        <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
+          {introLead}
+        </p>
+      </div>
+      <div className="mt-10 flex w-full max-w-[820px] flex-wrap items-center gap-x-8 gap-y-4 border-ivory/15 border-t pt-6 lg:mt-12">
+        <div className="flex items-center gap-3">
+          <span aria-hidden="true" className="h-9 w-0.5 rounded-full bg-gold/70" />
           <div>
             <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
               June 6
@@ -61,7 +86,8 @@ export default function NetworkingPage() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
+          <span aria-hidden="true" className="h-9 w-0.5 rounded-full bg-gold/70" />
           <div>
             <p className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
               June 8
@@ -74,73 +100,93 @@ export default function NetworkingPage() {
       </div>
     </div>
   </div>
+  <OnThisPageNav
+    items={[
+      { id: 'networking-overview', label: 'Overview' },
+      { id: 'real-conversations', label: 'Real Conversations' },
+      { id: 'signature-events', label: 'Signature Events' },
+    ]}
+  />
   <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-    <div className="py-14 lg:py-16">
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-8">
-          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
+    <div className="flex flex-col gap-16 py-14 lg:gap-20 lg:py-20">
+      <section id="networking-overview" className="a2m-reveal scroll-mt-[190px]">
+        <div className="flex items-center gap-5">
+          <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
             Across All Three Days — The Marketplace as a Networking Hub
-          </h3>
-          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-            Networking at A2M extends far beyond evening events. The Marketplace floor functions as a vibrant, continuous networking environment throughout the convention. Featuring exhibition stands, dedicated seating areas, coffee stations, and informal meeting zones, the floor is purposefully designed to encourage spontaneous and valuable encounters.
-          </p>
-          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
-            Where the real conversations happen
-          </h3>
-          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-            While formal sessions deliver intelligence and the Capital Markets Lounge drives negotiations, it is often the social program that creates the trusted relationships essential for long-term partnerships.
-          </p>
-          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-            Serious mining professionals understand that the most consequential discussions rarely take place at the podium. They unfold over dinner, at the bar, or in the moments between sessions, especially when candid insights are shared and opportunities crystallise.
-          </p>
-          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-            A2M 2027's social program is intentionally designed to accelerate these high-value interactions. From exclusive VIP receptions and gala dinners to casual networking breaks and social gatherings, the events provide the perfect backdrop for building relationships, forging partnerships, and creating unforgettable memories with fellow delegates, speakers, investors and industry leaders.
-          </p>
-          <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
-            Signature Networking & Social Events
-          </h3>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="h-full">
-              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Welcome Reception
-                </h3>
-                <p className="text-body text-muted">
-                  Kickstart your A2M experience with fellow delegates before the inaugural sessions. A2M-App networking suggestions activate in real time. The first meetings happen here.
-                </p>
-              </div>
-            </div>
-            <div className="h-full">
-              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Networking evenings
-                </h3>
-                <p className="text-body text-muted">
-                  Every evening before the Gala Dinner, informal gatherings provide the space to deepen conversations started earlier in the day. Music, atmosphere, no agenda — just deals continuing.
-                </p>
-              </div>
-            </div>
-            <div className="h-full">
-              <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                  Gala Dinner
-                </h3>
-                <p className="text-body text-muted">
-                  An evening of fine dining and high-value networking. Mixed Canada/Africa seating arrangements, curated for maximum business affinity.
-                </p>
-              </div>
+          </h2>
+          <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="flex flex-col lg:col-span-7">
+            <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink [font-family:var(--font-display)] sm:text-[1.3rem]">
+              {introLead}
+            </p>
+            <p className="mt-6 max-w-[680px] text-lead text-muted leading-[1.7]">
+              Networking at A2M extends far beyond evening events. The Marketplace floor functions as a vibrant, continuous networking environment throughout the convention. Featuring exhibition stands, dedicated seating areas, coffee stations, and informal meeting zones, the floor is purposefully designed to encourage spontaneous and valuable encounters.
+            </p>
+          </div>
+          <div className="a2m-motif relative self-start overflow-hidden rounded-sm border border-ivory/15 bg-emerald-deep text-ivory shadow-emerald lg:col-span-5">
+            <div aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 bg-gold/70" />
+            <div className="relative z-10 p-7 sm:p-8">
+              <p className="font-semibold text-[11px] text-gold uppercase tracking-[0.18em]">
+                The Marketplace as hub
+              </p>
+              <p className="mt-3 text-body text-champagne/85 leading-[1.7]">
+                Stands, lounges and coffee stations: a continuous networking environment throughout the event.
+              </p>
             </div>
           </div>
-          <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
-            <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
-              The Marketplace as hub
+        </div>
+      </section>
+      <section id="real-conversations" className="a2m-reveal scroll-mt-[190px]">
+        <div className="flex items-center gap-5">
+          <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+            Where the real conversations happen
+          </h2>
+          <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="flex flex-col gap-5 lg:col-span-7">
+            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+              While formal sessions deliver intelligence and the Capital Markets Lounge drives negotiations, it is often the social program that creates the trusted relationships essential for long-term partnerships.
             </p>
-            <p className="text-body text-muted">
-              Stands, lounges and coffee stations: a continuous networking environment throughout the event.
+            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+              Serious mining professionals understand that the most consequential discussions rarely take place at the podium. They unfold over dinner, at the bar, or in the moments between sessions, especially when candid insights are shared and opportunities crystallise.
+            </p>
+          </div>
+          <div className="flex flex-col lg:col-span-5 lg:pt-1">
+            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
+              A2M 2027's social program is intentionally designed to accelerate these high-value interactions. From exclusive VIP receptions and gala dinners to casual networking breaks and social gatherings, the events provide the perfect backdrop for building relationships, forging partnerships, and creating unforgettable memories with fellow delegates, speakers, investors and industry leaders.
             </p>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="signature-events" className="a2m-reveal scroll-mt-[190px]">
+        <div className="flex items-center gap-5">
+          <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+            Signature Networking & Social Events
+          </h2>
+          <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {socialEvents.map((event) => (
+            <article key={event.index} className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+              <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
+                  {event.index}
+                </span>
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+              </div>
+              <h3 className="mt-4 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta">
+                {event.title}
+              </h3>
+              <p className="mt-2 text-body text-muted">
+                {event.body}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
     </div>
   </div>
   <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
