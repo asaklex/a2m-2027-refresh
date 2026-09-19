@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import OnThisPageNav from '../components/OnThisPageNav'
 
 const introLead =
   'Empowering Women, Reshaping the Industry — a high-impact forum included with registration.'
@@ -100,9 +101,16 @@ export default function WomenInMiningPage() {
       </div>
     </div>
   </div>
+  <OnThisPageNav
+    items={[
+      { id: 'forum-overview', label: 'Overview' },
+      { id: 'why-this-forum', label: 'Why This Forum Matters' },
+      { id: 'key-topics', label: 'Key Topics' },
+    ]}
+  />
   <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
     <div className="flex flex-col gap-16 py-14 lg:gap-20 lg:py-20">
-      <section className="a2m-reveal">
+      <section id="forum-overview" className="a2m-reveal scroll-mt-[190px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="flex flex-col lg:col-span-7">
             <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink [font-family:var(--font-display)] sm:text-[1.3rem]">
@@ -120,7 +128,7 @@ export default function WomenInMiningPage() {
           </div>
         </div>
       </section>
-      <section className="a2m-reveal">
+      <section id="why-this-forum" className="a2m-reveal scroll-mt-[190px]">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
             Why This Forum Matters
@@ -157,7 +165,7 @@ export default function WomenInMiningPage() {
           </p>
         </div>
       </section>
-      <section className="a2m-reveal">
+      <section id="key-topics" className="a2m-reveal scroll-mt-[190px]">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
             Key Topics
