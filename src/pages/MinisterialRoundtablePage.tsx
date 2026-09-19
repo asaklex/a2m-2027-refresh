@@ -166,7 +166,7 @@ export default function MinisterialRoundtablePage() {
                 Venue
               </dt>
               <dd className="mt-1 font-display font-bold text-data text-ivory">
-                Fairmont The Queen Elizabeth
+                TBC
               </dd>
             </div>
             <div>
@@ -183,8 +183,8 @@ export default function MinisterialRoundtablePage() {
       <OnThisPageNav
         items={[
           { id: 'ministerial-round-table', label: 'The Roundtable' },
-          { id: 'canada-africa-strategy', label: "Canada's Africa Strategy" },
           { id: 'chairpersons', label: 'Chairpersons' },
+          { id: 'canada-africa-strategy', label: "Canada's Africa Strategy" },
         ]}
       />
       <section id="ministerial-round-table" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-20">
@@ -277,6 +277,46 @@ export default function MinisterialRoundtablePage() {
           </div>
         </div>
       </section>
+      <div className="a2m-motif relative overflow-hidden bg-emerald-deep py-6">
+        <div className="relative z-10 mx-auto flex w-full max-w-[max(1280px,80vw)] items-center justify-center gap-5 px-4 sm:px-8 lg:px-16">
+          <span aria-hidden="true" className="hidden h-px flex-1 bg-gradient-to-r from-transparent to-gold/50 sm:block" />
+          <span aria-hidden="true" className="size-1.5 rotate-45 bg-gold" />
+          <p className="text-small font-semibold uppercase tracking-[0.26em] text-gold-light">
+            Presiding the dialogue
+          </p>
+          <span aria-hidden="true" className="size-1.5 rotate-45 bg-gold" />
+          <span aria-hidden="true" className="hidden h-px flex-1 bg-gradient-to-l from-transparent to-gold/50 sm:block" />
+        </div>
+      </div>
+      {/* Chairpersons — same composition as the home Speakers section */}
+      <section id="chairpersons" className="a2m-reveal scroll-mt-24 bg-ivory px-4 py-20 sm:px-8 sm:scroll-mt-32 lg:px-16 lg:scroll-mt-[205px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
+          <h2 className="font-display text-h1 text-ink">Chairpersons</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <p className="mt-5 max-w-[640px] text-lead text-muted">
+            The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
+          </p>
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {chairpersons.map((person) => (
+              <li key={person.name}>
+                <article>
+                  <img
+                    alt={person.name}
+                    loading="lazy"
+                    className="aspect-square w-full rounded-sm object-cover shadow-card"
+                    src={person.image}
+                  />
+                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-small text-ink">{person.title}</p>
+                  <p className="mt-0.5 text-small text-muted">{person.org}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <section id="canada-africa-strategy" className="a2m-motif relative scroll-mt-24 overflow-hidden bg-emerald-deep py-16 text-ivory sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-24">
         <div className="relative z-10 mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:gap-16">
@@ -335,21 +375,23 @@ export default function MinisterialRoundtablePage() {
                 <p className="mt-3 max-w-[760px] text-lead text-champagne/80 leading-[1.7]">
                   The Strategy is structured around five axes, closely aligned with African priorities.
                 </p>
-                <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {strategyAxes.map((axis) => (
-                    <div key={axis.num} className="flex h-full flex-col gap-3 rounded-sm border border-ivory/15 bg-ivory/5 p-6 transition-colors duration-[250ms] ease-discret hover:border-gold/60">
-                      <span className="tnum font-display font-bold text-data text-gold-light">
-                        {axis.num}
+                <ol className="mt-6 flex flex-col">
+                  {strategyAxes.map((axis, i) => (
+                    <li key={axis.num} className="grid gap-4 border-ivory/15 border-t py-8 first:border-t-0 first:pt-0 sm:grid-cols-[96px_minmax(0,1fr)] sm:gap-8">
+                      <span className="tnum font-display font-bold text-data-xl text-gold-light">
+                        {String(i + 1).padStart(2, '0')}
                       </span>
-                      <h4 className="font-display font-semibold text-h3 text-ivory">
-                        {axis.title}
-                      </h4>
-                      <p className="text-body text-champagne/80">
-                        {axis.body}
-                      </p>
-                    </div>
+                      <div>
+                        <h4 className="font-display font-semibold text-h3 text-ivory">
+                          {axis.title}
+                        </h4>
+                        <p className="mt-2 text-body text-champagne/80 leading-[1.7]">
+                          {axis.body}
+                        </p>
+                      </div>
+                    </li>
                   ))}
-                </div>
+                </ol>
               </div>
               <div>
                 <h3 className="font-display font-semibold text-h3 text-ivory">
@@ -458,38 +500,6 @@ export default function MinisterialRoundtablePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Chairpersons — same composition as the home Speakers section */}
-      <section id="chairpersons" className="a2m-reveal scroll-mt-24 bg-ivory px-4 py-20 sm:px-8 sm:scroll-mt-32 lg:px-16 lg:scroll-mt-[205px]">
-        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
-          <p className="text-small font-semibold uppercase tracking-[0.26em] text-copper">
-            Presiding the dialogue
-          </p>
-          <h2 className="mt-3 font-display text-h1 text-ink">Chairpersons</h2>
-          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
-          <p className="mt-5 max-w-[640px] text-lead text-muted">
-            The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
-          </p>
-          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {chairpersons.map((person) => (
-              <li key={person.name}>
-                <article>
-                  <img
-                    alt={person.name}
-                    loading="lazy"
-                    className="aspect-square w-full rounded-sm object-cover shadow-card"
-                    src={person.image}
-                  />
-                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
-                    {person.name}
-                  </h3>
-                  <p className="mt-1 text-small text-ink">{person.title}</p>
-                  <p className="mt-0.5 text-small text-muted">{person.org}</p>
-                </article>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
