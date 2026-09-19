@@ -155,30 +155,36 @@ export default function PartnerPage() {
           <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
             Speaker, strategic partner or media: contribute to A2M 2027.
           </p>
-          <dl className="mt-12 grid max-w-[720px] grid-cols-1 gap-6 border-ivory/15 border-t pt-8 sm:grid-cols-3">
-            <div>
-              <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Keynotes &amp; panels
-              </dt>
-              <dd className="mt-1 font-display font-bold text-data-xl text-ivory">
-                Speakers
-              </dd>
+          <dl className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-ivory/15 border-t pt-6 lg:mt-12">
+            <div className="flex items-center gap-2.5">
+              <div>
+                <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+                  Keynotes &amp; panels
+                </dt>
+                <dd className="font-display font-semibold text-[14px] text-ivory leading-tight">
+                  Speakers
+                </dd>
+              </div>
             </div>
-            <div>
-              <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Bespoke programs
-              </dt>
-              <dd className="mt-1 font-display font-bold text-data-xl text-ivory">
-                Strategic partners
-              </dd>
+            <div className="flex items-center gap-2.5">
+              <div>
+                <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+                  Bespoke programs
+                </dt>
+                <dd className="font-display font-semibold text-[14px] text-ivory leading-tight">
+                  Strategic partners
+                </dd>
+              </div>
             </div>
-            <div>
-              <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
-                Press accreditation
-              </dt>
-              <dd className="mt-1 font-display font-bold text-data-xl text-ivory">
-                Media
-              </dd>
+            <div className="flex items-center gap-2.5">
+              <div>
+                <dt className="font-semibold text-[10px] text-champagne/85 uppercase tracking-[0.16em]">
+                  Press accreditation
+                </dt>
+                <dd className="font-display font-semibold text-[14px] text-ivory leading-tight">
+                  Media
+                </dd>
+              </div>
             </div>
           </dl>
         </div>
