@@ -316,7 +316,7 @@ export default function PartnerPage() {
               </p>
               <div className="mt-6">
                 <Callout label="Media accreditation">
-                  Please contact us at media@africanmininginmontreal.com if you're interested in becoming a Media Partner or applying for media accreditation.
+                  Please contact us, if you're interested in becoming a Media Partner or applying for media accreditation.
                 </Callout>
               </div>
             </div>
