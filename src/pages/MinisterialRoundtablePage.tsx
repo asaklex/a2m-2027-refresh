@@ -460,42 +460,36 @@ export default function MinisterialRoundtablePage() {
           </div>
         </div>
       </section>
-      <section id="chairpersons" className="a2m-reveal scroll-mt-24 border-hairline border-t bg-surface/60 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-20">
-        <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:gap-16">
-            <div className="lg:sticky lg:top-[140px] lg:self-start">
-              <span className="font-semibold text-[11px] text-copper uppercase tracking-[0.22em]">
-                Presiding the dialogue
-              </span>
-              <h2 className="mt-2 font-display font-bold tracking-[-0.01em] text-h2">
-                Chairpersons
-              </h2>
-              <p className="mt-4 text-lead text-muted">
-                The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
-              </p>
-            </div>
-            <div className="flex min-w-0 flex-col">
-              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {chairpersons.map((person) => (
-                  <li key={person.name}>
-                    <article>
-                      <img
-                        alt={person.name}
-                        loading="lazy"
-                        className="aspect-square w-full rounded-sm object-cover shadow-card"
-                        src={person.image}
-                      />
-                      <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
-                        {person.name}
-                      </h3>
-                      <p className="mt-1 text-small text-ink">{person.title}</p>
-                      <p className="mt-0.5 text-small text-muted">{person.org}</p>
-                    </article>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      {/* Chairpersons — same composition as the home Speakers section */}
+      <section id="chairpersons" className="a2m-reveal scroll-mt-24 bg-ivory px-4 py-20 sm:px-8 sm:scroll-mt-32 lg:px-16 lg:scroll-mt-[205px]">
+        <div className="mx-auto w-full max-w-[max(1280px,80vw)]">
+          <p className="text-small font-semibold uppercase tracking-[0.26em] text-copper">
+            Presiding the dialogue
+          </p>
+          <h2 className="mt-3 font-display text-h1 text-ink">Chairpersons</h2>
+          <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
+          <p className="mt-5 max-w-[640px] text-lead text-muted">
+            The Roundtable is guided by distinguished chairpersons from Canada and Africa, whose standing embodies the conference's values.
+          </p>
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {chairpersons.map((person) => (
+              <li key={person.name}>
+                <article>
+                  <img
+                    alt={person.name}
+                    loading="lazy"
+                    className="aspect-square w-full rounded-sm object-cover shadow-card"
+                    src={person.image}
+                  />
+                  <h3 className="mt-4 font-display font-semibold text-body uppercase tracking-[0.04em] text-emerald-deep">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-small text-ink">{person.title}</p>
+                  <p className="mt-0.5 text-small text-muted">{person.org}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 border-hairline border-t py-8">
