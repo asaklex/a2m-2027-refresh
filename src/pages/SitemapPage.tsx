@@ -43,12 +43,12 @@ export default function SitemapPage() {
               </Link>
             </li>
             <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#sessions">
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/about#sessions">
                 Conference Themes
               </Link>
             </li>
             <li>
-              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/program#schedule">
+              <Link className="text-body text-muted transition-colors hover:text-emerald-cta" to="/en/about#schedule">
                 Agenda
               </Link>
             </li>
