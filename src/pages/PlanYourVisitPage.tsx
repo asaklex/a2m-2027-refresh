@@ -15,7 +15,7 @@ export default function PlanYourVisitPage() {
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
               <li>
-                <Link className="transition-colors hover:text-emerald-cta" to="/en">
+                <Link className="transition-colors hover:text-gold-light" to="/en">
                   Home
                 </Link>
               </li>
@@ -30,10 +30,10 @@ export default function PlanYourVisitPage() {
             </ol>
           </nav>
         </div>
-        <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
+        <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
           Plan Your Visit
         </span>
-        <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.9rem]">
+        <h1 className="mt-3 max-w-[760px] font-bold text-hero text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-hero-md sm:leading-[1.1] lg:text-hero-lg">
           <span className="text-gold">
             Montréal
           </span>
@@ -83,19 +83,19 @@ export default function PlanYourVisitPage() {
   </div>
   <OnThisPageNav
     items={[
-      { id: "register", label: "Register as a Delegate" },
-      { id: "where-to-stay", label: "Book Accommodation" },
+      { id: "register", label: "Register as a delegate" },
+      { id: "where-to-stay", label: "Book accommodation" },
       { id: "visa", label: "Request invitation letter" },
       { id: "discover-montreal", label: "Discover Montréal" },
-      { id: "venue", label: "Venue & Accessibility" },
-      { id: "useful-info", label: "Useful Information" },
+      { id: "venue", label: "Venue & accessibility" },
+      { id: "useful-info", label: "Useful information" },
     ]}
   />
-  <section id="register" className="a2m-reveal scroll-mt-[190px] py-14 lg:py-20">
+  <section id="register" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <div className="flex items-center gap-5">
         <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-          Register as a Delegate
+          Register as a delegate
         </h2>
         <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
       </div>
@@ -107,7 +107,7 @@ export default function PlanYourVisitPage() {
             </p>
             <div className="mt-4 flex flex-col divide-y divide-hairline">
               <div className="flex items-center gap-3 py-3 first:pt-0">
-                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
@@ -121,7 +121,7 @@ export default function PlanYourVisitPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3 py-3">
-                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinecap="round" d="M22 22H2" />
@@ -135,7 +135,7 @@ export default function PlanYourVisitPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3 py-3">
-                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <circle cx="9" cy="6" r="4" />
@@ -150,7 +150,7 @@ export default function PlanYourVisitPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3 py-3">
-                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                     <g fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5">
                       <path d="M14 12a6 6 0 1 1-6-6" />
@@ -163,7 +163,7 @@ export default function PlanYourVisitPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3 py-3 last:pb-0">
-                <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M14 6h-4c-1.356 0-2.468 0-3.39.054c-1.645.097-2.688.367-3.438 1.118C2 8.343 2 10.229 2 14s0 5.657 1.172 6.828S6.229 22 10 22h4c3.771 0 5.657 0 6.828-1.172S22 17.771 22 14s0-5.657-1.172-6.828c-.75-.75-1.793-1.02-3.437-1.118C16.468 6 15.356 6 14 6Z" />
@@ -199,7 +199,7 @@ export default function PlanYourVisitPage() {
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   01
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
                 <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-bronze/15 text-copper">
                   Current rate
                 </span>
@@ -214,12 +214,12 @@ export default function PlanYourVisitPage() {
                 Sep 1 – Dec 31, 2026
               </span>
             </article>
-            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
               <div className="flex items-center gap-3">
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   02
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
                 <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
                   Upcoming
                 </span>
@@ -234,12 +234,12 @@ export default function PlanYourVisitPage() {
                 Jan 1 – Mar 31, 2027
               </span>
             </article>
-            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
               <div className="flex items-center gap-3">
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   03
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
                 <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
                   Upcoming
                 </span>
@@ -254,12 +254,12 @@ export default function PlanYourVisitPage() {
                 Apr 1 – May 31, 2027
               </span>
             </article>
-            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+            <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
               <div className="flex items-center gap-3">
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   04
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
                 <span className="inline-flex items-center rounded-sm px-[9px] py-1 font-sans font-bold text-[9px] uppercase tracking-[0.14em] bg-anthracite/8 text-muted">
                   Upcoming
                 </span>
@@ -279,11 +279,11 @@ export default function PlanYourVisitPage() {
       </div>
     </div>
   </section>
-  <section id="where-to-stay" className="a2m-reveal scroll-mt-[190px] py-14 lg:py-20">
+  <section id="where-to-stay" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <div className="flex items-center gap-5">
         <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-          Book Accommodation
+          Book accommodation
         </h2>
         <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
       </div>
@@ -295,12 +295,12 @@ export default function PlanYourVisitPage() {
           <h3 className="font-display font-semibold text-h3 text-ink">
             Fairmont The Queen Elizabeth
           </h3>
-          <p className="border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
+          <p className="border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
             Situated in the heart of downtown Montreal, Fairmont The Queen Elizabeth is a landmark luxury hotel that has welcomed world leaders, celebrities, and business executives since 1958. Offering exceptional service, elegant accommodations, and state-of-the-art facilities, it is the ideal choice for both discerning business travelers and international delegates.
           </p>
           <div className="flex flex-col divide-y divide-hairline">
             <div className="group/icr flex items-start gap-4 py-4 first:pt-0">
-              <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-6">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="m18 8l.949.316c.99.33 1.485.495 1.768.888s.283.915.283 1.958v5.667c0 1.29 0 1.936-.34 2.351c-.115.14-.255.26-.413.35c-.465.267-1.102.16-2.375-.051c-1.256-.21-1.884-.314-2.507-.262q-.329.027-.65.097c-.61.134-1.185.421-2.334.996c-1.5.75-2.25 1.125-3.048 1.24q-.36.052-.726.052c-.807-.002-1.595-.265-3.172-.79l-.384-.128c-.99-.33-1.485-.495-1.768-.888S3 18.88 3 17.838v-4.93c0-1.659 0-2.488.488-2.934a1.5 1.5 0 0 1 .281-.203c.578-.322 1.365-.06 2.938.465" />
@@ -319,7 +319,7 @@ export default function PlanYourVisitPage() {
               </div>
             </div>
             <div className="group/icr flex items-start gap-4 py-4">
-              <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-6">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path strokeLinecap="round" d="M22 22H2" />
@@ -338,7 +338,7 @@ export default function PlanYourVisitPage() {
               </div>
             </div>
             <div className="group/icr flex items-start gap-4 py-4 last:pb-0">
-              <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors group-hover/icr:border-gold group-hover/icr:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-6">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="9" cy="6" r="4" />
@@ -373,7 +373,6 @@ export default function PlanYourVisitPage() {
         <div className="flex flex-col gap-5 lg:col-span-7">
           <figure className="flex flex-col gap-1.5">
             <div className="relative">
-              <div aria-hidden="true" className="absolute -right-3 -top-3 hidden h-full w-full rounded-sm border-2 border-gold/50 sm:block" />
               <div style={{ aspectRatio: '16 / 9' }} className="group relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card w-full">
                 <img alt="Façade of the Fairmont The Queen Elizabeth in Montréal" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 92vw" srcSet="/images/plan/fairmont.jpg 256w, /images/plan/fairmont.jpg 384w, /images/plan/fairmont.jpg 640w, /images/plan/fairmont.jpg 750w, /images/plan/fairmont.jpg 828w, /images/plan/fairmont.jpg 1080w, /images/plan/fairmont.jpg 1200w, /images/plan/fairmont.jpg 1920w, /images/plan/fairmont.jpg 2048w, /images/plan/fairmont.jpg 3840w" src="/images/plan/fairmont.jpg" />
               </div>
@@ -388,22 +387,22 @@ export default function PlanYourVisitPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <figure className="flex flex-col gap-1.5">
               <div style={{ aspectRatio: '3 / 2' }} className="group relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card w-full">
-                <img alt="Daytime facade of the hotel and a contemporary walnut-and-ivory guest room (illustrative)" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 19vw, (min-width: 640px) 25vw, 92vw" srcSet="/images/plan/fairmont-day.jpg 256w, /images/plan/fairmont-day.jpg 384w, /images/plan/fairmont-day.jpg 640w, /images/plan/fairmont-day.jpg 750w, /images/plan/fairmont-day.jpg 828w, /images/plan/fairmont-day.jpg 1080w, /images/plan/fairmont-day.jpg 1200w, /images/plan/fairmont-day.jpg 1920w, /images/plan/fairmont-day.jpg 2048w, /images/plan/fairmont-day.jpg 3840w" src="/images/plan/fairmont-day.jpg" />
+                <img alt="Daytime exterior of Fairmont The Queen Elizabeth in downtown Montréal" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 19vw, (min-width: 640px) 25vw, 92vw" srcSet="/images/plan/fairmont-day.jpg 256w, /images/plan/fairmont-day.jpg 384w, /images/plan/fairmont-day.jpg 640w, /images/plan/fairmont-day.jpg 750w, /images/plan/fairmont-day.jpg 828w, /images/plan/fairmont-day.jpg 1080w, /images/plan/fairmont-day.jpg 1200w, /images/plan/fairmont-day.jpg 1920w, /images/plan/fairmont-day.jpg 2048w, /images/plan/fairmont-day.jpg 3840w" src="/images/plan/fairmont-day.jpg" />
               </div>
               <figcaption className="text-[11px] text-subtle">
                 <a href="https://commons.wikimedia.org/wiki/File:The_Queen_Elizabeth.jpg" target="_blank" rel="noopener noreferrer" className="underline-offset-2 transition-colors hover:text-muted hover:underline">
-                  Photo de jour : Jeangagnon — Wikimedia Commons
+                  Wikimedia Commons
                   · CC BY-SA 3.0
                 </a>
               </figcaption>
             </figure>
             <figure className="flex flex-col gap-1.5">
               <div style={{ aspectRatio: '3 / 2' }} className="group relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card w-full">
-                <img alt="Daytime facade of the hotel and a contemporary walnut-and-ivory guest room (illustrative)" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 19vw, (min-width: 640px) 25vw, 92vw" srcSet="/images/plan/fairmont-room.jpg 256w, /images/plan/fairmont-room.jpg 384w, /images/plan/fairmont-room.jpg 640w, /images/plan/fairmont-room.jpg 750w, /images/plan/fairmont-room.jpg 828w, /images/plan/fairmont-room.jpg 1080w, /images/plan/fairmont-room.jpg 1200w, /images/plan/fairmont-room.jpg 1920w, /images/plan/fairmont-room.jpg 2048w, /images/plan/fairmont-room.jpg 3840w" src="/images/plan/fairmont-room.jpg" />
+                <img alt="Contemporary walnut-and-ivory guest room at Fairmont The Queen Elizabeth" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 19vw, (min-width: 640px) 25vw, 92vw" srcSet="/images/plan/fairmont-room.jpg 256w, /images/plan/fairmont-room.jpg 384w, /images/plan/fairmont-room.jpg 640w, /images/plan/fairmont-room.jpg 750w, /images/plan/fairmont-room.jpg 828w, /images/plan/fairmont-room.jpg 1080w, /images/plan/fairmont-room.jpg 1200w, /images/plan/fairmont-room.jpg 1920w, /images/plan/fairmont-room.jpg 2048w, /images/plan/fairmont-room.jpg 3840w" src="/images/plan/fairmont-room.jpg" />
               </div>
               <figcaption className="text-[11px] text-subtle">
                 <a href="https://commons.wikimedia.org/wiki/File:The_Queen_Elizabeth.jpg" target="_blank" rel="noopener noreferrer" className="underline-offset-2 transition-colors hover:text-muted hover:underline">
-                  Photo de jour : Jeangagnon — Wikimedia Commons
+                  Wikimedia Commons
                   · CC BY-SA 3.0
                 </a>
               </figcaption>
@@ -413,7 +412,7 @@ export default function PlanYourVisitPage() {
       </div>
     </div>
   </section>
-  <section id="visa" className="a2m-reveal scroll-mt-[190px] py-14 lg:py-20 a2m-motif-light relative overflow-hidden bg-surface">
+  <section id="visa" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20 a2m-motif-light relative overflow-hidden bg-surface">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <div className="flex items-center gap-5">
         <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
@@ -423,11 +422,11 @@ export default function PlanYourVisitPage() {
       </div>
       <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
         <div className="flex flex-col gap-6 lg:col-span-6">
-          <p className="border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink [font-family:var(--font-display)] sm:text-[1.3rem]">
+          <p className="border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
             Most visitors need a Temporary Resident Visa (TRV) or an eTA. Verify your requirements on the official Government of Canada (IRCC) website well in advance.
           </p>
           <h3 className="font-display font-semibold text-h3 text-ink">
-            Travel & Visa Information
+            Travel & visa information
           </h3>
           <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
             International participants are responsible for ensuring they meet all Canadian entry requirements. Most visitors require a Temporary Resident Visa (TRV) or an Electronic Travel Authorization (eTA).
@@ -437,12 +436,12 @@ export default function PlanYourVisitPage() {
           </p>
         </div>
         <div className="flex flex-col gap-5 lg:col-span-6">
-          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                 01
               </span>
-              <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+              <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
             </div>
             <p className="mt-4 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
               Invitation letter
@@ -451,12 +450,12 @@ export default function PlanYourVisitPage() {
               Request an official invitation letter (invitation letter request form). An official invitation letter can be provided on request to registered delegates.
             </p>
           </article>
-          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                 02
               </span>
-              <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+              <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
             </div>
             <p className="mt-4 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
               Important Note
@@ -469,8 +468,8 @@ export default function PlanYourVisitPage() {
       </div>
     </div>
   </section>
-  <section id="discover-montreal" className="a2m-reveal scroll-mt-[190px]">
-    <div className="py-14 lg:py-20">
+  <section id="discover-montreal" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
+    <div className="pb-14 lg:pb-20">
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
@@ -481,7 +480,7 @@ export default function PlanYourVisitPage() {
         <p className="mt-6 max-w-[820px] text-lead text-muted">
           A bilingual, creative metropolis, Montréal blends European charm, North American energy and Quebecois joie de vivre. June kicks off festival season.
         </p>
-        <p className="mt-10 max-w-[860px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
+        <p className="mt-10 max-w-[860px] border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
           Montreal is a vibrant, cosmopolitan city that masterfully blends European charm, North American energy, and Quebecois joie de vivre. As you attend A2M 2027, take the opportunity to experience
           <em className="font-medium [font-family:var(--font-display)] text-copper">
             the city's rich culture, world-class gastronomy, and dynamic atmosphere
@@ -491,8 +490,8 @@ export default function PlanYourVisitPage() {
         <p className="mt-10 max-w-[760px] text-lead text-muted leading-[1.7]">
           June marks the beginning of Montreal's renowned festival season, offering an exceptional backdrop for your visit. Highlights include:
         </p>
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover">
             <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-b border-hairline bg-surface w-full">
               <img alt="Crowd before the stage at the Montréal International Jazz Festival" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.04]" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/plan/jazz-festival.jpg 256w, /images/plan/jazz-festival.jpg 384w, /images/plan/jazz-festival.jpg 640w, /images/plan/jazz-festival.jpg 750w, /images/plan/jazz-festival.jpg 828w, /images/plan/jazz-festival.jpg 1080w, /images/plan/jazz-festival.jpg 1200w, /images/plan/jazz-festival.jpg 1920w, /images/plan/jazz-festival.jpg 2048w, /images/plan/jazz-festival.jpg 3840w" src="/images/plan/jazz-festival.jpg" />
             </div>
@@ -501,10 +500,10 @@ export default function PlanYourVisitPage() {
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   01
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
               </div>
               <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-4">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinejoin="round" d="M9 18V5.5c0-.68 0-1.02.174-1.263a1 1 0 0 1 .29-.27C9.72 3.81 10.055 3.755 10.727 3.643l7.2-1.2c.983-.164 1.475-.246 1.774.02c.299.265.299.764.299 1.76V16" />
@@ -513,7 +512,7 @@ export default function PlanYourVisitPage() {
                     </g>
                   </svg>
                 </span>
-                Festivals & Events
+                Festivals & events
               </h3>
               <p className="text-body text-muted">
                 Francofolies de Montréal, the Montréal International Jazz Festival and the MURAL Festival (street art).
@@ -526,7 +525,7 @@ export default function PlanYourVisitPage() {
               </p>
             </div>
           </article>
-          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover">
+          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover">
             <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-b border-hairline bg-surface w-full">
               <img alt="Café terrace and passers-by on Rue Saint-Paul, Old Montréal" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.04]" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/plan/old-montreal.jpg 256w, /images/plan/old-montreal.jpg 384w, /images/plan/old-montreal.jpg 640w, /images/plan/old-montreal.jpg 750w, /images/plan/old-montreal.jpg 828w, /images/plan/old-montreal.jpg 1080w, /images/plan/old-montreal.jpg 1200w, /images/plan/old-montreal.jpg 1920w, /images/plan/old-montreal.jpg 2048w, /images/plan/old-montreal.jpg 3840w" src="/images/plan/old-montreal.jpg" />
             </div>
@@ -535,10 +534,10 @@ export default function PlanYourVisitPage() {
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   02
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
               </div>
               <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-4">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinecap="round" d="M22 22H2" />
@@ -548,7 +547,7 @@ export default function PlanYourVisitPage() {
                     </g>
                   </svg>
                 </span>
-                Must-Visit Neighborhoods
+                Must-visit neighborhoods
               </h3>
               <p className="text-body text-muted">
                 Old Montreal (Vieux-Montréal): historic architecture, Notre-Dame Basilica, and cobblestone streets. Plateau Mont-Royal: trendy boutiques, galleries, and restaurants. Quartier des Spectacles: Montreal's vibrant entertainment district.
@@ -561,7 +560,7 @@ export default function PlanYourVisitPage() {
               </p>
             </div>
           </article>
-          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover">
+          <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-hairline bg-card shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover">
             <div style={{ aspectRatio: '16 / 9' }} className="relative overflow-hidden border-b border-hairline bg-surface w-full">
               <img alt="Downtown view from the Kondiaronk Belvedere on Mount Royal" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.04]" sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw" srcSet="/images/plan/mount-royal.jpg 256w, /images/plan/mount-royal.jpg 384w, /images/plan/mount-royal.jpg 640w, /images/plan/mount-royal.jpg 750w, /images/plan/mount-royal.jpg 828w, /images/plan/mount-royal.jpg 1080w, /images/plan/mount-royal.jpg 1200w, /images/plan/mount-royal.jpg 1920w, /images/plan/mount-royal.jpg 2048w, /images/plan/mount-royal.jpg 3840w" src="/images/plan/mount-royal.jpg" />
             </div>
@@ -570,10 +569,10 @@ export default function PlanYourVisitPage() {
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   03
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
               </div>
               <h3 className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink">
-                <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-4">
                     <g fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path strokeLinejoin="round" d="M12 2c-3.5 3.06-6 6.44-6 9.5C6 14.54 8.462 17 12 17s6-2.46 6-5.5c0-3.06-2.5-6.44-6-9.5Z" />
@@ -581,7 +580,7 @@ export default function PlanYourVisitPage() {
                     </g>
                   </svg>
                 </span>
-                Outdoor Activities
+                Outdoor activities
               </h3>
               <p className="text-body text-muted">
                 Mount Royal Park: panoramic views, hiking trails, and cycling. Lachine Canal: scenic walks, Atwater Market, and street performers. Parc Jean-Drapeau: gardens, attractions, and stunning river views.
@@ -609,54 +608,54 @@ export default function PlanYourVisitPage() {
         </a>
       </figcaption>
     </figure>
-    <div className="py-14 lg:py-20">
+    <div className="pt-14 lg:pt-20">
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
         <h3 className="font-display font-semibold text-h3 text-ink">
-          Food & Drink
+          Food & drink
         </h3>
         <p className="mt-4 max-w-[760px] text-lead text-muted leading-[1.7]">
           Montreal's culinary scene reflects its French and Quebecois heritage. Don't miss classic dishes such as poutine, tourtière, or sugar pie, along with the city's renowned craft beer scene and bustling public markets like Jean-Talon Market.
         </p>
         <div className="mt-8 grid gap-5 grid-cols-1 sm:grid-cols-2">
           <div style={{ aspectRatio: '16 / 9' }} className="group relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card w-full">
-            <img alt="Montréal festival scene and Jean-Talon Market stalls" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/plan/festival.jpg 256w, /images/plan/festival.jpg 384w, /images/plan/festival.jpg 640w, /images/plan/festival.jpg 750w, /images/plan/festival.jpg 828w, /images/plan/festival.jpg 1080w, /images/plan/festival.jpg 1200w, /images/plan/festival.jpg 1920w, /images/plan/festival.jpg 2048w, /images/plan/festival.jpg 3840w" src="/images/plan/festival.jpg" />
+            <img alt="Crowd enjoying an outdoor show during Montréal's June festival season" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/plan/festival.jpg 256w, /images/plan/festival.jpg 384w, /images/plan/festival.jpg 640w, /images/plan/festival.jpg 750w, /images/plan/festival.jpg 828w, /images/plan/festival.jpg 1080w, /images/plan/festival.jpg 1200w, /images/plan/festival.jpg 1920w, /images/plan/festival.jpg 2048w, /images/plan/festival.jpg 3840w" src="/images/plan/festival.jpg" />
           </div>
           <div style={{ aspectRatio: '16 / 9' }} className="group relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card w-full">
-            <img alt="Montréal festival scene and Jean-Talon Market stalls" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/plan/market.jpg 256w, /images/plan/market.jpg 384w, /images/plan/market.jpg 640w, /images/plan/market.jpg 750w, /images/plan/market.jpg 828w, /images/plan/market.jpg 1080w, /images/plan/market.jpg 1200w, /images/plan/market.jpg 1920w, /images/plan/market.jpg 2048w, /images/plan/market.jpg 3840w" src="/images/plan/market.jpg" />
+            <img alt="Produce stalls at Jean-Talon Market in Montréal" loading="lazy" decoding="async" data-nimg="fill" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" srcSet="/images/plan/market.jpg 256w, /images/plan/market.jpg 384w, /images/plan/market.jpg 640w, /images/plan/market.jpg 750w, /images/plan/market.jpg 828w, /images/plan/market.jpg 1080w, /images/plan/market.jpg 1200w, /images/plan/market.jpg 1920w, /images/plan/market.jpg 2048w, /images/plan/market.jpg 3840w" src="/images/plan/market.jpg" />
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="venue" className="a2m-reveal scroll-mt-[190px]">
-    <div className="py-14 lg:py-20">
+  <section id="venue" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
+    <div className="pb-14 lg:pb-20">
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-            Venue & Accessibility
+            Venue & accessibility
           </h2>
           <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
         </div>
         <p className="mt-6 max-w-[820px] text-lead text-muted">
           A2M 2027 takes place at the Centre Mont-Royal, in the heart of downtown Montréal, steps from hotels, restaurants and cultural sites.
         </p>
-        <p className="mt-10 max-w-[860px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
+        <p className="mt-10 max-w-[860px] border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
           All A2M 2027 events will be held under one roof at the Centre Mont-Royal, a prestigious venue renowned for its world-class facilities and ideal for hosting high-profile international conferences. Located in the heart of downtown Montreal, the venue is within walking distance of major attractions, restaurants, and cultural sites, offering participants a seamless blend of business and memorable experiences.
         </p>
         <h3 className="mt-12 font-display font-semibold text-h3 text-ink">
-          How to Get There
+          How to get there
         </h3>
         <p className="mt-4 max-w-[760px] text-lead text-muted leading-[1.7]">
           The Centre Mont-Royal is centrally located and easily accessible by car, public transit, or air.
         </p>
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                 01
               </span>
-              <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
+              <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="10" />
@@ -668,19 +667,19 @@ export default function PlanYourVisitPage() {
               </span>
             </div>
             <h3 className="mt-4 font-display font-semibold text-h3 text-ink">
-              By Car
+              By car
             </h3>
             <p className="mt-2 text-body text-muted">
-              Valet Parking: Available at the hotel ($XX CAD per day). Driving Directions: From Highway 40, take the René-Lévesque Boulevard exit and proceed for approximately 1 km. Turn left onto Mansfield Street; ________.
+              Valet Parking: Available at the hotel. Driving Directions: From Highway 40, take the René-Lévesque Boulevard exit and proceed for approximately 1 km. Turn left onto Mansfield Street.
             </p>
           </article>
-          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                 02
               </span>
-              <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
+              <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M4 10c0-3.771 0-5.657 1.172-6.828S8.229 2 12 2s5.657 0 6.828 1.172S20 6.229 20 10v2c0 3.771 0 5.657-1.172 6.828S15.771 20 12 20s-5.657 0-6.828-1.172S4 15.771 4 12z" />
@@ -691,19 +690,19 @@ export default function PlanYourVisitPage() {
               </span>
             </div>
             <h3 className="mt-4 font-display font-semibold text-h3 text-ink">
-              By Public Transportation
+              By public transportation
             </h3>
             <p className="mt-2 text-body text-muted">
               Metro: A short walk from Peel Station (Green Line). Bus: Multiple lines serve the area, including routes 144 and 150.
             </p>
           </article>
-          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                 03
               </span>
-              <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
+              <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/15">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                   <g fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="m17.498 18.485l3.13-9.391c1.248-3.745 1.873-5.618.884-6.606c-.988-.989-2.86-.364-6.606.884l-9.331 3.11c-2.082.694-3.123 1.041-3.439 1.804q-.112.271-.133.564c-.059.824.717 1.6 2.269 3.151l.283.283c.254.254.382.382.478.523c.19.28.297.607.31.945c.008.171-.019.35-.072.705c-.196 1.304-.294 1.956-.179 2.458c.23 1 1.004 1.785 2 2.028c.5.123 1.154.034 2.46-.143l.072-.01c.368-.05.552-.075.729-.064c.32.019.63.124.898.303c.147.098.279.23.541.492l.252.252c1.51 1.51 2.265 2.265 3.066 2.226c.22-.011.438-.062.64-.152c.734-.323 1.072-1.336 1.747-3.362Z" />
@@ -713,10 +712,10 @@ export default function PlanYourVisitPage() {
               </span>
             </div>
             <h3 className="mt-4 font-display font-semibold text-h3 text-ink">
-              By Air
+              By air
             </h3>
             <p className="mt-2 text-body text-muted">
-              Montréal-Pierre Elliott Trudeau International Airport (YUL): Approximately 20 km from the hotel. Airport Shuttle: Available for approximately $XXX CAD per person. Taxi: Readily available outside the terminal, with an estimated fare of $XXX CAD to the hotel.
+              Montréal-Pierre Elliott Trudeau International Airport (YUL): Approximately 20 km from the hotel. Taxi: Readily available outside the terminal.
             </p>
           </article>
         </div>
@@ -734,7 +733,7 @@ export default function PlanYourVisitPage() {
         </a>
       </figcaption>
     </figure>
-    <div className="py-12 lg:py-14">
+    <div className="pt-14 lg:pt-20">
       <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
         <div className="max-w-[760px] rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5">
           <p className="mb-1 font-semibold text-[11px] text-copper uppercase tracking-[0.18em]">
@@ -747,11 +746,11 @@ export default function PlanYourVisitPage() {
       </div>
     </div>
   </section>
-  <section id="useful-info" className="a2m-reveal scroll-mt-[190px] a2m-motif relative overflow-hidden bg-emerald-deep py-16 text-ivory lg:py-20">
+  <section id="useful-info" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] a2m-motif relative overflow-hidden bg-emerald-deep py-14 text-ivory lg:py-20">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16 relative z-10">
       <div className="flex items-center gap-5">
         <h2 className="font-display font-bold tracking-[-0.01em] text-h2 text-ivory">
-          Useful Information
+          Useful information
         </h2>
         <span aria-hidden="true" className="hidden h-px flex-1 bg-ivory/15 sm:block" />
       </div>

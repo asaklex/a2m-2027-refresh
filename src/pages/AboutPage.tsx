@@ -84,7 +84,7 @@ export default function AboutPage() {
       { id: "conference", label: "A2M 2027" },
       { id: "sessions", label: "Conference Themes" },
       { id: "schedule", label: "Agenda" },
-      { id: "why-participate", label: "Why Participate?" },
+      { id: "why-participate", label: "Why participate?" },
       { id: "strategic-partners", label: "Institutional Endorsements" },
       { id: "advisory-board", label: "Advisory Board" },
       { id: "meet-the-team", label: "Meet the Team" },
@@ -555,11 +555,11 @@ export default function AboutPage() {
   </section>
   <ConferenceThemesSection />
   <AgendaSection />
-  <section id="why-participate" className="a2m-reveal scroll-mt-24 py-16 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-20">
+  <section id="why-participate" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[190px] lg:py-20">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
       <div className="flex items-center gap-5">
         <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-          Why Participate?
+          Why participate?
         </h2>
         <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
       </div>
@@ -568,7 +568,7 @@ export default function AboutPage() {
           <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
             Every delegate has a precise reason to be in Montreal. Whatever your profile, A2M offers direct access to the decision-makers, capital and opportunities of the African mining sector.
           </p>
-          <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
+          <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
             A2M 2027 exists because
             <em className="font-medium [font-family:var(--font-display)] text-copper">
               the most important conversations in African mining are still taking place in the wrong rooms
@@ -593,7 +593,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">01</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M4.979 9.685C2.993 8.891 2 8.494 2 8s.993-.89 2.979-1.685l2.808-1.123C9.773 4.397 10.767 4 12 4s2.227.397 4.213 1.192l2.808 1.123C21.007 7.109 22 7.506 22 8s-.993.89-2.979 1.685l-2.808 1.124C14.227 11.603 13.233 12 12 12s-2.227-.397-4.213-1.191z" />
@@ -602,7 +602,7 @@ export default function AboutPage() {
                     </svg>
             </span>
           </div>
-          <h3 id="majors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="majors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Majors & mid-tier
           </h3>
           <p className="mt-2 text-body text-muted">
@@ -613,7 +613,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">02</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10" />
@@ -622,7 +622,7 @@ export default function AboutPage() {
                     </svg>
             </span>
           </div>
-          <h3 id="juniors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="juniors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Juniors & exploration
           </h3>
           <p className="mt-2 text-body text-muted">
@@ -633,7 +633,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">03</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M2 11c0-2.828 0-4.243.879-5.121C3.757 5 5.172 5 8 5h5c2.828 0 4.243 0 5.121.879C19 6.757 19 8.172 19 11s0 4.243-.879 5.121C17.243 17 15.828 17 13 17H8c-2.828 0-4.243 0-5.121-.879C2 15.243 2 13.828 2 11Z" />
@@ -644,7 +644,7 @@ export default function AboutPage() {
                     </svg>
             </span>
           </div>
-          <h3 id="investors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="investors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Investors & DFIs
           </h3>
           <p className="mt-2 text-body text-muted">
@@ -655,7 +655,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">04</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M7 10c0-1.414 0-2.121.44-2.56C7.878 7 8.585 7 10 7h4c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v4c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44h-4c-1.414 0-2.121 0-2.56-.44C7 16.122 7 15.415 7 14z" />
@@ -665,7 +665,7 @@ export default function AboutPage() {
                     </svg>
             </span>
           </div>
-          <h3 id="services" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="services" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Service providers & tech
           </h3>
           <p className="mt-2 text-body text-muted">
@@ -676,7 +676,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">05</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" d="M22 22H2" />
@@ -686,7 +686,7 @@ export default function AboutPage() {
                     </svg>
             </span>
           </div>
-          <h3 id="governments" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="governments" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Governments & ministries
           </h3>
           <p className="mt-2 text-body text-muted">
@@ -697,13 +697,13 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">06</span>
             <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
-            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
                 <path fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5L12 12m0 0L3 7.5m9 4.5v9.5" />
               </svg>
             </span>
           </div>
-          <h3 id="buyers" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+          <h3 id="buyers" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[190px]">
             Buyers & traders
           </h3>
           <p className="mt-2 text-body text-muted">

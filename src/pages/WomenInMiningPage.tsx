@@ -12,17 +12,17 @@ const forumStats = [
 const keyTopics = [
   {
     index: '01',
-    title: 'Leadership and Inclusion',
+    title: 'Leadership and inclusion',
     body: 'Real stories from women leading mines, financial institutions, and government mining bodies across Canada and Africa.',
   },
   {
     index: '02',
-    title: 'Breaking Barriers',
+    title: 'Breaking barriers',
     body: "Challenges and practical solutions for increasing women's participation in traditionally male-dominated sectors.",
   },
   {
     index: '03',
-    title: 'Community and Social Impact',
+    title: 'Community and social impact',
     body: 'The pivotal role of women in responsible mining practices and sustainable community development.',
   },
   {
@@ -46,7 +46,7 @@ export default function WomenInMiningPage() {
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-subtle">
               <li>
-                <Link className="transition-colors hover:text-emerald-cta" to="/en">
+                <Link className="transition-colors hover:text-gold-light" to="/en">
                   Home
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export default function WomenInMiningPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right size-3.5 text-hairline" aria-hidden="true">
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-                <Link className="transition-colors hover:text-emerald-cta" to="/en/program">
+                <Link className="transition-colors hover:text-gold-light" to="/en/program">
                   Features
                 </Link>
               </li>
@@ -69,14 +69,11 @@ export default function WomenInMiningPage() {
             </ol>
           </nav>
         </div>
-        <span className="font-semibold text-[11px] text-gold uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
+        <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.26em] [text-shadow:0_1px_10px_rgba(3,20,16,0.55)]">
           Features
         </span>
-        <h1 className="mt-3 max-w-[760px] font-bold text-[1.7rem] text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-[2.4rem] sm:leading-[1.1] lg:text-[2.9rem]">
-          Empowering women,
-          <span className="text-gold">
-            reshaping the industry
-          </span>
+        <h1 className="mt-3 max-w-[760px] font-bold text-hero text-ivory leading-[1.15] tracking-[-0.005em] [font-family:var(--font-display)] [text-shadow:0_2px_20px_rgba(3,20,16,0.55)] sm:text-hero-md sm:leading-[1.1] lg:text-hero-lg">
+          Empowering <span className="text-gold">women</span>, reshaping the industry
         </h1>
         <span className="mt-5 block h-0.5 w-10 rounded-full bg-gold" aria-hidden="true" />
         <p className="mt-4 max-w-[640px] text-champagne/90 text-lead [text-shadow:0_1px_14px_rgba(3,20,16,0.6)]">
@@ -104,16 +101,16 @@ export default function WomenInMiningPage() {
   <OnThisPageNav
     items={[
       { id: 'forum-overview', label: 'Overview' },
-      { id: 'why-this-forum', label: 'Why This Forum Matters' },
-      { id: 'key-topics', label: 'Key Topics' },
+      { id: 'why-this-forum', label: 'Why this forum matters' },
+      { id: 'key-topics', label: 'Key topics' },
     ]}
   />
   <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-    <div className="flex flex-col gap-16 py-14 lg:gap-20 lg:py-20">
-      <section id="forum-overview" className="a2m-reveal scroll-mt-[190px]">
+    <div className="flex flex-col">
+      <section id="forum-overview" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="flex flex-col lg:col-span-7">
-            <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink [font-family:var(--font-display)] sm:text-[1.3rem]">
+            <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-quote text-ink [font-family:var(--font-display)] sm:text-quote-md">
               {introLead}
             </p>
             <p className="mt-6 max-w-[680px] text-lead text-muted leading-[1.7]">
@@ -121,17 +118,16 @@ export default function WomenInMiningPage() {
             </p>
           </div>
           <div className="relative lg:col-span-5">
-            <div aria-hidden="true" className="absolute -right-3 -top-3 hidden h-full w-full rounded-sm border-2 border-gold/50 sm:block" />
             <div className="relative overflow-hidden rounded-sm border border-hairline bg-surface shadow-card" style={{ aspectRatio: '16 / 9' }}>
               <img alt="Women in Mining Forum room: a speaker at the podium before delegates" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover transition-transform duration-[1200ms] ease-cinema hover:scale-[1.03]" sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 92vw" srcSet="/images/program/women-in-mining.jpg 256w, /images/program/women-in-mining.jpg 384w, /images/program/women-in-mining.jpg 640w, /images/program/women-in-mining.jpg 750w, /images/program/women-in-mining.jpg 828w, /images/program/women-in-mining.jpg 1080w, /images/program/women-in-mining.jpg 1200w, /images/program/women-in-mining.jpg 1920w, /images/program/women-in-mining.jpg 2048w, /images/program/women-in-mining.jpg 3840w" src="/images/program/women-in-mining.jpg" />
             </div>
           </div>
         </div>
       </section>
-      <section id="why-this-forum" className="a2m-reveal scroll-mt-[190px]">
+      <section id="why-this-forum" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-            Why This Forum Matters
+            Why this forum matters
           </h2>
           <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
         </div>
@@ -165,21 +161,21 @@ export default function WomenInMiningPage() {
           </p>
         </div>
       </section>
-      <section id="key-topics" className="a2m-reveal scroll-mt-[190px]">
+      <section id="key-topics" className="a2m-reveal scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[190px] py-14 lg:py-20">
         <div className="flex items-center gap-5">
           <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-            Key Topics
+            Key topics
           </h2>
           <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
         </div>
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
           {keyTopics.map((topic) => (
-            <article key={topic.index} className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+            <article key={topic.index} className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-emerald-cta/40 hover:shadow-card-hover sm:p-7">
               <div className="flex items-center gap-3">
                 <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">
                   {topic.index}
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+                <span aria-hidden="true" className="h-px flex-1 bg-hairline" />
               </div>
               <h3 className="mt-4 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta">
                 {topic.title}

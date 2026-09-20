@@ -66,6 +66,18 @@
   --text-data-xl: 2.375rem;
   --text-data-xl--line-height: 1;
 
+  /* Hero + pull-quote scale (promoted from arbitrary text-[...] sizes) */
+  --text-hero: 1.7rem;
+  --text-hero--line-height: 1.15;
+  --text-hero-md: 2.4rem;
+  --text-hero-md--line-height: 1.1;
+  --text-hero-lg: 2.9rem;
+  --text-hero-lg--line-height: 1.1;
+  --text-quote: 1.2rem;
+  --text-quote--line-height: 1.5;
+  --text-quote-md: 1.3rem;
+  --text-quote-md--line-height: 1.5;
+
   --tracking-tight: -0.005em;
 
   /* Radius & elevation */
