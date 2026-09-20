@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build -- --base=/a2m-2027-refresh/
+      - name: Rewrite root-absolute asset refs for the sub-path
+        run: |
+          cd dist
+          BASE=/a2m-2027-refresh/
+          find . -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) -print0 \
+            | xargs -0 sed -i "s|\"\(/images/[^\"]*\)\"|\"${BASE}\1\"|g; s|'\(/images/[^']*\)'|'${BASE}\1'|g"
+      - run: cp dist/index.html dist/404.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
