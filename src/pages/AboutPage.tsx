@@ -555,160 +555,181 @@ export default function AboutPage() {
   </section>
   <ConferenceThemesSection />
   <AgendaSection />
-  <section id="why-participate" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16">
+  <section id="why-participate" className="a2m-reveal scroll-mt-24 py-16 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-20">
     <div className="mx-auto w-full max-w-[max(1280px,80vw)] px-4 sm:px-8 lg:px-16">
-      <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
-        Why Participate?
-      </h2>
-      <div className="mt-8">
-        <div className="flex flex-col gap-6">
-          <p className="max-w-[760px] text-lead text-muted">
+      <div className="flex items-center gap-5">
+        <h2 className="font-display font-bold tracking-[-0.01em] text-h2">
+          Why Participate?
+        </h2>
+        <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
+      </div>
+      <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="flex flex-col gap-6 lg:col-span-7">
+          <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
             Every delegate has a precise reason to be in Montreal. Whatever your profile, A2M offers direct access to the decision-makers, capital and opportunities of the African mining sector.
           </p>
-          <div className="flex flex-col gap-8">
-            <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
-              A2M 2027 exists because
-              <em className="font-medium [font-family:var(--font-display)] text-copper">
-                the most important conversations in African mining are still taking place in the wrong rooms
-              </em>
-              : bilateral embassy meetings that never reach the right companies, fleeting hallway exchanges at major conferences where African ministers go unmet, and investment committees that dismiss African projects they never truly understood.
-            </p>
-            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-              Over three focused days at the Centre Mont-Royal in Montréal, we bring every key decision-maker into the same room — and equip them with the tools to do serious business.
-            </p>
-            <p className="max-w-[760px] text-lead text-muted leading-[1.7]">
-              Every seat at A2M 2027 represents a decision.
-              <em className="font-medium [font-family:var(--font-display)] text-copper">
-                The mining deals will be made. The only question is whether your organization will be part of them.
-              </em>
-            </p>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M4.979 9.685C2.993 8.891 2 8.494 2 8s.993-.89 2.979-1.685l2.808-1.123C9.773 4.397 10.767 4 12 4s2.227.397 4.213 1.192l2.808 1.123C21.007 7.109 22 7.506 22 8s-.993.89-2.979 1.685l-2.808 1.124C14.227 11.603 13.233 12 12 12s-2.227-.397-4.213-1.191z" />
+          <p className="max-w-[760px] border-gold border-l-2 pl-5 font-medium text-[1.2rem] text-ink leading-relaxed [font-family:var(--font-display)] sm:text-[1.3rem]">
+            A2M 2027 exists because
+            <em className="font-medium [font-family:var(--font-display)] text-copper">
+              the most important conversations in African mining are still taking place in the wrong rooms
+            </em>
+            : bilateral embassy meetings that never reach the right companies, fleeting hallway exchanges at major conferences where African ministers go unmet, and investment committees that dismiss African projects they never truly understood.
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 lg:col-span-5">
+          <p className="text-lead text-muted leading-[1.7]">
+            Over three focused days at the Centre Mont-Royal in Montréal, we bring every key decision-maker into the same room — and equip them with the tools to do serious business.
+          </p>
+          <p className="rounded-sm border-l-2 border-l-gold bg-surface px-6 py-5 text-lead text-muted leading-[1.7]">
+            Every seat at A2M 2027 represents a decision.
+            <em className="font-medium [font-family:var(--font-display)] text-copper">
+              The mining deals will be made. The only question is whether your organization will be part of them.
+            </em>
+          </p>
+        </div>
+      </div>
+      <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">01</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M4.979 9.685C2.993 8.891 2 8.494 2 8s.993-.89 2.979-1.685l2.808-1.123C9.773 4.397 10.767 4 12 4s2.227.397 4.213 1.192l2.808 1.123C21.007 7.109 22 7.506 22 8s-.993.89-2.979 1.685l-2.808 1.124C14.227 11.603 13.233 12 12 12s-2.227-.397-4.213-1.191z" />
                         <path strokeLinecap="round" d="M22 12s-.993.89-2.979 1.685l-2.808 1.124C14.227 15.603 13.233 16 12 16s-2.227-.397-4.213-1.191L4.98 13.685C2.993 12.891 2 12 2 12m20 4s-.993.89-2.979 1.685l-2.808 1.124C14.227 19.603 13.233 20 12 20s-2.227-.397-4.213-1.192L4.98 17.685C2.993 16.891 2 16 2 16" />
                       </g>
                     </svg>
-                  </span>
-                  <h3 id="majors" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Majors & mid-tier
-                  </h3>
-                  <p className="text-body text-muted">
-                    Your African operations run on relationships — manage them at the highest level (ministers, DFIs, regulatory intelligence).
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <circle cx="12" cy="12" r="10" />
+            </span>
+          </div>
+          <h3 id="majors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Majors & mid-tier
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            Your African operations run on relationships — manage them at the highest level (ministers, DFIs, regulatory intelligence).
+          </p>
+        </article>
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">02</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10" />
                         <path d="M13.024 14.56c-2.31.924-3.465 1.386-4.124.938a1.5 1.5 0 0 1-.398-.398c-.448-.66.014-1.814.938-4.124c.197-.493.295-.74.465-.933q.065-.074.139-.138c.193-.17.44-.268.932-.465c2.31-.924 3.464-1.386 4.124-.938a1.5 1.5 0 0 1 .398.398c.448.66-.014 1.814-.938 4.124c-.197.493-.296.739-.465.932a2 2 0 0 1-.139.139c-.193.17-.44.268-.932.465Z" />
                       </g>
                     </svg>
-                  </span>
-                  <h3 id="juniors" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Juniors & exploration
-                  </h3>
-                  <p className="text-body text-muted">
-                    Investment Showcase, Capital Markets Lounge and a Deal Flow Package shared with 40+ qualified investors before the event.
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M2 11c0-2.828 0-4.243.879-5.121C3.757 5 5.172 5 8 5h5c2.828 0 4.243 0 5.121.879C19 6.757 19 8.172 19 11s0 4.243-.879 5.121C17.243 17 15.828 17 13 17H8c-2.828 0-4.243 0-5.121-.879C2 15.243 2 13.828 2 11Z" />
+            </span>
+          </div>
+          <h3 id="juniors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Juniors & exploration
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            Investment Showcase, Capital Markets Lounge and a Deal Flow Package shared with 40+ qualified investors before the event.
+          </p>
+        </article>
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">03</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M2 11c0-2.828 0-4.243.879-5.121C3.757 5 5.172 5 8 5h5c2.828 0 4.243 0 5.121.879C19 6.757 19 8.172 19 11s0 4.243-.879 5.121C17.243 17 15.828 17 13 17H8c-2.828 0-4.243 0-5.121-.879C2 15.243 2 13.828 2 11Z" />
                         <path d="M19 8.076c.975.096 1.631.313 2.121.803c.88.878.88 2.293.88 5.121s0 4.243-.88 5.121c-.878.88-2.293.88-5.12.88h-5c-2.83 0-4.244 0-5.122-.88c-.49-.49-.707-1.146-.803-2.121" />
                         <path d="M13 11a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Z" />
                         <path strokeLinecap="round" d="M16 13V9M5 13V9" />
                       </g>
                     </svg>
-                  </span>
-                  <h3 id="investors" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Investors & DFIs
-                  </h3>
-                  <p className="text-body text-muted">
-                    Pre-screened projects, closed-door Investors' Breakfast and complimentary registration for qualified investors.
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M7 10c0-1.414 0-2.121.44-2.56C7.878 7 8.585 7 10 7h4c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v4c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44h-4c-1.414 0-2.121 0-2.56-.44C7 16.122 7 15.415 7 14z" />
+            </span>
+          </div>
+          <h3 id="investors" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Investors & DFIs
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            Pre-screened projects, closed-door Investors' Breakfast and complimentary registration for qualified investors.
+          </p>
+        </article>
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">04</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M7 10c0-1.414 0-2.121.44-2.56C7.878 7 8.585 7 10 7h4c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v4c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44h-4c-1.414 0-2.121 0-2.56-.44C7 16.122 7 15.415 7 14z" />
                         <path d="M4 12c0-3.771 0-5.657 1.172-6.828S8.229 4 12 4s5.657 0 6.828 1.172S20 8.229 20 12s0 5.657-1.172 6.828S15.771 20 12 20s-5.657 0-6.828-1.172S4 15.771 4 12Z" />
                         <path strokeLinecap="round" d="M4 12H2m20 0h-2M4 9H2m20 0h-2M4 15H2m20 0h-2m-8 5v2m0-20v2M9 20v2M9 2v2m6 16v2m0-20v2" />
                       </g>
                     </svg>
-                  </span>
-                  <h3 id="services" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Service providers & tech
-                  </h3>
-                  <p className="text-body text-muted">
-                    The contracts that will fund your Africa growth are awarded here: targeted meetings and a stand at the heart of the flow.
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" d="M22 22H2" />
+            </span>
+          </div>
+          <h3 id="services" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Service providers & tech
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            The contracts that will fund your Africa growth are awarded here: targeted meetings and a stand at the heart of the flow.
+          </p>
+        </article>
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">05</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" d="M22 22H2" />
                         <path d="M17 22V6c0-1.886 0-2.828-.586-3.414S14.886 2 13 2h-2c-1.886 0-2.828 0-3.414.586S7 4.114 7 6v16m14 0V11.5c0-1.405 0-2.107-.337-2.611a2 2 0 0 0-.552-.552C19.607 8 18.904 8 17.5 8M3 22V11.5c0-1.405 0-2.107.337-2.611a2 2 0 0 1 .552-.552C4.393 8 5.096 8 6.5 8" />
                         <path strokeLinecap="round" d="M12 22v-3M10 5h4m-4 3h4m-4 3h4m-4 3h4" />
                       </g>
                     </svg>
-                  </span>
-                  <h3 id="governments" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Governments & ministries
-                  </h3>
-                  <p className="text-body text-muted">
-                    Meet the TSX executives with your country on their shortlist and become a founding member of the Canada-Africa framework.
-                  </p>
-                </div>
-              </div>
-              <div className="h-full">
-                <div className="rounded-sm border transition-all duration-[250ms] ease-discret border-hairline bg-card shadow-card hover:-translate-y-1 hover:border-gold hover:shadow-card-hover flex h-full flex-col gap-3 p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-sm bg-mist text-emerald-cta">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
-                      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5L12 12m0 0L3 7.5m9 4.5v9.5" />
-                    </svg>
-                  </span>
-                  <h3 id="buyers" className="flex items-center gap-2.5 font-display font-semibold text-h3 text-ink scroll-mt-24 sm:scroll-mt-32 lg:scroll-mt-[205px]">
-                    Buyers & traders
-                  </h3>
-                  <p className="text-body text-muted">
-                    Assemble all three parties to an offtake negotiation in one place, at one time.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <h3 className="max-w-[760px] font-display font-semibold text-h3 text-ink">
-              Your profile in detail
-            </h3>
-            <Tabs
-              wrapperClassName="grid grid-cols-1 items-start gap-6 lg:grid-cols-[300px_1fr] lg:gap-8"
-              listAriaOrientation="vertical"
-              listClassName="flex flex-col gap-1"
-              triggerClassActive="flex items-start gap-3 border-l-[3px] px-4 py-3 text-left transition-colors border-l-gold bg-mist/60"
-              triggerClassInactive="flex items-start gap-3 border-l-[3px] px-4 py-3 text-left transition-colors border-l-transparent hover:border-l-gold/40 hover:bg-mist/30"
-              panelClassName="animate-fade-in rounded-sm border border-hairline bg-card p-6 shadow-card sm:p-7"
-              panelContainerClassName="min-w-0"
+            </span>
+          </div>
+          <h3 id="governments" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Governments & ministries
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            Meet the TSX executives with your country on their shortlist and become a founding member of the Canada-Africa framework.
+          </p>
+        </article>
+        <article className="group flex h-full flex-col rounded-sm border border-hairline bg-card p-6 shadow-card transition-all duration-[250ms] ease-discret hover:-translate-y-1 hover:border-gold hover:shadow-card-hover sm:p-7">
+          <div className="flex items-center gap-3">
+            <span aria-hidden="true" className="tnum font-display font-bold text-[1.4rem] leading-none text-gold">06</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-hairline transition-colors duration-[250ms] ease-discret group-hover:bg-gold/50" />
+            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-sm bg-mist text-emerald-cta transition-colors duration-[250ms] ease-discret group-hover:bg-gold/10">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="size-5">
+                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5L12 12m0 0L3 7.5m9 4.5v9.5" />
+              </svg>
+            </span>
+          </div>
+          <h3 id="buyers" className="mt-4 scroll-mt-24 font-display font-semibold text-h3 text-ink transition-colors duration-[250ms] ease-discret group-hover:text-emerald-cta sm:scroll-mt-32 lg:scroll-mt-[205px]">
+            Buyers & traders
+          </h3>
+          <p className="mt-2 text-body text-muted">
+            Assemble all three parties to an offtake negotiation in one place, at one time.
+          </p>
+        </article>
+      </div>
+      <div className="mt-16 flex items-center gap-5 lg:mt-20">
+        <h3 className="font-display font-semibold text-h3 text-ink">
+          Your profile in detail
+        </h3>
+        <span aria-hidden="true" className="hidden h-px flex-1 bg-hairline sm:block" />
+      </div>
+      <Tabs
+        wrapperClassName="mt-8 grid grid-cols-1 items-start gap-6 lg:grid-cols-[320px_1fr] lg:gap-10"
+        listAriaOrientation="vertical"
+        listClassName="flex flex-col gap-1.5"
+        triggerClassActive="flex items-start gap-3.5 border-l-[3px] px-4 py-3.5 text-left transition-colors duration-[250ms] ease-discret border-l-gold bg-mist/60"
+        triggerClassInactive="flex items-start gap-3.5 border-l-[3px] px-4 py-3.5 text-left transition-colors duration-[250ms] ease-discret border-l-transparent hover:border-l-gold/40 hover:bg-mist/30"
+        panelClassName="animate-fade-in rounded-sm border border-hairline bg-card p-6 shadow-card sm:p-8"
+        panelContainerClassName="min-w-0"
               tabs={[
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         01
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -718,7 +739,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         01
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -797,7 +818,7 @@ export default function AboutPage() {
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         02
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -807,7 +828,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         02
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -894,7 +915,7 @@ export default function AboutPage() {
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         03
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -904,7 +925,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         03
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -986,7 +1007,7 @@ export default function AboutPage() {
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         04
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -996,7 +1017,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         04
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -1086,7 +1107,7 @@ export default function AboutPage() {
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         05
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -1096,7 +1117,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         05
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -1173,7 +1194,7 @@ export default function AboutPage() {
                 {
                   triggerActive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-copper">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-gold">
                         06
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-emerald-cta">
@@ -1183,7 +1204,7 @@ export default function AboutPage() {
                   ),
                   triggerInactive: (
                     <>
-                      <span className="tnum pt-0.5 font-semibold text-[11px] tracking-[0.14em] text-taupe">
+                      <span className="tnum pt-1 font-display font-bold text-[15px] leading-none text-taupe">
                         06
                       </span>
                       <span className="font-display font-semibold text-[14px] leading-snug text-ink">
@@ -1264,9 +1285,6 @@ export default function AboutPage() {
                 },
               ]}
             />
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <section id="strategic-partners" className="a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16 a2m-motif-light relative overflow-hidden bg-surface">
